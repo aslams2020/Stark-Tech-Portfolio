@@ -506,3 +506,66 @@ html{
     text-shadow: rgba(255, 0, 144, 0.629) 1px 0 6px;
 
 }
+
+/* New Contact form styling */
+.contact {
+  padding: 50px 0;
+  background: rgba(0, 0, 0, 0.8) url(assets/bg-contact.jpg);
+  background-size: cover;
+  background-blend-mode: darken;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.text-center {
+  text-align: center;
+  font-size: 2rem;
+  color: #e31b1b;
+  margin-bottom: 20px;
+  font-family: 'Baloo Bhaina 2', cursive;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, #e31b1b, #b00e0e);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(135deg, #ff4d4d, #b20000);
+}
