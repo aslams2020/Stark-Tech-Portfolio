@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
 
@@ -10,7 +9,6 @@
 html{
   scroll-behavior: smooth;
 }
-
 /* Vertical Scrollbar Styling :) */
 ::-webkit-scrollbar {
   width: 8px;
@@ -197,56 +195,62 @@ html{
   padding: 6px 10px;
   vertical-align: middle;
 }
-.box-main{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  max-width: 50%;
-  margin: auto;
-  height: 80%;
+.box-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 50%;
+    margin: auto;
+    height: 80%;
 }
-
 /* Hero Section */
-
-.firstSection{
-  height: 90vh; 
+.firstSection {
+    height: 90vh;
 }
-
-.firstHalf{
-  
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.firstHalf {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: float 1.5s ease-in-out infinite alternate; /* Float animation */
 }
-.secondHalf{
-  width: 30%;
-}
-.secondHalf img{
-  width: 250%;
-  border: 4px solid white;
-  border-radius: 10px;
-  display: block;
-  margin: auto;
-  animation-name: IronImage;
-  animation-direction: reverse;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
+.secondHalf {
+    width:30%;
 
 }
-
-@keyframes IronImage {      
-  from{
-      transform: translateX(0px);
-  }
-
-  to{
-      transform: translateX(450px);
-  }
+.secondHalf img {
+    width: 250%; /* Adjust as needed */
+    border: 4px solid white;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    animation: IronImage 2s ease forwards, float 3s ease-in-out infinite alternate; /* Add float animation */
 }
+
+.secondHalf:hover {
+    width:32%;
+    transition: ease-in;
+}
+@keyframes IronImage {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(450px);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px); /* Adjust this value for the float height */
+    }
+}
+
 
 .text-big{
   font-size: 35px;
