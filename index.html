@@ -7,7 +7,9 @@
     <title>Stark Tech Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="website icon" href="/assets/logo/icon.png">
+    <link rel="website icon" href="assets/logo/icon.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
     <div id="progress-container">
@@ -16,7 +18,7 @@
 
     <nav class="navbar h-nav background">
         <ul class="nav-list visibility">
-            <div class="logo"><img src="/assets/logo/icon.png" alt="logo" srcset=""></div>
+            <div class="logo" id="ironmask"><img src="assets\logo\icon.png" alt="logo" srcset=""></div>
             <li> <a href="#home" class="active">Home</a></li>
             <li> <a href="#about">About</a></li>
             <li> <a href="#services">Merchandise</a></li>
@@ -36,7 +38,7 @@
             <div class="line"></div>
         </div>
     </nav>
-    <section class="background1 firstSection">
+    <section class="background1 firstSection" id="home">
         <div class="box-main">
             <div class="firstHalf DoAnimation">
                 <p class="text-big"> <strong>Who is Ironman ?</strong></p>
@@ -47,47 +49,47 @@
                 </div>
             </div>
             <div class="secondHalf">
-                <img id="img" src="assets/ironman2.jpg" alt="Tony" srcset="">
+                <img  id="img" src="assets/ironman2.jpg" alt="Tony" srcset="">
             </div>
         </div>
     </section>
-    <section class="sec">
+    <section  class="sec">
     <section class="section" id="about">
-        <div class="paras">
-       <p class="sectionTag text-big">Which Cinematic Universe Does He Belong?</p>
+        <div class="paras"  data-aos="fade-up-right">
+       <p class="sectionTag text-big" >Which Cinematic Universe Does He Belong?</p>
        <p class="sectionSubTag text-small"><strong>Iron Man (real name Anthony Edward "Tony" Stark) is a superhero from Marvel Comics and the Marvel Cinematic Universe, first appearing in the 2008 film Iron Man. He is also one of the protagonists of the TV series The Avengers: Earth's Mightiest Heroes and Avengers Assemble.</strong>
         <br>The Marvel Cinematic Universe (MCU) is an American media franchise and shared universe centered on a series of superhero films produced by Marvel Studios. The films are based on characters that appear in American comic books published by Marvel Comics.Marvel Studios releases its films in groups called "Phases", with the first three phases collectively known as "The Infinity Saga" and the following three phases as "The Multiverse Saga".  </p>
         </div>
 
        <div class="thumbnail">
-        <img src="/assets/marvel.jpg" alt="Tony" class="imgFluid">
+        <img data-aos="fade-up-left" src="./assets/marvel.jpg" alt="Tony" class="imgFluid">
        </div>
     </section>
 
     
     <section class="section left" id="services">
-        <div class="paras paraRight">
+        <div class="paras paraRight" data-aos="fade-up-left">
        <p class="sectionTag text-big">Tony Stark</p>
        <p class="sectionSubTag text-small">Tony Stark is a genius, billionaire, and philanthropist. He not only invented the Iron Man Armor, but wears the suit himself. He is a resourceful co-leader and one of the founding members of the Avengers. He is the CEO of Stark Industries, which once sold highly sophisticated weapons systems technologies to the government defense organizations such as S.H.I.E.L.D. who uses them to maintain peace and order, but has pulled his company away from the weapons business once he saw the damage they caused.Combining their genius, Tony and Yinsen built a mighty suit of iron armor that would be dubbed Iron Man. This first suit left a lot of room for improvement, but it still did what Tony couldn’t do <br></alone> <strong>"My armor, it was never a distraction or a hobby, it was a cocoon. And now, I'm a changed man. You can take away my house, all my tricks and toys. But one thing you can't take away... I am Iron Man."
         ―Tony Stark</strong></p>
         </div>
         
        <div class="thumbnail">
-        <img src="/assets/tony2.jpg" alt="Tony" class="imgFluid">
+        <img data-aos="fade-up-right" src="./assets/tony2.jpg" alt="Tony" class="imgFluid">
        </div>
     </section>
     <section class="section" id="services">
-        <div class="paras">
+        <div class="paras" data-aos="fade-up-right">
        <p class="sectionTag text-big">Robert Downey Jr</p>
        <p class="sectionSubTag text-small">Robert John Downey Jr. (born April 4, 1965) is an American actor and producer. His career has been characterized by critical and popular success in his youth, followed by a period of substance abuse and legal troubles, before a resurgence of commercial success later in his career. <br> RDJ gained global recognition for starring as Tony Stark/Iron Man in ten films within the Marvel Cinematic Universe, beginning with Iron Man (2008), and leading up to Avengers: Endgame (2019). He has also played the title character in Guy Ritchie's Sherlock Holmes (2009), which earned him his second Golden Globe, and its sequel, Sherlock Holmes: A Game of Shadows (2011). <br> <strong>Robert Downey Jr. has evolved into one of the most respected actors in Hollywood. With an amazing list of credits to his name, he has managed to stay new and fresh even after over four decades in the business. </strong>
     </p>
         </div>
        <div class="thumbnail">
-        <img src="/assets/robert.jpg" alt="Tony" class="imgFluid">
+        <img src="./assets/robert.jpg" data-aos="fade-up-left" alt="Tony" class="imgFluid">
        </div>
     </section>
 
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" >
        <h2 class="text-center" >Contact</h2>
        <div class="form">
         <input type="text" name="name" id="name" placeholder="Enter your Name">
@@ -115,9 +117,11 @@
         });
 
     </script>
-    <script src="/Js/script.js"></script>
-
+    <script src="./Js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>
-
