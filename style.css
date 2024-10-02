@@ -115,6 +115,7 @@ html{
   width: 75%;
   display: flex;
   align-items: center;
+  margin-right: 75px;
 }
 .nav-list li{
   list-style: none;
@@ -141,59 +142,58 @@ html{
 
 /* Right Nav */
 
-.rightNav{
+ .rightNav{
   width: 40%;
   text-align: right;
   padding: 0px 23px;
-}
+} 
 
-.rightNav button {
+ .rightNav button {
   color: black;
   border: none;
-  background-color: white;
+  background-color: rgb(238, 10, 10);
   margin-bottom: 10px;
-}
+} 
 
-#search{
-  padding: 5px;
-  font-size: 17px;
-  border: 1px solid rgba(163, 0, 0, 0.801);
-  border-radius: 9px;
-}
-
-#search::placeholder {
-  color: rgba(127, 20, 1, 0.715);
-  font-style: italic;
-  font-size: 15px;
-}
-
-.btn{
-  padding: 8px 20px;
-  border: 2px solid black;
-  border-radius: 8px;
-  margin: 7px 3px;
-  font-size: 15px;
-  background: none;
-  color: black;
-  cursor: pointer;
-}
-.btn a{
-  color: white;
-  text-decoration: none;
-}
-.btn a:hover{
-  color: black;
-  background-color: rgba(255, 255, 255, 0.357);
-
-}
-.btn:hover{
+.search-bar{
+  margin-left: 90px;
+  width:300px;
+  height:40px;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
   background-color: white;
-  color: red;
-  font-weight: bolder;
+  border-radius: 60px;
+  padding: 5px 10px;
 }
-.btn-sm{
-  padding: 6px 10px;
-  vertical-align: middle;
+.search-bar input{
+  background: transparent;
+  font-family: 'Alkatra', cursive;
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  align-items: center;
+  padding-left: 25px;
+  color: rgb(238, 10, 10);
+  margin-top: 3px;
+}
+::placeholder{
+  color: rgb(238, 10, 10);
+}
+
+.search-bar button{
+  border: 0;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 9px;
+  margin-right: 7px;
+}
+.search-bar button:hover{
+  transform: scale(1.1);
 }
 .box-main {
     display: flex;
