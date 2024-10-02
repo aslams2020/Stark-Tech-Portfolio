@@ -226,7 +226,7 @@ html{
     border-radius: 10px;
     display: block;
     margin: auto;
-    animation: IronImage 2s ease forwards, float 3s ease-in-out infinite alternate; /* Add float animation */
+    animation: IronImage 2s ease forwards, float 1.5s ease-in-out infinite alternate; /* Add float animation */
 }
 
 .secondHalf:hover {
