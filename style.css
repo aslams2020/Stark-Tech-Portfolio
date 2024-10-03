@@ -366,7 +366,7 @@ html{
 .text-center{
   text-align: center;
   padding: 30px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Alkatra', cursive;
   font-size: 25px;
   color: white;
 }
@@ -379,6 +379,7 @@ html{
 .form input{
   width: 100%;
   font-size: 20px;
+  font-family: 'Alkatra', cursive;
   border: 2px solid grey;
   border-radius: 6px;
   margin: 14px 0px;
