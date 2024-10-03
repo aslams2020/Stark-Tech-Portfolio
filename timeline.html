@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Man Movies Timeline</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eb5f66;
+        }
+
+        #heading{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 2.5rem;
+        }
+
+        h2{
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--red-dark);
+        }
+
+        p{
+            font-size: 1.2rem;
+            background: linear-gradient(to right, var(--red-dark), black);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        :root {
+            --red: #dc3545;
+            --red-light: #f8d7da;
+            --red-dark: #c82333;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--red);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            /* border: black 2px solid; */
+        }
+
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid var(--red);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid var(--red);
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent var(--red);
+        }
+
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid var(--red);
+            border-width: 10px 10px 10px 0;
+            border-color: transparent var(--red) transparent transparent;
+        }
+
+        .right::after {
+            left: -16px;
+        }
+
+        .content {
+            padding: 20px 30px;
+            background-color: var(--red-light);
+            position: relative;
+            border-radius: 6px;
+            border: 2px solid var(--red);
+            font-size: 1.2rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-container::before {
+                left: 60px;
+                border: medium solid var(--red);
+                border-width: 10px 10px 10px 0;
+                border-color: transparent var(--red) transparent transparent;
+            }
+
+            .left::after,
+            .right::after {
+                left: 15px;
+            }
+
+            .right {
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul class="nav-list visibility">
+            <li><a href="./index.html">Home</a> </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid py-5">
+        <div class="timeline">
+    
+            <!-- Iron Man (2008) -->
+            <div class="timeline-container left">
+                <div class="content">
+                    <h2><a href="https://www.imdb.com/title/tt0371746/" target="_blank">Iron Man (2008)</a></h2>
+                    <p>The first movie in the MCU introduces Tony Stark as Iron Man.</p>
+                </div>
+            </div>
+    
+            <!-- Iron Man 2 (2010) -->
+            <div class="timeline-container right">
+                <div class="content">
+                    <h2><a href="https://www.imdb.com/title/tt1228705/" target="_blank">Iron Man 2 (2010)</a></h2>
+                    <p>Tony Stark faces new challenges and introduces War Machine.</p>
+                </div>
+            </div>
+    
+            <!-- The Avengers (2012) -->
+            <div class="timeline-container left">
+                <div class="content">
+                    <h2><a href="https://www.imdb.com/title/tt0848228/" target="_blank">The Avengers (2012)</a></h2>
+                    <p>Iron Man joins the Avengers to save the world from Loki and the Chitauri.</p>
+                </div>
+            </div>
+    
+            <!-- Iron Man 3 (2013) -->
+            <div class="timeline-container right">
+                <div class="content">
+                    <h2><a href="https://www.imdb.com/title/tt1300854/" target="_blank">Iron Man 3 (2013)</a></h2>
+                    <p>Tony Stark faces the Mandarin and deals with personal challenges.</p>
+                </div>
+            </div>
+    
+            <!-- Avengers: Age of Ultron (2015) -->
+            <div class="timeline-container left">
+                <div class="content">
+                    <h2><a href="https://www.imdb.com/title/tt2395427/" target="_blank">Avengers: Age of Ultron (2015)</a></h2>
+                    <p>Iron Man creates Ultron, leading to a battle to save the world.</p>
+                </div>
+            </div>
+            
+            <!-- Captain America: Civil War (2016) -->
+            <div class="timeline-container right">
+                <div class="content">
+                    <h2><a href="https://www.imdb.com/title/tt3498820/" target="_blank">Captain America: Civil War (2016)</a></h2>
+                    <p>Iron Man faces off against Captain America in a conflict that divides the Avengers.</p>
+                </div>
+            </div>
+            
+            <!-- Spider-Man: Homecoming (2017) -->
+            <div class="timeline-container left">
+                <div class="content">
+                    <h2><a href="https://www.imdb.com/title/tt2250912/" target="_blank">Spider-Man: Homecoming (2017)</a></h2>
+                    <p>Tony Stark mentors Peter Parker as he becomes Spider-Man.</p>
+                </div>
+            </div>
+            
+            <!-- Avengers: Infinity War (2018) -->
+            <div class="timeline-container right">
+                <div class="content">
+                    <h2><a href="https://www.imdb.com/title/tt4154756/" target="_blank">Avengers: Infinity War (2018)</a></h2>
+                    <p>Iron Man leads the fight against Thanos to prevent him from collecting all Infinity Stones.</p>
+                </div>
+            </div>
+            
+            <!-- Avengers: Endgame (2019) -->
+            <div class="timeline-container left">
+                <div class="content">
+                    <h2><a href="https://www.imdb.com/title/tt4154796/" target="_blank">Avengers: Endgame (2019)</a></h2>
+                    <p>Iron Man makes the ultimate sacrifice to defeat Thanos and save the universe.</p>
+                </div>
+            </div>            
+    
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function handleScroll() {
+            const containers = document.querySelectorAll('.timeline-container');
+            containers.forEach(container => {
+                if (isElementInViewport(container)) {
+                    container.classList.add('animate__animated', 'animate__fadeIn');
+                }
+            });
+        }
+
+        window.addEventListener('load', handleScroll);
+        window.addEventListener('scroll', handleScroll);
+    </script>
+</body>
+</html>
