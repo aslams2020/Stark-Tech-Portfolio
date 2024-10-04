@@ -484,13 +484,13 @@ footer p {
     color:rgb(247, 242, 242);
     text-decoration: underline;
   }
-
+  
 #appearance_active{
     color: rgb(238, 10, 10);
     text-decoration: underline;
 }
-  /* Back to Top button style */
-  #BacktoTop {
+/* Back to Top button style */
+#BacktoTop {
     display: block; /* Ensure the button is part of the layout */
     position: fixed;
     bottom: 20px;
@@ -510,24 +510,24 @@ footer p {
     transition: opacity 1.5s, visibility 1.5s, box-shadow 0.3s ease;
     box-shadow: 0 0 0 2px #FFF, 0 0 0 3px #262626, 0 0 6px 2px rgba(255, 255, 255, 0.2); /* Adjusted outer rings */
     overflow: hidden;
-  }
-  
-  .circle1 {
+}
+
+.circle1 {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  #BacktoTop:hover {
+}
+
+#BacktoTop:hover {
     background-color: rgb(106, 12, 11); /* Darker shade on hover */
     transform: scale(1.1); /* Slight zoom effect on hover */
-  }
-  
-  #BacktoTop svg {
+}
+
+#BacktoTop svg {
     fill: #b4a933; 
     transition: fill 0.3s ease-in-out;
-  }
-  
-  #BacktoTop:hover svg {
+}
+
+#BacktoTop:hover svg {
     fill: #ffd700; 
-  }
+}
