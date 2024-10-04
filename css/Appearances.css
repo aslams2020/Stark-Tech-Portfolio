@@ -477,6 +477,11 @@ footer p {
     color:rgb(247, 242, 242);
     text-decoration: underline;
   }
+
+  #appearance_active{
+    color: rgb(238, 10, 10);
+    text-decoration: underline;
+ }
   
   /* Back to Top button style */
 #BacktoTop {
