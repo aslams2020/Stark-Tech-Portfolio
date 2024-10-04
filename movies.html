@@ -6,20 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stark Tech Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="movieStyle.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="website icon" href="/assets/logo/icon.png">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
 </head>
+<body>
 <nav class="navbar h-nav background">
     <ul class="nav-list visibility">
-        <div class="logo" id="ironmask"><img src="assets\logo\icon.png" alt="logo" srcset=""></div>
+        <div class="logo" id="ironmask"><a href="/index.html"><img src="assets\logo\icon.png" alt="logo" srcset=""></a></div>
         <li> <a href="index.html">Home</a></li>
-        <li> <a href="#about">About</a></li>
+        <li> <a href="index.html#about" onclick="scrollToSection(event, 'home')">About</a></li>
         <li> <a href="Appearances.html">Appearances</a></li>
-        <li> <a href="#contact">Contact</a></li>
-        
+        <li> <a href="index.html#contact">Contact</a></li>
     </ul>
 
     <div class="rightNav visibility">
@@ -130,7 +131,7 @@
     </div>
 </div>
 
-
+<script src="./Js/script.js"></script>
 <button id="BacktoTop">
     <div class="circle1">
         <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
@@ -162,8 +163,5 @@
     });
 
 </script>
-
-<script src="./Js/script.js"></script>
-
 </body>
 </html>

@@ -489,6 +489,7 @@ footer p {
     color: rgb(238, 10, 10);
     text-decoration: underline;
 }
+
 /* Back to Top button style */
 #BacktoTop {
     display: block; /* Ensure the button is part of the layout */
