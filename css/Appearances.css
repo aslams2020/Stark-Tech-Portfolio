@@ -462,6 +462,13 @@ footer p {
         display: inline-block; /* Make images inline-block for centering */
         margin: 0 auto; /* Center the image */
     }
+    .search-bar{
+        margin-left: 0px;
+    }
+    .logo a{
+        display: flex;
+        justify-content: center;
+    }
   }
   
     
@@ -524,4 +531,3 @@ footer p {
   #BacktoTop:hover svg {
     fill: #ffd700; 
   }
-  
