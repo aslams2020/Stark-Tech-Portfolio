@@ -478,10 +478,10 @@ footer p {
     text-decoration: underline;
   }
 
-  #appearance_active{
+#appearance_active{
     color: rgb(238, 10, 10);
     text-decoration: underline;
- }
+}
   
   /* Back to Top button style */
 #BacktoTop {
