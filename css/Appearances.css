@@ -520,6 +520,7 @@ footer p {
   #BacktoTop:hover svg {
     fill: #ffd700; 
   }
+  
 #appearance_active{
     color: rgb(238, 10, 10);
     text-decoration: underline;
