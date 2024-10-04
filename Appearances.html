@@ -129,29 +129,7 @@
         document.getElementById('search-bar').focus();
     };
 </script>
-<script>
-    /* Back to Top Button */
-    const scrollToTopBtn = document.getElementById("BacktoTop");
-    window.onscroll = function() {
-        scrollFunction();
-    };
 
-    function scrollFunction() {
-        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-            scrollToTopBtn.style.visibility = 'visible';
-            scrollToTopBtn.style.opacity = '1';
-        } else {
-            scrollToTopBtn.style.visibility = 'hidden';
-            scrollToTopBtn.style.opacity = '0';
-        }
-    }
-
-    scrollToTopBtn.addEventListener("click", function() {
-        // Smooth scroll back to top
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-</script>
 <script>
         window.addEventListener('scroll', function() {
         const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -165,6 +143,30 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+
+    <script>
+        /* Back to Top Button */
+        const scrollToTopBtn = document.getElementById("BacktoTop");
+        window.onscroll = function() {
+            scrollFunction();
+        };
+    
+        function scrollFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                scrollToTopBtn.style.visibility = 'visible';
+                scrollToTopBtn.style.opacity = '1';
+            } else {
+                scrollToTopBtn.style.visibility = 'hidden';
+                scrollToTopBtn.style.opacity = '0';
+            }
+        }
+    
+        scrollToTopBtn.addEventListener("click", function() {
+            // Smooth scroll back to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    
     </script>
 </body>
 
