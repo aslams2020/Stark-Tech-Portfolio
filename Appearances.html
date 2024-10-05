@@ -26,6 +26,24 @@
 </head>
 
 <body class="custom-page">
+    <!-- Preloader -->
+    <div id="preloader">
+        <img src="assets/logo/icon.png" alt="Preloader" class="preloader-icon">
+        <p class="loading-text">Loading...</p>
+    </div>
+
+    <!-- Main content -->
+    <div id="main-content" style="display:none;">
+        <!-- Your existing content goes here -->
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.body.classList.add('loaded');
+            }, 3000); // 3 seconds delay
+        });
+    </script>
     <!-- Circles -->
     <div class="circle"></div>
     <div class="circle"></div>
