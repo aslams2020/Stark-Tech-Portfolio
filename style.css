@@ -515,14 +515,101 @@ a:link,a:visited{
 
 }
 
-.text-footer {
-  text-align: center;
-  padding: 30px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 15px;
+/* Footer */
+
+.footer {
+  padding: 5rem 1rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: 400px repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.footer-col img {
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+  top: -20px;
+}
+
+.footer-p {
+  opacity: 0.7;
+  margin-bottom: 1.3rem;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+}
+
+.footer-social i {
+  color: white;
+  font-size: 1.25rem;
+  margin-right: 1rem;
+  opacity: 0.7;
+  border: 2px solid white;
+  border-radius: 100%;
+  padding: 0.5rem;
+  transition: background-color 0.3s ease 0s;
+}
+
+.footer-social i:hover {
+  opacity: 1;
+  background-color: #35373b;
+}
+
+.h46 {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
   color: white;
 }
 
+.footer-col-main {
+  /* margin-top: -1rem; */
+}
+
+.footer-col-main a {
+  display: block;
+  margin-bottom: 1rem;
+  color: white;
+  opacity: 0.7;
+  text-decoration: none;
+  transition: color 0.3s ease 0s;
+}
+
+.footer-col-main a:hover {
+  color: #b71919;
+}
+
+.footer-bar {
+  /* background-color: #0d0101; */
+  text-align: center;
+  margin: auto;
+  /* padding: 1rem; */
+  font-size: 0.9rem;
+  .mygithub {
+    color: white;
+    text-decoration: none;
+    text-shadow: rgba(255, 0, 144, 0.629) 1px 0 6px;
+  }
+}
+
+.footer-bar p {
+  position: relative;
+  top: -60px;
+}
+
+/* .footer-bar {
+  background-color: #040101;
+} */
+
+
+@media (max-width: 900px) {
+  .footer {
+      grid-template-columns: 1fr 200px;
+  }
+}
 /* Hamburger Menu */
 .burger {
   display: none;
