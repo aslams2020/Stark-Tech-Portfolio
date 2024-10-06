@@ -15,7 +15,7 @@
 
 /* Logo styles (pulsing background effect, no border) */
 .preloader-icon {
-  width: 75px; /* Set the size you want */
+  width: 400px; /* Set the size you want */
   border-radius: 50%; /* Keep circular shape */
   animation: pulseBackground 2s infinite ease-in-out; /* Pulsing effect */
   /*background-color: rgb(255, 56, 56);  Initial color */
@@ -40,13 +40,13 @@
 /* Pulse animation for logo's background */
 @keyframes pulseBackground {
   0% {
-      box-shadow: 0 0 10px rgba(255, 56, 56, 0.8);
+      box-shadow: 0 0 50px rgba(255, 56, 56, 0.8);
   }
   50% {
-      box-shadow: 0 0 20px rgba(255, 56, 56, 0.5);
+      box-shadow: 0 0 30px rgba(255, 56, 56, 0.5);
   }
   100% {
-      box-shadow: 0 0 10px rgba(255, 56, 56, 0.8);
+      box-shadow: 0 0 50px rgba(255, 56, 56, 0.8);
   }
 }
 
