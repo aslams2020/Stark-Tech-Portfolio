@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stark Tech Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="movieStyle.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="website icon" href="/assets/logo/icon.png">
+    <link rel="icon" href="https://images.wallpapersden.com/image/download/marvel-iron-man-art_68122_2160x3840.jpg" type="image/png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Circle styles */
+        .circle {
+            height: 24px;
+            width: 24px;
+            border-radius: 24px;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 99999999;
+            /* Stays on top of all elements */
+        }
+    </style>
+</head>
+<body>
+    <!-- Circles -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+<nav class="navbar h-nav background">
+    <ul class="nav-list visibility">
+        <div class="logo" id="ironmask"><a href="/index.html"><img src="assets\logo\icon.png" alt="logo" srcset=""></a></div>
+        <li> <a href="index.html">Home</a></li>
+        <li> <a href="index.html#about" onclick="scrollToSection(event, 'home')">About</a></li>
+        <li> <a href="Appearances.html#Appearance">Appearances</a></li>
+        <li> <a href="index.html#Comics">Comics</a></li>
+        <li> <a href="index.html#contact">Contact</a></li>
+    </ul>
+
+    <div class="rightNav visibility">
+        <form class="search-bar">
+        <input type="text" name="search"  placeholder="Search the website">
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
+    <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</nav>
+
+<!-- Main Section -->
+<section class="movies-section background1" id="home">
+    <div class="box-main">
+        <div class="firstHalf DoAnimation">
+            <h1 class="movies-heading">
+                <img src="assets/posters/ironmanmovie1.jpg" alt="Iron Man" class="ironman-image">
+            </h1>
+            <br> </br>
+            <h2>
+                IRON LEGACY:DIVE INTO THE WORLD OF IRONMAN
+            </h2>
+            <br>
+            <br>
+        </div>
+    </div>
+
+<!-- Movie Cards Section -->
+<div class="movie-cards-container">
+    <!-- Card 1 -->
+    <div class="movie-card">
+        <a href="https://leagueofcomicgeeks.com/comics/series/160735/the-invincible-iron-man" target="_blank" class="movie-link">
+            <img src="https://d1466nnw0ex81e.cloudfront.net/n_iv/600/1048621.jpg" alt="Iron Man" class="movie-image">
+            <h2 class="movie-title">Iron Man: The Invincible Iron Man (2008)<span class="imdd-rating"><br>A modern reboot that explores Tony Stark's challenges as a superhero and a businessman.</span></h2>
+        </a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="movie-card">
+        <a href="https://marvelcinematicuniverse.fandom.com/wiki/Extremis" target="_blank" class="movie-link">
+            <img src="https://d1466nnw0ex81e.cloudfront.net/n_iv/600/5256676.jpg" alt="Iron Man" class="movie-image">
+            <h2 class="movie-title">Iron Man: Extremis (2005)<span class="imdd-rating"><br>A pivotal storyline that redefines Iron Man's armor and introduces the Extremis virus, which enhances Tony Stark's abilities.</span></h2>
+        </a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="movie-card">
+        <a href="https://archive.org/details/ironmanarmorwars0000unse" target="_blank" class="movie-link">
+            <img src="https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5778674-01.jpg" alt="Iron Man" class="movie-image">
+            <h2 class="movie-title">Iron Man: Armor Wars (1987)<span class="imdd-rating"><br>Tony Stark battles against those who have stolen his technology, emphasizing the moral implications of his inventions.</span></h2>
+        </a>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="movie-card">
+        <a href="https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_3" target="_blank" class="movie-link">
+            <img src="assets/posters/ironmanmovie5.png" alt="Iron Man 3" class="movie-image">
+            <h2 class="movie-title">IRON MAN 3 (2013) <span class="imdd-rating"><br>Tony Stark confronts those who misuse his technology, raising ethical questions about innovation and responsibility.</span></h2>
+        </a>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="movie-card">
+        <a href="https://marvelcinematicuniverse.fandom.com/wiki/Avengers:_Age_of_Ultron" target="_blank" class="movie-link">
+            <img src="https://images-bucket.bonanzastatic.com/afu/images/0f30/668a/65bc_8707655661/s-l1600.jpg" alt="Avengers Age of Ultron" class="movie-image">
+            <h2 class="movie-title">Iron Man: The Five Nightmares (2008)<span class="imdd-rating"><br>A compelling narrative that features a new villain, Ezekiel Stane, and explores the impact of Stark’s technology on the world.
+            </span></h2>
+        </a>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="movie-card">
+        <a href="https://ironman.fandom.com/wiki/The_Secret_Origin_of_Tony_Stark" target="_blank" class="movie-link">
+            <img src="https://media.comicbook.com/wp-content/uploads/2013/02/secret-origin-iron-man-2.jpg" alt="Captain America Civil War" class="movie-image">
+            <h2 class="movie-title">Iron Man: The Secret Origin of Iron Man (2009)<span class="imdd-rating"><br>A retelling of Tony Stark’s origin story, providing fresh insights into his character and motivations.</span></h2>
+        </a>
+    </div>
+    <!-- Card 7 -->
+    <div class="movie-card">
+        <a href="https://comicvine.gamespot.com/invincible-iron-man-worlds-most-wanted-part-one/4050-30989/" target="_blank" class="movie-link">
+            <img src="https://theslingsandarrows.com/wp-content/uploads/2015/09/Iron-Man-Worlds-Most-Wanted-v1-723x1024.jpg" alt="Spider Man Homecoming" class="movie-image">
+            <h2 class="movie-title">Iron Man: Worlds Most Wanted (2010)<span class="imdd-rating"><br>A thrilling arc where Tony Stark is on the run, dealing with powerful enemies while protecting his technology.</span></h2>
+        </a>
+    </div>
+    <!-- Card 8 -->
+    <div class="movie-card">
+        <a href="https://marvel.fandom.com/wiki/Man_Without_Fear_Vol_1_1" target="_blank" class="movie-link">
+            <img src="https://comicbookrealm.com/cover-scan/656c74793be6fefee5fe37e15ab981a5/xl/marvel-comics-fear-itself-invincible-iron-man-hard-cover-1.jpg" alt="Avengers Infinity War" class="movie-image">
+            <h2 class="movie-title">Iron Man: The Man Without Fear (2011)<span class="imdd-rating"><br>A crossover with Daredevil that explores Tony Stark's place in the Marvel Universe, focusing on themes of responsibility.</span></h2>
+        </a>
+    </div>
+    <!-- Card 9 -->
+    <div class="movie-card">
+        <a href="https://archive.org/details/ironmandemoninbo0000mich" target="_blank" class="movie-link">
+            <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1586475955i/119501.jpg" alt="Avengers Endgame" class="movie-image">
+            <h2 class="movie-title">Iron Man: Demon in a Bottle (2022 Edition)<span class="imdd-rating"><br>A new edition of the classic storyline, often released with updated art or commentary.</span></h2>
+        </a>
+    </div>
+    <!-- Card 10 -->
+    <div class="movie-card">
+        <a href="https://www.goodreads.com/book/show/26030874-invincible-iron-man-vol-1" target="_blank" class="movie-link">
+            <img src="https://tienda.tomosygrapas.com/29057-large_default/invencible-iron-man-reboot-marvel-now-deluxe.jpg" alt="Spider Man Far From Home" class="movie-image">
+            <h2 class="movie-title">Invincible Iron Man: Reboot (2015)<br>ARCHIVE FOOTAGE<span class="imdd-rating"><br>A fresh start for the character, introducing new challenges and enemies in the modern age.</span></h2>
+        </a>
+    </div>
+</div>
+
+<button id="BacktoTop">
+    <div class="circle1">
+        <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"></path>
+        </svg>
+    </div>
+</button>
+
+<script>
+    /* Back to Top Button */
+    const scrollToTopBtn = document.getElementById("BacktoTop");
+    window.onscroll = function() {
+    scrollFunction();
+    };
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    scrollToTopBtn.style.visibility = 'visible';
+    scrollToTopBtn.style.opacity = '1';
+    } else {
+    scrollToTopBtn.style.visibility = 'hidden';
+    scrollToTopBtn.style.opacity = '0';
+    }
+    }
+
+    scrollToTopBtn.addEventListener("click", function() {
+    // Smooth scroll back to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+</script>
+<script>
+    // Coordinates for the cursor
+    const coords = { x: 0, y: 0 };
+    const circles = document.querySelectorAll(".circle");
+
+    // Colors for the circles
+    const colors = [
+        "#ffb56b", "#fdaf69", "#f89d63", "#f59761", "#ef865e", "#ec805d",
+        "#e36e5c", "#df685c", "#d5585c", "#d1525c", "#c5415d", "#c03b5d",
+        "#b22c5e", "#ac265e", "#9c155f", "#950f5f", "#830060", "#7c0060",
+        "#680060", "#60005f", "#48005f", "#3d005e"
+    ];
+
+    // Assign colors and initial position to each circle
+    circles.forEach(function (circle, index) {
+        circle.x = 0;
+        circle.y = 0;
+        circle.style.backgroundColor = colors[index % colors.length];
+    });
+
+    // Update the coordinates when the mouse moves
+    window.addEventListener("mousemove", function (e) {
+        coords.x = e.clientX;
+        coords.y = e.clientY;
+    });
+
+    // Animation function to move the circles
+    function animateCircles() {
+        let x = coords.x;
+        let y = coords.y;
+
+        circles.forEach(function (circle, index) {
+            // Update the position and scale of each circle
+            circle.style.left = x - 12 + "px";
+            circle.style.top = y - 12 + "px";
+            circle.style.scale = (circles.length - index) / circles.length;
+
+            circle.x = x;
+            circle.y = y;
+
+            // Get the next circle in the sequence
+            const nextCircle = circles[index + 1] || circles[0];
+            x += (nextCircle.x - x) * 0.3;
+            y += (nextCircle.y - y) * 0.3;
+        });
+
+        // Repeat the animation
+        requestAnimationFrame(animateCircles);
+    }
+
+    // Start the animation
+    animateCircles();
+</script>
+<script src="./Js/script.js"></script>
+
+</body>
+</html>

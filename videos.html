@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stark Tech Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="website icon" href="/assets/logo/icon.png">
+    <link rel="icon" href="https://images.wallpapersden.com/image/download/marvel-iron-man-art_68122_2160x3840.jpg" type="image/png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Circle styles */
+        .circle {
+            height: 24px;
+            width: 24px;
+            border-radius: 24px;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 99999999;
+            /* Stays on top of all elements */
+        }
+    </style>
+</head>
+<!-- Circles -->
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<nav class="navbar h-nav background">
+    <ul class="nav-list visibility">
+        <div class="logo" id="ironmask"><a href="/index.html"><img src="assets\logo\icon.png" alt="logo" srcset=""></a></div>
+        <li> <a href="index.html">Home</a></li>
+        <li> <a href="index.html#about">About</a></li>
+        <li> <a href="Appearances.html">Appearances</a></li>
+        <li> <a href="Comics.html">Comics</a></li> 
+        <li> <a href="index.html#contact">Contact</a></li>
+        
+    </ul>
+
+    <div class="rightNav visibility">
+        <form class="search-bar">
+        <input type="text" name="search"  placeholder="Search the website">
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
+    <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</nav>
+
+<!-- Main Section -->
+<section class="movies-section background1" id="home">
+    <div class="box-main">
+        <div class="firstHalf DoAnimation">
+            <h1 class="movies-heading">
+                ICONIC CLIPS OF<img src="assets/posters/ironmanmovie1.jpg" alt="Iron Man" class="ironman-image">
+            </h1>
+            <br> </br>
+        </div>
+    </div>
+
+<!-- Movie Cards Section -->
+<div class="movie-cards-container">
+    <!-- Card 1 -->
+    <div class="movie-card">
+        <h2 class="movie-title">IRON MAN VS F-22 EPIC DOGFIGHT SCENE</h2>
+        
+        <!-- Embedded YouTube Video -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/lpEYXaNNysM?si=G-g3imfWt08tgcW6" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="movie-card">
+        <h2 class="movie-title">IRON MAN STARK EXPO SCENE</h2>
+        
+        <!-- Embedded YouTube Video -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/yocBQlw_mCA?si=Cbq9dpQY2VJY4g-O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="movie-card">
+        <h2 class="movie-title">IRON MAN FINAL MARK 33 SUIT UP</h2>
+        
+        <!-- Embedded YouTube Video -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/cseyd_CRKF0?si=vToUKzkjq2Q1VS8E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
+    </div>
+    <!-- Card 4 -->
+    <div class="movie-card">
+        <h2 class="movie-title">IRON MAN VS THANOS INFINITY WAR</h2>
+            
+        <!-- Embedded YouTube Video -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/10zjuGJEG_w?si=1Bs7gHRhVB_jnCVA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!--Card 5-->
+    <div class="movie-card">
+        <h2 class="movie-title">I AM IRON MAN SCENE ICONIC</h2>
+            
+        <!-- Embedded YouTube Video -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/_anDMGmck-k?si=H7wN3AGcaMUHd8HZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</div>
+
+<!-- Styles -->
+<style>
+    .movie-cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movie-card {
+        width: 100%;
+        max-width: 600px;
+        margin: 20px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .movie-title {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<button id="BacktoTop">
+    <div class="circle1">
+        <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"></path>
+        </svg>
+    </div>
+</button>
+<footer class="background">
+    <div class="footer-list">
+        <h3>Follow Us On</h3>
+        <ul class="social-icons">
+            <li><a href="https://github.com" target="_blank" style="color:  white; font-size: 18px;"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://instagram.com" target="_blank" style="color:  white; font-size: 18px; margin-bottom:20px;"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://x.com" target="_blank" style="color:  white; font-size: 18px;"><i class="fa-brands fa-twitter"></i></a></li>
+           
+            <li><a href="https://facebook.com" target="_blank" style="color:  white;font-size: 18px;"><i class="fab fa-facebook"></i></a></li>
+    
+            <li><a href="https://linkedin.com" target="_blank" style="color: white; font-size: 18px;"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+       </div>
+    <p class="text-footer">
+        &copy; Copyright <span id="year"></span>- All Rights Reserved
+        -   Made With ❤️ by <span><a class="mygithub" href="https://github.com/aslams2020">Aslam Sayyad</a></span>
+    </p>
+    <button id="BacktoTop">
+            <div class="circle1">
+                <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"></path>
+                </svg>
+            </div>
+    </button>
+    
+</footer>
+
+
+<script>
+    /* Back to Top Button */
+    const scrollToTopBtn = document.getElementById("BacktoTop");
+    window.onscroll = function() {
+    scrollFunction();
+    };
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    scrollToTopBtn.style.visibility = 'visible';
+    scrollToTopBtn.style.opacity = '1';
+    } else {
+    scrollToTopBtn.style.visibility = 'hidden';
+    scrollToTopBtn.style.opacity = '0';
+    }
+    }
+
+    scrollToTopBtn.addEventListener("click", function() {
+    // Smooth scroll back to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+</script>
+<script>
+    // Coordinates for the cursor
+    const coords = { x: 0, y: 0 };
+    const circles = document.querySelectorAll(".circle");
+
+    // Colors for the circles
+    const colors = [
+        "#ffb56b", "#fdaf69", "#f89d63", "#f59761", "#ef865e", "#ec805d",
+        "#e36e5c", "#df685c", "#d5585c", "#d1525c", "#c5415d", "#c03b5d",
+        "#b22c5e", "#ac265e", "#9c155f", "#950f5f", "#830060", "#7c0060",
+        "#680060", "#60005f", "#48005f", "#3d005e"
+    ];
+
+    // Assign colors and initial position to each circle
+    circles.forEach(function (circle, index) {
+        circle.x = 0;
+        circle.y = 0;
+        circle.style.backgroundColor = colors[index % colors.length];
+    });
+
+    // Update the coordinates when the mouse moves
+    window.addEventListener("mousemove", function (e) {
+        coords.x = e.clientX;
+        coords.y = e.clientY;
+    });
+
+    // Animation function to move the circles
+    function animateCircles() {
+        let x = coords.x;
+        let y = coords.y;
+
+        circles.forEach(function (circle, index) {
+            // Update the position and scale of each circle
+            circle.style.left = x - 12 + "px";
+            circle.style.top = y - 12 + "px";
+            circle.style.scale = (circles.length - index) / circles.length;
+
+            circle.x = x;
+            circle.y = y;
+
+            // Get the next circle in the sequence
+            const nextCircle = circles[index + 1] || circles[0];
+            x += (nextCircle.x - x) * 0.3;
+            y += (nextCircle.y - y) * 0.3;
+        });
+
+        // Repeat the animation
+        requestAnimationFrame(animateCircles);
+    }
+
+    // Start the animation
+    animateCircles();
+</script>
+<script src="/Js/script.js"></script>
+</html>
