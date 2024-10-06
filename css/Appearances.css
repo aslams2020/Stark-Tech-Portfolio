@@ -79,9 +79,10 @@ body {
 
 .footer-list {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 150px;
     background-color: rgb(0, 0, 0);
   
   }
@@ -94,7 +95,7 @@ body {
     font-size: 20px;
     color: white;
   
-    margin-top: 50px;
+    /* margin-top: 50px; */
   }
   
   .social-icons {

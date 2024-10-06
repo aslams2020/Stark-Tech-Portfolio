@@ -721,7 +721,8 @@ a:link,a:visited{
 
 .footer-list {
   display: flex;
-  justify-content: end;
+  justify-content: center;
+  height: 150px;
   align-items: center;
   flex-direction: column;
   background-color: rgb(0, 0, 0);
@@ -736,7 +737,7 @@ a:link,a:visited{
   font-size: 20px;
   color: white;
 
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 
 .social-icons {
