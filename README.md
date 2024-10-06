@@ -8,17 +8,17 @@ Welcome to the **Stark Tech Portfolio** project, a tribute to Iron Man! This por
 
 ### Features ✨ 
 
-- **High-Tech Design**: Inspired by Tony Stark, the website features a sleek, modern design.
-- **Project Showcase**: Display your projects in a well-organized manner.
-- **Skills & Experience**: Highlight your skills and experience with interactive sections.
-- **Responsive Layout**: Fully responsive design that works on all devices.
-- **Interactive Elements**: Engaging animations and transitions that reflect the innovative spirit of Iron Man.
+- **High-Tech Design** : Inspired by Tony Stark, the website features a sleek, modern design.
+- **Project Showcase** : Display your projects in a well-organized manner.
+- **Skills & Experience** : Highlight your skills and experience with interactive sections.
+- **Responsive Layout** : Fully responsive design that works on all devices.
+- **Interactive Elements** : Engaging animations and transitions that reflect the innovative spirit of Iron Man.
 
 ### Tech Stack 🛠
 
-- **HTML**: For the structure of the web pages.
-- **CSS**: For styling and layout, making the website visually appealing.
-- **JavaScript**: To add interactivity and dynamic content.
+- **HTML** : For the structure of the web pages.
+- **CSS** : For styling and layout, making the website visually appealing.
+- **JavaScript** : To add interactivity and dynamic content.
 
 ### Installation 📥
 
