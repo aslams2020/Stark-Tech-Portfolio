@@ -15,6 +15,9 @@
     
 </head>
 <body>
+    <button class="go-top-btn">
+        <img   width="35px" src="cropped_image.png" alt="go top">
+    </button>
     <div id="progress-container">
         <div id="progress-bar"></div>
   </div>
@@ -109,7 +112,24 @@
             </ul>
         </div>
     </nav>
-    
+    <script>
+        //js for go top button
+const goTopBtn = document.querySelector('.go-top-btn');
+    window.addEventListener('scroll', checkHeight)
+    function checkHeight() {
+      if (window.scrollY > 200) {
+        goTopBtn.style.display = "flex"
+      } else {
+        goTopBtn.style.display = "none"
+      }
+    }
+    goTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })
+    })
+    </script>
 
     </body>
 </html>

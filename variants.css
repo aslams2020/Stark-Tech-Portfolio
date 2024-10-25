@@ -2,6 +2,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
 
+/* css for scroll to top button  */
+
+.go-top-btn{
+  position:fixed;
+  bottom: 35px;
+  right: 35px;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  background:#ff0015;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition:background-color 0.3s, box-shadow 0.3s,transform 0.3s;
+}
+.go-top-btn:hover{
+  background-color: #ac0000;
+  box-shadow: 0px 6px 12px rgba(0,0,0 ,0.25);
+  transform: translateY(-2px)
+}
+
 *{
   margin: 0;
   padding: 0;
