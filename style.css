@@ -148,14 +148,18 @@ body {
 .nav-list li a {
   text-decoration: none;
   color: white;
-  font-size: 21px;
+  font-size: 1.4rem;
   font-family: 'Alkatra', cursive;
-  transition: color 0.3s ease, text-shadow 0.4s ease-in-out;
+  transition: all 1s ease;
+  transition-duration: 0.5s;
+  /* transition: color 0.3s ease, text-shadow 0.4s ease-in-out; */
 }
 
 .nav-list li a:hover {
-  color: rgb(238, 10, 10);
+  color:  rgb(238, 10, 10);
   text-decoration: none;
+  font-size: 1.7rem;
+  
   text-shadow: 2px 2px 15px rgba(255, 238, 107, 0.847);
 }
 
@@ -534,7 +538,10 @@ a:link,a:visited{
 
 .footer-p {
   opacity: 0.7;
+  
+  /* padding-top: 5px; */
   margin-bottom: 1.3rem;
+
 }
 
 .footer-social {
@@ -548,38 +555,57 @@ a:link,a:visited{
   margin-right: 1rem;
   opacity: 0.7;
   border: 2px solid white;
-  border-radius: 100%;
+  border-radius: 13px;
   padding: 0.5rem;
-  transition: background-color 0.3s ease 0s;
+  transition: all 1s ease;
+  transition-duration: 0.5s;
+  
 }
 
 .footer-social i:hover {
   opacity: 1;
-  background-color: #35373b;
+  font-size: 1.7rem;
+  background-color: rgb(238, 10, 10);
+  border-radius: 22px;
+  border-style: dotted;
+  
+  
 }
 
 .h46 {
   margin-bottom: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 500;
   color: white;
+  transition: all 1s ease;
+  transition-duration: 0.4s;
+  margin-left: 50px;
 }
 
-.footer-col-main {
-  /* margin-top: -1rem; */
+.h46:hover{
+  font-size: 1.5rem;
+  color: #ee1919;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .footer-col-main a {
   display: block;
+  font-size: 15px;
   margin-bottom: 1rem;
   color: white;
+  margin-left: 50px;
   opacity: 0.7;
   text-decoration: none;
-  transition: color 0.3s ease 0s;
+  transition-duration: 0.4s;
+  margin-left: 50px;
+  
 }
 
 .footer-col-main a:hover {
-  color: #b71919;
+  color: #e61d1d;
+  font-size: 19px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
 .footer-bar {
@@ -587,12 +613,15 @@ a:link,a:visited{
   text-align: center;
   margin: auto;
   /* padding: 1rem; */
-  font-size: 0.9rem;
+  font-size: 1rem;
   .mygithub {
     color: white;
     text-decoration: none;
     text-shadow: rgba(255, 0, 144, 0.629) 1px 0 6px;
   }
+}
+.footer-bar p span{
+  color: #d12323;
 }
 
 .footer-bar p {
