@@ -272,12 +272,21 @@ body {
   }
   
 .logo img{
-    width: 20%;
-    height: 20%;
-    border: 3px solid white;
-    border-radius: 50%;
-    padding: 5px;
-    margin: 20px 0px;
+  max-width: 75px;
+  border: 3px solid white;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 20px 0px;
+  animation: glow 5s infinite alternate;
+  }
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 5px -8px #6a0a0a;
+    }
+  
+    to {
+      box-shadow: 0 0 10px 8px #7b0a0a;
+    }
   }
 
 /* Hero Section */
