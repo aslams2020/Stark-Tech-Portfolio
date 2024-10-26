@@ -131,16 +131,32 @@
        </div>
     </section>
 
-    <section class="contact" id="contact" >
-       <h2 class="text-center" >Contact Us</h2>
-       <p>Want to get in touch? We'd love to hear from you. Here's how you can reach us.</p>
-       <div class="form">
-        <input type="text" name="name" id="name" placeholder="Name">
-        <input type="number" name="phone" id="name" placeholder="Phone number">
-        <input type="email" name="email" id="name" placeholder="Email - Id">
-        <button class="btn submit-btn">Submit</button>
-       </div>
+    <section class="contact" id="contact">
+        <h2 class="text-center ironman-title">Contact Us</h2>
+        <p class="ironman-subtext">Want to get in touch? We'd love to hear from you.Here's how you can reach us.</p>
+    
+        <div class="form ironman-form">
+            <input type="text" name="name" id="name" placeholder="Enter Your Name" class="ironman-input" required>
+            <input type="tel" name="phone" id="phone" placeholder="Your Contact Number" class="ironman-input" required>
+            <input type="email" name="email" id="email" placeholder="Your Email Address" class="ironman-input" required>
+            <input type="text" name="subject" id="subject" placeholder="Subject of Inquiry" class="ironman-input">
+            
+            <select name="inquiry-type" id="inquiry-type" class="ironman-input">
+                <option value="">-- Choose Inquiry Type --</option>
+                <option value="feedback">Feedback</option>
+                <option value="support">Support</option>
+                <option value="partnership">Partnership</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <textarea name="message" id="message" rows="4" placeholder="Share Your Message" class="ironman-input"></textarea>
+            
+            <button class="btn submit-btn">Submit</button>
+        </div>
     </section>
+    
+    
+    
     </section>
    
     <div class="footer background">
