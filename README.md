@@ -1,15 +1,11 @@
-# 🚀 Stark Tech Portfolio
 
-A portfolio showcasing various tech projects and open-source contributions. This repository is a part of several open-source programs and events, encouraging collaborative contributions from the developer community.
-
----
 
 ## 📋 Participating Programs
 
 | Name                  | Logo                                                      | Purpose                                                                                                      |
 |-----------------------|-----------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| GSSoC'2024-Extd       | ![GSSoC Logo](https://path-to-gssoc-logo.png)             | The coding period is from October 1st to October 30th, during which contributors make contributions and earn points on the platform. |
-| Hacktoberfest 2024    | ![Hacktoberfest Logo](https://path-to-hacktoberfest-logo.png) | Hacktoberfest is a month-long October event welcoming all skill levels to join the open-source community.     |
+| GSSoC'2024-Extd       | ![GSSoC Logo](assets/GSSoC-Ext.png)             | The coding period is from October 1st to October 30th, during which contributors make contributions and earn points on the platform. |
+| Hacktoberfest 2024    | ![Hacktoberfest Logo](assets/hacktoberfest.jpg) | Hacktoberfest is a month-long October event welcoming all skill levels to join the open-source community.     |
 
 ---
 
@@ -35,20 +31,6 @@ A portfolio showcasing various tech projects and open-source contributions. This
         </tr>
     </tbody>
 </table>
-
----
-
-## 🌟 Contributors
-
-Thanks to these amazing contributors!
-
-[![Contributors](https://contrib.rocks/image?repo=aslams2020/Stark-Tech-Portfolio)](https://github.com/aslams2020/Stark-Tech-Portfolio/graphs/contributors)
-
----
-
-### About
-
-This repository is designed to help developers showcase their work, engage in open-source events, and improve their skills through collaborative projects. Contributions are always welcome!
 
 ---
 
@@ -217,6 +199,16 @@ We encourage you to explore the website, contribute your ideas, and get involved
        <img src="https://i.pinimg.com/originals/f8/57/5e/f8575e719ad2e47282123f60a7c13407.gif" alt="Back to Top" width="50" height="50">
     </a>
 </div>
+
+---
+
+## 🌟 Contributors
+
+Thanks to these amazing contributors!
+
+[![Contributors](https://contrib.rocks/image?repo=aslams2020/Stark-Tech-Portfolio)](https://github.com/aslams2020/Stark-Tech-Portfolio/graphs/contributors)
+
+---
 
 
 
