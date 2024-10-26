@@ -1,3 +1,71 @@
+# 🚀 Stark Tech Portfolio
+
+A portfolio showcasing various tech projects and open-source contributions. This repository is a part of several open-source programs and events, encouraging collaborative contributions from the developer community.
+
+---
+
+## 📋 Participating Programs
+
+| Name                  | Logo                                                      | Purpose                                                                                                      |
+|-----------------------|-----------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| GSSoC'2024-Extd       | ![GSSoC Logo](https://path-to-gssoc-logo.png)             | The coding period is from October 1st to October 30th, during which contributors make contributions and earn points on the platform. |
+| Hacktoberfest 2024    | ![Hacktoberfest Logo](https://path-to-hacktoberfest-logo.png) | Hacktoberfest is a month-long October event welcoming all skill levels to join the open-source community.     |
+
+---
+
+## 📊 Project Metrics
+
+<table align="center">
+    <thead align="center">
+        <tr>
+            <td><b>🌟 Stars</b></td>
+            <td><b>🍴 Forks</b></td>
+            <td><b>🐛 Issues</b></td>
+            <td><b>🔔 Open PRs</b></td>
+            <td><b>🔕 Closed PRs</b></td>
+        </tr>
+     </thead>
+    <tbody>
+         <tr>
+            <td><img alt="Stars" src="https://img.shields.io/github/stars/aslams2020/Stark-Tech-Portfolio?style=flat&logo=github"/></td>
+            <td><img alt="Forks" src="https://img.shields.io/github/forks/aslams2020/Stark-Tech-Portfolio?style=flat&logo=github"/></td>
+            <td><img alt="Issues" src="https://img.shields.io/github/issues/aslams2020/Stark-Tech-Portfolio?style=flat&logo=github"/></td>
+            <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/aslams2020/Stark-Tech-Portfolio?style=flat&logo=github"/></td>
+            <td><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/aslams2020/Stark-Tech-Portfolio?style=flat&color=green&logo=github"/></td>
+        </tr>
+    </tbody>
+</table>
+
+---
+
+## 🌟 Contributors
+
+Thanks to these amazing contributors!
+
+[![Contributors](https://contrib.rocks/image?repo=aslams2020/Stark-Tech-Portfolio)](https://github.com/aslams2020/Stark-Tech-Portfolio/graphs/contributors)
+
+---
+
+### About
+
+This repository is designed to help developers showcase their work, engage in open-source events, and improve their skills through collaborative projects. Contributions are always welcome!
+
+---
+
+## How to Contribute
+
+1. Fork the repository.
+2. Clone the forked repo locally.
+3. Create a new branch for your changes.
+4. Make your changes and commit them.
+5. Push the changes to your forked repo.
+6. Open a Pull Request (PR) and describe your changes.
+
+Happy coding!
+
+
+
+
 # Stark Tech Portfolio<img src="https://freepngimg.com/download/chibi/149662-chibi-iron-man-png-download-free.png" alt="Back to Top" width="35" height="35">
 
 
