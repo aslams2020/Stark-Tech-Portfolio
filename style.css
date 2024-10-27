@@ -475,13 +475,12 @@ a:link,a:visited{
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 20px rgba(11, 180, 199, 0.5), 0 0 30px rgba(0, 229, 255, 0.4);
+  box-shadow: 0 0 20px rgba(244, 2, 2, 0.795), 0 0 30px rgba(237, 20, 4, 0.866);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .form input,
-.form select,
 .form textarea {
   width: 100%;
   max-width: 450px;
@@ -503,7 +502,6 @@ a:link,a:visited{
 }
 
 .form input::placeholder,
-.form select,
 .form textarea::placeholder {
   color: rgb(255, 255, 255);
   font-size: 14px;
@@ -516,39 +514,25 @@ a:link,a:visited{
   border-bottom: 3px solid #b71c1c;
 }
 
-.form select {
-  height: 45px;
-  background-color: rgba(255, 185, 185, 0.1);
-  color: white;
-  padding: 10px;
-}
-
-.form select option {
-  background-color: rgba(255, 185, 185, 0.9); /* Change background color for dropdown options */
-  color: black; /* Change text color for better visibility */
-}
-
 /* Button Styling */
 
 .submit-btn {
   padding: 12px 25px;
   color: #fff;
   font-weight: bold;
-  background: linear-gradient(135deg, rgba(212, 6, 6, 0.6), rgba(234, 4, 4, 0.4));
+  background: linear-gradient(135deg, rgba(237, 20, 4, 0.8), rgba(200, 0, 0, 0.6));
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   font-size: 16px;
 }
 
 .submit-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 20px rgba(0, 198, 255, 0.6);
-  background: linear-gradient(135deg, rgba(0, 198, 255, 0.8), rgba(0, 123, 255, 0.6));
+  box-shadow: 0 3px 15px rgba(244, 2, 2, 0.9), 0 0 30px rgba(237, 20, 4, 0.95);
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.9), rgba(237, 20, 4, 0.8));
 }
-
-
 
 /* Footer */
 
