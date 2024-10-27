@@ -33,7 +33,7 @@ body {
   background: linear-gradient(135deg, rgb(67, 0, 0), rgb(255, 56, 56));
   border-radius: 4px;
   border: 1px solid rgb(149, 6, 113);
-  transition: background 0.3s ease-in-out !important;
+  transition: 0.3s ease-in-out !important;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -131,7 +131,7 @@ body {
   background-blend-mode: darken;
 }
 
-.nav-list {
+ .nav-list {
   width: 75%;
   display: flex;
   align-items: center;
@@ -140,33 +140,36 @@ body {
 
 .nav-list li {
   list-style: none;
-  padding: 10px 20px;
+  padding: 5px 10px;
   font-size: 18px;
   margin: 0px 5px;
 }
 
 .nav-list li a {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   text-decoration: none;
   color: white;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-family: 'Alkatra', cursive;
   transition: all 1s ease;
   transition-duration: 0.5s;
   /* transition: color 0.3s ease, text-shadow 0.4s ease-in-out; */
-}
 
-.nav-list li a:hover {
+}
+ .nav-list li a:hover {
+  padding-right: 5px;
+  padding-left: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   color:  rgb(238, 10, 10);
   text-decoration: none;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   
-  text-shadow: 2px 2px 15px rgba(255, 238, 107, 0.847);
-}
+} 
 
-.nav-list li a.active {
-  color: rgb(238, 10, 10);
-  border-bottom: 2px solid rgb(238, 10, 10);
-}
 
 /* Right Nav */
 .rightNav {
@@ -563,18 +566,18 @@ a:link,a:visited{
 }
 
 .footer-social i:hover {
-  opacity: 1;
-  font-size: 1.7rem;
+  opacity: 1;  
   background-color: rgb(238, 10, 10);
   border-radius: 22px;
   border-style: dotted;
+  font-size: 1.27rem;
   
   
 }
 
 .h46 {
   margin-bottom: 2rem;
-  font-size: 1.3rem;
+  font-size: 20px;
   font-weight: 500;
   color: white;
   transition: all 1s ease;
@@ -583,9 +586,9 @@ a:link,a:visited{
 }
 
 .h46:hover{
-  font-size: 1.5rem;
+  /* text-decoration: underline; */
+  font-size: 21px;
   color: #ee1919;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .footer-col-main a {
@@ -603,8 +606,8 @@ a:link,a:visited{
 
 .footer-col-main a:hover {
   color: #e61d1d;
-  font-size: 19px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+  
 
 }
 
@@ -876,6 +879,8 @@ a:link,a:visited{
 /* Hover effects for social media icons */
 .social-icons a:hover {
   transform: translateY(-5px);
+  
+
 }
 
 
