@@ -54,7 +54,7 @@
                 align-items: center;
                 justify-content: center;
                 position: relative;
-                background-image: url("./assets/bg.jpg");
+                background-image: url("/assets/bg.jpg");
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
