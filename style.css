@@ -33,7 +33,7 @@ body {
   background: linear-gradient(135deg, rgb(67, 0, 0), rgb(255, 56, 56));
   border-radius: 4px;
   border: 1px solid rgb(149, 6, 113);
-  transition: background 0.3s ease-in-out !important;
+  transition: 0.3s ease-in-out !important;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -131,7 +131,7 @@ body {
   background-blend-mode: darken;
 }
 
-.nav-list {
+ .nav-list {
   width: 75%;
   display: flex;
   align-items: center;
@@ -140,29 +140,36 @@ body {
 
 .nav-list li {
   list-style: none;
-  padding: 10px 20px;
+  padding: 5px 10px;
   font-size: 18px;
   margin: 0px 5px;
 }
 
 .nav-list li a {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   text-decoration: none;
   color: white;
-  font-size: 21px;
+  font-size: 1.5rem;
   font-family: 'Alkatra', cursive;
-  transition: color 0.3s ease, text-shadow 0.4s ease-in-out;
-}
+  transition: all 1s ease;
+  transition-duration: 0.5s;
+  /* transition: color 0.3s ease, text-shadow 0.4s ease-in-out; */
 
-.nav-list li a:hover {
-  color: rgb(238, 10, 10);
+}
+ .nav-list li a:hover {
+  padding-right: 5px;
+  padding-left: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color:  rgb(238, 10, 10);
   text-decoration: none;
-  text-shadow: 2px 2px 15px rgba(255, 238, 107, 0.847);
-}
+  font-size: 1.6rem;
+  
+} 
 
-.nav-list li a.active {
-  color: rgb(238, 10, 10);
-  border-bottom: 2px solid rgb(238, 10, 10);
-}
 
 /* Right Nav */
 .rightNav {
@@ -534,7 +541,10 @@ a:link,a:visited{
 
 .footer-p {
   opacity: 0.7;
+  
+  /* padding-top: 5px; */
   margin-bottom: 1.3rem;
+
 }
 
 .footer-social {
@@ -548,38 +558,57 @@ a:link,a:visited{
   margin-right: 1rem;
   opacity: 0.7;
   border: 2px solid white;
-  border-radius: 100%;
+  border-radius: 13px;
   padding: 0.5rem;
-  transition: background-color 0.3s ease 0s;
+  transition: all 1s ease;
+  transition-duration: 0.5s;
+  
 }
 
 .footer-social i:hover {
-  opacity: 1;
-  background-color: #35373b;
+  opacity: 1;  
+  background-color: rgb(238, 10, 10);
+  border-radius: 22px;
+  border-style: dotted;
+  font-size: 1.27rem;
+  
+  
 }
 
 .h46 {
   margin-bottom: 2rem;
-  font-size: 1.2rem;
+  font-size: 20px;
   font-weight: 500;
   color: white;
+  transition: all 1s ease;
+  transition-duration: 0.4s;
+  margin-left: 50px;
 }
 
-.footer-col-main {
-  /* margin-top: -1rem; */
+.h46:hover{
+  /* text-decoration: underline; */
+  font-size: 21px;
+  color: #ee1919;
 }
 
 .footer-col-main a {
   display: block;
+  font-size: 15px;
   margin-bottom: 1rem;
   color: white;
+  margin-left: 50px;
   opacity: 0.7;
   text-decoration: none;
-  transition: color 0.3s ease 0s;
+  transition-duration: 0.4s;
+  margin-left: 50px;
+  
 }
 
 .footer-col-main a:hover {
-  color: #b71919;
+  color: #e61d1d;
+  
+  
+
 }
 
 .footer-bar {
@@ -587,12 +616,15 @@ a:link,a:visited{
   text-align: center;
   margin: auto;
   /* padding: 1rem; */
-  font-size: 0.9rem;
+  font-size: 1rem;
   .mygithub {
     color: white;
     text-decoration: none;
     text-shadow: rgba(255, 0, 144, 0.629) 1px 0 6px;
   }
+}
+.footer-bar p span{
+  color: #d12323;
 }
 
 .footer-bar p {
@@ -847,6 +879,8 @@ a:link,a:visited{
 /* Hover effects for social media icons */
 .social-icons a:hover {
   transform: translateY(-5px);
+  
+
 }
 
 
