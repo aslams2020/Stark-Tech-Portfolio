@@ -504,13 +504,15 @@ footer p {
     margin: 5px 3px;
   }
   .text-big{
-    font-size: 40px;
-    font-family: 'Roboto', cursive;
+    font-size: 50px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
     margin-right: 50px;
     margin-top: 20px;
-    color: white;
+    color: #f7b011;
     /* text-shadow: rgba(255, 77, 0, 0.849) 1px 0 10px !important; */
     text-align: center;
+    font-style: italic;
 }
 @keyframes flicker {
     0%, 100% {
