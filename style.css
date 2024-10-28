@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Alkatra&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+
 
 * {
   margin: 0;
@@ -52,12 +53,7 @@ body {
 #progress-bar {
   height: 53%;
   width: 0;
-  background: linear-gradient(
-    90deg,
-    rgb(255, 0, 0) 0%,
-    rgb(255, 153, 153) 50%,
-    rgb(250, 0, 0) 100%
-  );
+  background: linear-gradient(90deg, rgb(255, 0, 0) 0%, rgb(255, 153, 153) 50%, rgb(250, 0, 0) 100%);
   box-shadow: 0 0 4px rgba(255, 0, 0, 0.7), 0 0 10px rgba(192, 100, 2, 0.7);
   transition: width 0.09s ease-in-out;
   border-radius: 10px;
@@ -158,8 +154,9 @@ body {
   color: white;
   font-size: 1.5rem;
   font-family: 'Alkatra', cursive;
-  transition: color 0.3s ease, text-shadow 0.4s ease-in-out;
-
+  transition: all 1s ease;
+  transition-duration: 0.5s;
+  /* transition: color 0.3s ease, text-shadow 0.4s ease-in-out; */
 
 }
  .nav-list li a:hover {
@@ -202,7 +199,7 @@ body {
 
 .search-bar input {
   background: transparent;
-  font-family: "Alkatra", cursive;
+  font-family: 'Alkatra', cursive;
   flex: 1;
   border: none;
   outline: none;
@@ -237,15 +234,15 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   max-width: 50%;
   margin: auto;
   height: 80%;
 }
-a:link,
-a:visited {
+a:link,a:visited{
   color: rgb(226, 96, 10);
-}
+ }
+
 
 /* Hero Section */
 /* First Section Styling */
@@ -254,8 +251,7 @@ a:visited {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("assets/bg3.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/bg3.jpg');
   background-size: cover;
   padding-left: 50px;
   /* Space between left edge and content */
@@ -278,8 +274,7 @@ a:visited {
 .ironman-illustration {
   width: 100%;
   height: auto;
-  animation: IronImage 2s ease forwards,
-    float 1.5s ease-in-out infinite alternate;
+  animation: IronImage 2s ease forwards, float 1.5s ease-in-out infinite alternate;
 }
 
 /* Text Content Styling */
@@ -334,7 +329,7 @@ a:visited {
   border: 2px solid transparent;
   font-size: 16px;
   font-weight: 600;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   width: 145px;
 }
 
@@ -350,7 +345,7 @@ a:visited {
   border: 2px solid white;
   font-size: 16px;
   font-weight: 600;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   width: 160px;
 }
 
@@ -358,6 +353,7 @@ a:visited {
   background: #ffffff;
   color: #a94040;
 }
+
 
 @keyframes IronImage {
   from {
@@ -382,14 +378,14 @@ a:visited {
 
 .text-big {
   font-size: 35px;
-  font-family: "Roboto", cursive;
+  font-family: 'Roboto', cursive;
   margin-right: 100px;
   text-shadow: rgba(255, 77, 0, 0.849) 1px 0 10px !important;
 }
 
 .text-small {
   font-size: 20px;
-  font-family: "Roboto", cursive;
+  font-family: 'Roboto', cursive;
   margin-right: 100px;
   text-shadow: rgba(255, 0, 195, 0.849) 1px 0 10px !important;
 }
@@ -408,7 +404,7 @@ a:visited {
 
 .sec {
   /* background-color: rgba(111, 7, 0, 0.819); */
-  background-image: url("assets/bg3.jpg");
+  background-image: url('assets/bg3.jpg');
   /* background-color: rgba(0, 0, 0, 0.61); */
   background-repeat: none;
   color: white;
@@ -449,7 +445,7 @@ a:visited {
 }
 
 .sectionSubTag {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 14px;
   text-shadow: rgba(245, 131, 255, 0.54) 1px 0 10px !important;
 }
@@ -466,15 +462,14 @@ a:visited {
 .contact p {
   text-align: center;
   font-size: 18px;
-  margin: 1% 3% 3% 3%;
+  margin: 1% 3%;
   line-height: 1.5;
-
+}
 
 .text-center {
   text-align: center;
   padding: 30px 0;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
   font-size: 25px;
 }
 
@@ -517,7 +512,6 @@ a:visited {
 .form textarea::placeholder {
   color: rgb(255, 255, 255);
   font-size: 14px;
-  border: none;
 }
 
 .form input:focus,
@@ -525,7 +519,6 @@ a:visited {
   outline: none;
   border-bottom: 3px solid #b71c1c;
 }
-
 
 /* Button Styling */
 
@@ -542,12 +535,9 @@ a:visited {
 }
 
 .submit-btn:hover {
-  color: white;
-  background: linear-gradient(135deg, rgba(255, 0, 0, 0.9), rgba(237, 20, 4, 0.8));
-  border: none;
   transform: scale(1.05);
   box-shadow: 0 3px 15px rgba(244, 2, 2, 0.9), 0 0 30px rgba(237, 20, 4, 0.95);
-
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.9), rgba(237, 20, 4, 0.8));
 }
 
 /* Footer */
@@ -594,50 +584,13 @@ a:visited {
 }
 
 .footer-social i:hover {
-opacity: 1;
-background-color: rgb(238, 10, 10);
-border-radius: 22px;
-border-style: dotted;
-font-size: 1.27rem;
-animation-name: spin;
-animation-duration: 2500ms;
-animation-iteration-count: infinite;
-animation-timing-function: linear;
-}
-
-.footer-social i.fa-github:hover {
-  color: #171515 !important;
-  border: 2px solid #171515;
-}
-.footer-social i.fa-instagram:hover {
-  color: #e1306c !important;
-  border: 2px solid #e1306c;
-}
-
-.footer-social i.fa-square-x-twitter:hover {
-  color: #1da1f2 !important;
-  border: 2px solid #1da1f2;
-}
-
-.footer-social i.fa-linkedin:hover {
-  color: #0072b1 !important;
-  border: 2px solid #0072b1;
-}
-
-.footer-social i.fa-facebook:hover {
-  color: #316ff6 !important;
-  border: 2px solid #316ff6;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
+  opacity: 1;  
+  background-color: rgb(238, 10, 10);
+  border-radius: 22px;
+  border-style: dotted;
+  font-size: 1.27rem;
+  
+  
 }
 
 .h46 {
@@ -701,9 +654,10 @@ animation-timing-function: linear;
   background-color: #040101;
 } */
 
+
 @media (max-width: 900px) {
   .footer {
-    grid-template-columns: 1fr 200px;
+      grid-template-columns: 1fr 200px;
   }
 }
 /* Hamburger Menu */
@@ -724,6 +678,7 @@ animation-timing-function: linear;
 
 /* Responsiveness ^_^ */
 @media only screen and (max-width: 1020px) {
+
   .logo img {
     max-width: 100px;
     border: 3px solid white;
@@ -733,11 +688,11 @@ animation-timing-function: linear;
     animation: glow 5s infinite alternate;
   }
 
-  @keyframes glow {
+ @keyframes glow {
     from {
       box-shadow: 0 0 5px -8px #6a0a0a;
     }
-
+  
     to {
       box-shadow: 0 0 10px 8px #7b0a0a;
     }
@@ -900,12 +855,14 @@ animation-timing-function: linear;
 
 /*Added SOCIAL- Media icons */
 
+
 .footer-list {
   display: flex;
   justify-content: end;
   align-items: center;
   flex-direction: column;
   background-color: rgb(0, 0, 0);
+
 }
 
 .footer-list ul {
@@ -930,8 +887,11 @@ animation-timing-function: linear;
 
 /* Social Media Icons */
 .social-icons a {
+
   font-size: 0.5rem;
   transition: all 0.3s ease;
+
+
 }
 
 /* Hover effects for social media icons */
@@ -940,6 +900,7 @@ animation-timing-function: linear;
   
 
 }
+
 
 /* Specific hover colors for different social media platforms */
 .social-icons .fa-facebook:hover {
@@ -962,6 +923,8 @@ animation-timing-function: linear;
   color: #6e5494;
 }
 
+
+
 /* Ensure navbar has fixed position */
 .navbar {
   position: fixed;
@@ -982,7 +945,7 @@ animation-timing-function: linear;
 /* Styling for movie headings */
 .movies-heading {
   font-size: 2.5rem;
-  font-family: "Arial", sans-serif;
+  font-family: 'Arial', sans-serif;
   font-weight: bold;
   text-align: center;
   color: white;
@@ -1101,8 +1064,7 @@ h2 {
   visibility: hidden;
   opacity: 0;
   transition: opacity 1.5s, visibility 1.5s, box-shadow 0.3s ease;
-  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #262626,
-    0 0 6px 2px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 2px #FFF, 0 0 0 3px #262626, 0 0 6px 2px rgba(255, 255, 255, 0.2);
   /* Adjusted outer rings */
   overflow: hidden;
 }
@@ -1129,8 +1091,10 @@ h2 {
   fill: #ffd700;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
