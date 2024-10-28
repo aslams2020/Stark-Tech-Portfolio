@@ -11,6 +11,8 @@
     <link rel="website icon" href="/assets/logo/icon.png">
     <link rel="icon" href="https://images.wallpapersden.com/image/download/marvel-iron-man-art_68122_2160x3840.jpg" type="image/png">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <style>
         /* Circle styles */
         .circle {
@@ -91,7 +93,7 @@
 <!-- Movie Cards Section -->
 <div class="movie-cards-container">
     <!-- Card 1 -->
-    <div class="movie-card">
+    <div class="movie-card" data-aos="slide-right">
         <a href="https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_(film)" target="_blank" class="movie-link">
             <img src="assets/posters/ironmanmovie2.png" alt="Iron Man" class="movie-image">
             <h2 class="movie-title">IRON MAN (2008) <span class="imdb-rating"><br>IMDB:7.9</span></h2>
@@ -99,7 +101,7 @@
     </div>
 
     <!-- Card 2 -->
-    <div class="movie-card">
+    <div class="movie-card"  data-aos="zoom-in" >
         <a href="https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_2" target="_blank" class="movie-link">
             <img src="assets/posters/ironmanmovie3.png" alt="Iron Man" class="movie-image">
             <h2 class="movie-title">IRON MAN 2 (2010) <span class="imdb-rating"><br>IMDB:6.9</span></h2>
@@ -107,7 +109,7 @@
     </div>
 
     <!-- Card 3 -->
-    <div class="movie-card">
+    <div class="movie-card" data-aos="slide-left">
         <a href="https://marvelcinematicuniverse.fandom.com/wiki/The_Avengers" target="_blank" class="movie-link">
             <img src="assets/posters/ironmanmovie4.png" alt="Iron Man" class="movie-image">
             <h2 class="movie-title">THE AVENGERS (2012) <span class="imdb-rating"><br>IMDB:8.0</span></h2>
@@ -115,7 +117,7 @@
     </div>
 
     <!-- Card 4 -->
-    <div class="movie-card">
+    <div class="movie-card" data-aos="slide-right">
         <a href="https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_3" target="_blank" class="movie-link">
             <img src="assets/posters/ironmanmovie5.png" alt="Iron Man 3" class="movie-image">
             <h2 class="movie-title">IRON MAN 3 (2013) <span class="imdb-rating"><br>IMDB:7.1</span></h2>
@@ -123,7 +125,7 @@
     </div>
 
     <!-- Card 5 -->
-    <div class="movie-card">
+    <div class="movie-card" data-aos="zoom-in">
         <a href="https://marvelcinematicuniverse.fandom.com/wiki/Avengers:_Age_of_Ultron" target="_blank" class="movie-link">
             <img src="assets/posters/ironmanmovie6.png" alt="Avengers Age of Ultron" class="movie-image">
             <h2 class="movie-title">AVENGERS: AGE OF ULTRON (2015) <span class="imdb-rating"><br>IMDB:7.3</span></h2>
@@ -131,35 +133,35 @@
     </div>
 
     <!-- Card 6 -->
-    <div class="movie-card">
+    <div class="movie-card" data-aos="slide-left">
         <a href="https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_Civil_War" target="_blank" class="movie-link">
             <img src="assets/posters/ironmanmovie7.png" alt="Captain America Civil War" class="movie-image">
             <h2 class="movie-title">CAPTAIN AMERICA: CIVIL WAR(2016) <span class="imdb-rating"><br>IMDB:7.8</span></h2>
         </a>
     </div>
     <!-- Card 7 -->
-    <div class="movie-card">
+    <div class="movie-card" data-aos="slide-right">
         <a href="https://marvelcinematicuniverse.fandom.com/wiki/Spider-Man:_Homecoming" target="_blank" class="movie-link">
             <img src="assets/posters/ironmanmovie8.png" alt="Spider Man Homecoming" class="movie-image">
             <h2 class="movie-title">SPIDER-MAN: HOMECOMING (2017) <span class="imdb-rating"><br>IMDB:7.4</span></h2>
         </a>
     </div>
     <!-- Card 8 -->
-    <div class="movie-card">
+    <div class="movie-card" data-aos="zoom-in">
         <a href="https://marvelcinematicuniverse.fandom.com/wiki/Avengers:_Infinity_War" target="_blank" class="movie-link">
             <img src="assets/posters/ironmanmovie9.png" alt="Avengers Infinity War" class="movie-image">
             <h2 class="movie-title">AVENGERS: INFINITY WAR(2018) <span class="imdb-rating"><br>IMDB:8.4</span></h2>
         </a>
     </div>
     <!-- Card 9 -->
-    <div class="movie-card">
+    <div class="movie-card" data-aos="slide-left">
         <a href="https://marvelcinematicuniverse.fandom.com/wiki/Avengers:_Endgame" target="_blank" class="movie-link">
             <img src="assets/posters/ironmanmovie10.png" alt="Avengers Endgame" class="movie-image">
             <h2 class="movie-title">AVENGERS: ENDGAME(2019) <span class="imdb-rating"><br>IMDB:8.4</span></h2>
         </a>
     </div>
     <!-- Card 10 -->
-    <div class="movie-card">
+    <div class="movie-card" data-aos="zoom-in">
         <a href="https://marvelcinematicuniverse.fandom.com/wiki/Spider-Man:_Far_From_Home" target="_blank" class="movie-link">
             <img src="assets/posters/ironmanmovie11.png" alt="Spider Man Far From Home" class="movie-image">
             <h2 class="movie-title">SPIDER-MAN: FAR FROM HOME(2019)<br>ARCHIVE FOOTAGE<span class="imdb-rating"><br>IMDB:7.4</span></h2>
@@ -278,6 +280,12 @@
     animateCircles();
 </script>
 <script src="./Js/script.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 2000
+  });
+</script>
 
 </body>
 </html>
