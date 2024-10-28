@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stark Tech Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/contributor.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="website icon" href="/assets/logo/icon.png">
+    <link rel="icon" href="https://images.wallpapersden.com/image/download/marvel-iron-man-art_68122_2160x3840.jpg" type="image/png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Circle styles */
+        .circle {
+            height: 24px;
+            width: 24px;
+            border-radius: 24px;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 99999999;
+            /* Stays on top of all elements */
+        }
+    </style>
+</head>
+<body>
+    <!-- Circles -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+  </div>
+
+    <nav class="navbar h-nav background">
+        <ul class="nav-list visibility">
+            <div class="logo" id="ironmask" ><a href="/index.html"><img src="assets\logo\icon.png" alt="logo" srcset=""></a></div>
+            <li> <a href="/index.html" class="active" onclick="scrollToSection(event, 'home')" >Home</a></li>
+            <li> <a href="/index.html">About</a></li>
+            <li> <a href="/index.html">Appearances</a></li>
+            <li> <a href="/index.html">Comics</a></li>
+            <li> <a href="/index.html">Contact</a></li> 
+            
+        </ul>
+
+        <div class="rightNav visibility">
+            <form class="search-bar">
+            <input type="text" id="search-bar" name="search"  placeholder="Search the website">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+
+    <!-- our code -->
+
+    <div class="contributor-container">
+        <div class="contributors-content" id="contributor">
+            <section class="hero">
+                <div class="hero-overlay">
+                </div>
+                <div class="hero-content">
+                    <h1 id="heroTitle">Stark Tech Contributors</h1>
+
+                    <p id="heroSubtitle">
+                        Our very own deligent devs of Stark Industries
+                    </p>
+                    <a
+                        href="https://github.com/aslams2020/Stark-Tech-Portfolio"
+                        target="_blank"
+                        rel="noreferrer"
+                        class="cta-button"
+                        >Become Contributor</a
+                    >
+                </div>
+            </section>
+
+            <section class="stats">
+                <h2>Stark-Tech's Project Insights</h2>
+                <div id="stats" class="stats-container"></div>
+            </section>
+
+            <section class="contributors" id="contributor">
+                <h2>Contributors</h2>
+                <div id="contributors" class="contributors-container">
+                    <div id="loading" class="loading">
+                        <div class="spinner"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const contributorsContainer =
+                document.getElementById("contributors");
+            const statsContainer = document.getElementById("stats");
+            const loadingIndicator = document.getElementById("loading");
+
+            async function fetchData() {
+                loadingIndicator.style.display = "flex";
+
+                try {
+                    const contributorsResponse = await axios.get(
+                        "https://api.github.com/repos/aslams2020/Stark-Tech-Portfolio/contributors"
+                    );
+                    const contributorsData = contributorsResponse.data;
+
+                    const repoResponse = await axios.get(
+                        "https://api.github.com/repos/aslams2020/Stark-Tech-Portfolio"
+                    );
+                    const repoData = repoResponse.data;
+
+                    populateStats(repoData, contributorsData);
+                    populateContributors(contributorsData);
+                } catch (error) {
+                    console.error("Error fetching data:", error);
+                } finally {
+                    loadingIndicator.style.display = "none";
+                }
+            }
+
+            function populateStats(repoData, contributors) {
+                const stats = [
+                    { label: "Forks", value: repoData.forks_count },
+                    {
+                        label: "GitHub Stars",
+                        value: repoData.stargazers_count,
+                    },
+
+                    {
+                        label: "Total Contributions",
+                        value: contributors.reduce(
+                            (sum, contributor) =>
+                                sum + contributor.contributions,
+                            0
+                        ),
+                    },
+                    { label: "Contributors", value: contributors.length },
+                ];
+
+                statsContainer.innerHTML = "";
+                stats.forEach((stat) => {
+                    const statCard = document.createElement("div");
+                    statCard.className = "stat-card";
+                    statCard.innerHTML = `<h3>${stat.value}</h3><p>${stat.label}</p>`;
+                    statsContainer.appendChild(statCard);
+                });
+            }
+
+            function populateContributors(contributors) {
+                contributorsContainer.innerHTML = "";
+                contributors.forEach((contributor) => {
+                    const contributorCard = document.createElement("div");
+                    contributorCard.className = "contributor-card";
+                    contributorCard.innerHTML = `
+        <a href="${contributor.html_url}" target="_blank" class="card-link">
+            <img src="${contributor.avatar_url}" alt="${contributor.login}" />
+            <h3>${contributor.login}</h3>
+            <div class="contributions">${contributor.contributions} contributions</div>
+        </a>`;
+                    contributorsContainer.appendChild(contributorCard);
+                });
+            }
+
+            fetchData();
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.fromTo(
+                "header",
+                { y: -100 },
+                { y: 0, duration: 0.5, ease: "power4.out" }
+            );
+            gsap.fromTo(
+                ".hero-content h1",
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    ease: "power4.out",
+                    delay: 0.5,
+                }
+            );
+            gsap.fromTo(
+                ".hero-content p",
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    ease: "power4.out",
+                    delay: 1,
+                }
+            );
+            gsap.fromTo(
+                ".cta-btn",
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    ease: "power4.out",
+                    delay: 1.5,
+                }
+            );
+
+            ScrollTrigger.create({
+                trigger: "#contributor",
+                start: "top center",
+                onEnter: () => {
+                    gsap.fromTo(
+                        ".contributor-card",
+                        { opacity: 0, y: 50 },
+                        {
+                            opacity: 1,
+                            y: 0,
+                            duration: 1,
+                            stagger: 0.2,
+                            ease: "power4.out",
+                        }
+                    );
+                },
+            });
+        });
+    </script>
+
+    <!-- our code ends -->
+    
+    <div class="footer background">
+        <div class="footer-col">
+            <img src="/assets/logo/icon.png" alt="">
+            <p class="footer-p">
+
+                Iron Man is a fictional superhero in the Marvel Comics universe, created by writer Stan Lee. His real name is Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech suit of powered armor to fight crime after a life-threatening injury.
+
+            </p>
+            <div class="footer-social">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-col-main">
+            <h4 class="h46">Overview</h4>
+            <a href="#">Who is Iron Man?</a>
+            <a href="#">Franchise</a>
+            <a href="#">Community</a>
+            <a href="#">Media Kit</a>
+        </div>
+        <div class="footer-col-main">
+            <h4 class="h46">About Us</h4>
+            <a href="/index.html">Blogs</a>
+            <a href="/contributor.html">Contributors</a>
+            <a href="/index.html">Careers</a>
+        </div>
+        <div class="footer-col-main">
+            <h4 class="h46">Contact Us</h4>
+            <a href="/index.html">Help/Faq's</a>
+            <a href="/index.html">Contact</a>
+            <a href="/index.html">Privacy Policy</a>
+            <a href="/index.html">Terms & Conditions</a>
+            <a href="/index.html">Advertising</a>
+        </div>
+    </div>
+    <div class="footer-bar background"> 
+        <p>
+            &copy; Copyright 2024- All Rights Reserved -Made With ❤️ by <span><a class="mygithub" href="https://github.com/aslams2020">Aslam Sayyad</a></span>
+        </p>
+
+    </div>
+
+    <button id="BacktoTop">
+        <div class="circle1">
+            <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"></path>
+            </svg>
+        </div>
+</button>
+
+<script>
+    /* Back to Top Button */
+    const scrollToTopBtn = document.getElementById("BacktoTop");
+    window.onscroll = function() {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            scrollToTopBtn.style.visibility = 'visible';
+            scrollToTopBtn.style.opacity = '1';
+        } else {
+            scrollToTopBtn.style.visibility = 'hidden';
+            scrollToTopBtn.style.opacity = '0';
+        }
+    }
+
+    scrollToTopBtn.addEventListener("click", function() {
+        // Smooth scroll back to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+</script>
+
+    
+    <script>
+            window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progress-bar').style.width = scrolled + '%';
+
+        });
+
+ </script>
+  <!-- form name  -->
+<script>
+    function validateText(input) {
+       
+        const errorMessage = document.getElementById('error-message');
+
+      
+        const invalidChars = /[^a-zA-Z\s]/g;
+        if (invalidChars.test(input.value)) {
+           
+            errorMessage.style.display = 'inline';
+        } else {
+            
+            errorMessage.style.display = 'none';
+        }
+
+        
+        input.value = input.value.replace(invalidChars, '');
+    }
+    </script>
+
+    <script src="./Js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>  
+    <!-- adding automatic focus of cursor     -->
+    <script>
+        window.onload = function() {
+            document.getElementById('search-bar').focus();
+        };
+    </script>
+
+<!-- making the about section clealy visible when "about" or "home" is clicked -->
+<script>
+    function scrollToSection(event, sectionId) {
+  event.preventDefault();
+  const section = document.getElementById(sectionId);
+  const navbarHeight = 85; // Fixed navbar height
+
+  window.scrollTo({
+    top: section.offsetTop - navbarHeight,
+    behavior: 'smooth'
+  });
+}
+</script>
+<script>
+    // Coordinates for the cursor
+    const coords = { x: 0, y: 0 };
+    const circles = document.querySelectorAll(".circle");
+
+    // Colors for the circles
+    const colors = [
+        "#ffb56b", "#fdaf69", "#f89d63", "#f59761", "#ef865e", "#ec805d",
+        "#e36e5c", "#df685c", "#d5585c", "#d1525c", "#c5415d", "#c03b5d",
+        "#b22c5e", "#ac265e", "#9c155f", "#950f5f", "#830060", "#7c0060",
+        "#680060", "#60005f", "#48005f", "#3d005e"
+    ];
+
+    // Assign colors and initial position to each circle
+    circles.forEach(function (circle, index) {
+        circle.x = 0;
+        circle.y = 0;
+        circle.style.backgroundColor = colors[index % colors.length];
+    });
+
+    // Update the coordinates when the mouse moves
+    window.addEventListener("mousemove", function (e) {
+        coords.x = e.clientX;
+        coords.y = e.clientY;
+    });
+
+    // Animation function to move the circles
+    function animateCircles() {
+        let x = coords.x;
+        let y = coords.y;
+
+        circles.forEach(function (circle, index) {
+            // Update the position and scale of each circle
+            circle.style.left = x - 12 + "px";
+            circle.style.top = y - 12 + "px";
+            circle.style.scale = (circles.length - index) / circles.length;
+
+            circle.x = x;
+            circle.y = y;
+
+            // Get the next circle in the sequence
+            const nextCircle = circles[index + 1] || circles[0];
+            x += (nextCircle.x - x) * 0.3;
+            y += (nextCircle.y - y) * 0.3;
+        });
+
+        // Repeat the animation
+        requestAnimationFrame(animateCircles);
+    }
+
+    // Start the animation
+    animateCircles();
+</script>
+
+</body>
+
+</html>
