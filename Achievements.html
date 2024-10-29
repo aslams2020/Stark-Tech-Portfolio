@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tony Stark's Remarkable Achievements</title>
+    <style>
+        /* Basic Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-image: url(assets/bg3.jpg);
+            color: #333;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #f5f5f5;
+        }
+
+        /* Card Styling */
+        .card {
+            display: flex;
+            align-items: center;
+            background-color: #09081fc5;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            padding: 20px;
+            width: 100%;
+            max-width: 1400px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Alternating Layout */
+        .card:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .card:nth-child(even) img {
+            margin-right: 0;
+            margin-left: 20px;
+        }
+
+        .card-content {
+            flex: 1;
+        }
+
+        .card h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #d3d1d1;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tony Stark's Remarkable Achievements</h1>
+
+    <div class="card">
+        <img src="assets/arc-reactor.jpg" alt="Arc Reactor">
+        <div class="card-content">
+            <h2>Invented Arc Reactor</h2>
+            <p>The arc reactor is a compact, self-sustaining energy source created by Tony Stark. Originally designed to keep shrapnel from reaching his heart, it later powered the Iron Man suit. Stark's design revolutionized clean energy with nearly limitless potential. It became a symbol of his transition from arms dealer to humanitarian innovator.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="assets/iron-man-suit-1.jpg" alt="Iron Man Suit">
+        <div class="card-content">
+            <h2 style="text-align: end;">Built the First Iron Man Suit</h2>
+            <p style="text-align: end;">Tony Stark built his first Iron Man suit while held captive, using scrap materials. The suit allowed him to escape and laid the foundation for future upgrades. His suits are equipped with advanced weaponry, flight capabilities, and artificial intelligence. Each iteration reflects Stark's genius, pushing the boundaries of human capability.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="assets/stark-industries.png" alt="Stark Industries">
+        <div class="card-content">
+            <h2>Founded Stark Industries</h2>
+            <p>Stark Industries is a pioneering multinational corporation in tech and defense. Founded by Tony's father, Howard Stark, Tony expanded its reach globally. Under Tony’s leadership, the company shifted focus toward sustainable technologies and clean energy. Stark Industries remains a symbol of cutting-edge innovation in the tech world.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="assets/jarvis.jpg" alt="J.A.R.V.I.S.">
+        <div class="card-content">
+            <h2 style="text-align: end;">Created J.A.R.V.I.S.</h2>
+            <p style="text-align: end;">J.A.R.V.I.S. (Just A Rather Very Intelligent System) is an AI assistant developed by Tony Stark. Initially managing household tasks, it evolved into an integral part of the Iron Man suits. J.A.R.V.I.S. handles complex operations, assists in combat, and analyzes data in real-time. It showcases Stark’s expertise in artificial intelligence and robotics.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="assets/avengers-initiative.jpg" alt="Avengers Initiative">
+        <div class="card-content">
+            <h2>Avengers Initiative</h2>
+            <p>Tony Stark played a vital role in forming the Avengers, a team of Earth’s mightiest heroes. This initiative was a response to the growing threats beyond human control. His leadership and resources enabled the team to face formidable foes like Loki and Ultron. The Avengers Initiative is a testament to Stark’s belief in protecting humanity.</p>
+        </div>
+    </div>
+
+    <script>
+        // Scroll Animation JavaScript
+        const cards = document.querySelectorAll('.card');
+        
+        const showCardsOnScroll = () => {
+            const triggerBottom = window.innerHeight * 0.85;
+
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+
+                if (cardTop < triggerBottom) {
+                    card.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', showCardsOnScroll);
+        window.addEventListener('load', showCardsOnScroll);
+    </script>
+
+</body>
+</html>
