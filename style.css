@@ -93,8 +93,9 @@ body {
 #ironmask {
   cursor: pointer;
 }
+
 #ironlogo {
-  margin-left: 80px;
+ 
 
   animation: glow 5s infinite alternate;
   border-radius: 100px;
@@ -908,6 +909,13 @@ ironlogo .footer-col-main {
   .footer-bar p {
     font-size: 0.8rem;
   }
+
+  .footer-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 }
 
 
