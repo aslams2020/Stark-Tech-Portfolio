@@ -131,10 +131,9 @@
         <img src="./assets/robert.jpg" data-aos="fade-up-left" alt="Tony" class="imgFluid">
        </div>
     </section>
-
-    <section class="contact" id="contact">
+        <section class="contact" id="contact">
         <h2 class="text-center ironman-title">Contact Us</h2>
-        <p class="ironman-subtext">Want to get in touch? We'd love to hear from you.Here's how you can reach us.</p>
+        <p class="ironman-subtext">Want to get in touch? We'd love to hear from you. Here's how you can reach us.</p>
     
         <div class="form ironman-form">
             <input type="text" name="name" id="name" placeholder="Enter Your Name" class="ironman-input" required>
@@ -143,10 +142,11 @@
             
             <textarea name="message" id="message" rows="4" placeholder="Share Your Message" class="ironman-input"></textarea>
             
-            <button class="btn submit-btn">Submit</button>
+            <button type="button" class="btn submit-btn" onclick="validateForm()">Submit</button>
         </div>
     </section>
-        <script>
+    
+    <script>
        
     function validateForm() {
         const email = document.getElementById('email').value;
@@ -181,8 +181,6 @@
         phoneInput.addEventListener('keydown', restrictInputToNumbers);
     });
 </script>
-    
-    
     
     </section>
    <footer>
