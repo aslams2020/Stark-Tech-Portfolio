@@ -67,4 +67,68 @@ window.addEventListener('scroll', () => {
         link.classList.toggle('active', link.getAttribute('href').includes(current));
     });
 });
+function showMessage(){
+    const successMessage =document.getElementById("success-message");
+    successMessage.style.display="block";
+    document.getElementById("name").value="";
+    document.getElementById("phone").value="";
+    document.getElementById("email").value="";
+    document.getElementById("message").value="";
+}
+
+function handleFocus(element) {
+    element.dataset.placeholder = element.placeholder; 
+    element.placeholder = ''; 
+}
+
+function handleBlur(element) {
+    if (element.value === '') {
+        element.placeholder = element.dataset.placeholder;
+    }
+}
+
+function validateForm(event) {
+    event.preventDefault(); 
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phonePattern = /^\d+$/; 
+
+    
+    if (!emailPattern.test(email) || !phonePattern.test(phone)) {
+        showAlertBox();
+        return;
+    }
+
+    showConfirmation(); 
+}
+
+function showAlertBox() {
+    const alertBox = document.getElementById('alert-box');
+    alertBox.style.display = 'block';
+    
+    
+    setTimeout(() => {
+        alertBox.style.display = 'none';
+    }, 4000);
+}
+
+function showConfirmation() {
+    document.getElementById('success-message').style.display = 'block';
+
+    
+    const formElements = document.querySelectorAll('.ironman-input');
+    formElements.forEach(element => {
+        element.value = '';
+        element.placeholder = element.dataset.placeholder;
+    });
+
+    
+    setTimeout(() => {
+        document.getElementById('success-message').style.display = 'none';
+    }, 3000);
+}
+
+
+
 
