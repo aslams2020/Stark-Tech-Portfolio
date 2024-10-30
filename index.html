@@ -28,6 +28,22 @@
             z-index: 99999999;
             /* Stays on top of all elements */
         }
+        .bttn-four4{
+            width: 100px;
+            height: 50px;
+            background-color: black;
+            border-radius: 15px;
+            font-weight: bold;
+            box-shadow: 0 0 4px red, 0 0 8px red, 0 0 12px red, 0 0 16px red;
+            transition: 0.5s;
+        }
+        .bttn-four4:hover{
+            background-color: white;
+            height: 55px;
+            width: 105px;
+            box-shadow: 0 0 5px black, 0 0 9px black, 0 0 13px black, 0 0 17px black;
+            border: white;
+        }
     </style>
 </head>
 <body>
@@ -142,8 +158,8 @@ window.addEventListener("load", function() {
                 </p>
                 <div class="buttons">
                     <button class="btn btn-invert" onclick="window.location.href='movies.html'">Movies</button>
-                    <button class="btn btn-transparent " onclick="window.location.href='videos.html'" target="_blank">Watch Video</button>
-                    <button class="btn btn-transparent " onclick="window.location.href='sticker.html'" target="_blank">Stickers</button>
+                    <button class="btn btn-invert " onclick="window.location.href='videos.html'" target="_blank">Watch Video</button>
+                    <button class="btn btn-invert " onclick="window.location.href='sticker.html'" target="_blank">Stickers</button>
                 </div>
             </div>
         </div>
@@ -167,7 +183,8 @@ window.addEventListener("load", function() {
        <p class="sectionTag text-big">Tony Stark</p>
        <p class="sectionSubTag text-small">Tony Stark is a genius, billionaire, and philanthropist. He not only invented the Iron Man Armor, but wears the suit himself. He is a resourceful co-leader and one of the founding members of the Avengers. He is the CEO of Stark Industries, which once sold highly sophisticated weapons systems technologies to the government defense organizations such as S.H.I.E.L.D. who uses them to maintain peace and order, but has pulled his company away from the weapons business once he saw the damage they caused.Combining their genius, Tony and Yinsen built a mighty suit of iron armor that would be dubbed Iron Man. This first suit left a lot of room for improvement, but it still did what Tony couldn’t do <br></alone> <strong>"My armor, it was never a distraction or a hobby, it was a cocoon. And now, I'm a changed man. You can take away my house, all my tricks and toys. But one thing you can't take away... I am Iron Man."
         ―Tony Stark</strong></p>
-        <a href="variants.html" target="_blank">VARIANTS</a>
+        <br>
+        <button class="bttn-four4"><a href="variants.html" target="_blank">VARIANTS</a></button>
         </div>
         
        <div class="thumbnail">
