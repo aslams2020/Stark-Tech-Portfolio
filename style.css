@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Alkatra&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
 
 * {
   margin: 0;
@@ -164,7 +164,7 @@ body {
   text-decoration: none;
   color: white;
   font-size: 1.5rem;
-  font-family: "Alkatra", cursive;
+  font-family: 'Alkatra', cursive;
   transition: all 1s ease;
   transition-duration: 0.5s;
   /* transition: color 0.3s ease, text-shadow 0.4s ease-in-out; */
@@ -200,6 +200,7 @@ body {
   max-width: 600px;
   display: flex;
   align-items: center;
+    background-color: #414141 !important;
   background-color: white;
   border-radius: 60px;
   padding: 5px 10px;
@@ -207,7 +208,7 @@ body {
 
 .search-bar input {
   background: transparent;
-  font-family: "Alkatra", cursive;
+  font-family: 'Alkatra', cursive;
   flex: 1;
   border: none;
   outline: none;
@@ -217,11 +218,15 @@ body {
   color: rgb(238, 10, 10);
   margin-top: 3px;
 }
-
-::placeholder {
-  color: rgb(238, 10, 10);
+::placeholder,.email-input{
+  color: rgb(249, 246, 246);
 }
 
+/* ::placeholder {
+  color: rgb(238, 10, 10);
+} */
+
+ 
 .search-bar button {
   border: 0;
   border-radius: 50%;
@@ -242,7 +247,7 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   max-width: 50%;
   margin: auto;
   height: 80%;
@@ -260,7 +265,7 @@ a:visited {
   justify-content: flex-start;
   align-items: center;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("assets/bg3.jpg");
+    url('assets/bg3.jpg');
   background-size: cover;
   padding-left: 50px;
   /* Space between left edge and content */
@@ -331,22 +336,31 @@ a:visited {
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s ease;
-}
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Open Sans",sans-serif;
+} 
 
 .btn-invert {
   background: #ffffff;
   color: #a94040;
   border: 2px solid transparent;
+  border-radius: 8px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: bold;
   font-family: "Open Sans", sans-serif;
   width: 145px;
+  transition: box-shadow 0.3s ease, transform 0.2s ease, font-size 0.2s ease;
+  box-shadow: 0 4px 12px rgba(255, 126, 95, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .btn-invert:hover {
   background: transparent;
   color: white;
   border: 2px solid white;
+  font-size: 20px;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(255, 126, 95, 0.6), 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 12px whitesmoke, 0 0 24px whitesmoke;
 }
 
 .btn-transparent {
@@ -355,11 +369,13 @@ a:visited {
   border: 2px solid white;
   font-size: 16px;
   font-weight: 600;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   width: 160px;
 }
 
 .btn-transparent:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(255, 126, 95, 0.6), 0 4px 8px rgba(0, 0, 0, 0.3);
   background: #ffffff;
   color: #a94040;
 }
@@ -387,14 +403,14 @@ a:visited {
 
 .text-big {
   font-size: 35px;
-  font-family: "Roboto", cursive;
+  font-family: 'Roboto', cursive;
   margin-right: 100px;
   text-shadow: rgba(255, 77, 0, 0.849) 1px 0 10px !important;
 }
 
 .text-small {
   font-size: 20px;
-  font-family: "Roboto", cursive;
+  font-family: 'Roboto', cursive;
   margin-right: 100px;
   text-shadow: rgba(255, 0, 195, 0.849) 1px 0 10px !important;
 }
@@ -413,7 +429,7 @@ a:visited {
 
 .sec {
   /* background-color: rgba(111, 7, 0, 0.819); */
-  background-image: url("assets/bg3.jpg");
+  background-image: url('assets/bg3.jpg');
   /* background-color: rgba(0, 0, 0, 0.61); */
   background-repeat: none;
   color: white;
@@ -454,7 +470,7 @@ a:visited {
 }
 
 .sectionSubTag {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 14px;
   text-shadow: rgba(245, 131, 255, 0.54) 1px 0 10px !important;
 }
@@ -478,7 +494,7 @@ a:visited {
 .text-center {
   text-align: center;
   padding: 30px 0;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 25px;
 }
 
@@ -491,9 +507,10 @@ a:visited {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 20px rgba(244, 2, 2, 0.795), 0 0 30px rgba(237, 20, 4, 0.866);
-  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(244, 2, 2, 0.795), 0 0 30px rgba(237, 20, 4, 0.85);
+  backdrop-filter: 10px;
   border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease-in-out;
 }
 
 .form input,
@@ -527,24 +544,28 @@ a:visited {
 .form textarea:focus {
   outline: none;
   border-bottom: 3px solid #b71c1c;
+  background-color: rgba(255,255,255,0.1);
 }
 
 /* Button Styling */
 
 .submit-btn {
-  padding: 12px 25px;
-  color: #fff;
+  background-color: #b71c1c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+
   font-weight: bold;
   background: linear-gradient(
     135deg,
     rgba(237, 20, 4, 0.8),
     rgba(200, 0, 0, 0.6)
   );
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-  font-size: 16px;
+  
 }
 
 .submit-btn:hover {
@@ -555,6 +576,38 @@ a:visited {
     rgba(255, 0, 0, 0.9),
     rgba(237, 20, 4, 0.8)
   );
+}
+.success-message{
+  display: none;
+  font-size: 16px;
+  color: #b8e994;
+  margin-top: 20px;
+  animation: fadeIn 1s ease forwards;
+  text-align: center;
+}
+@keyframes fadeIn {
+  0% { opacity: 0;}
+  100% { opacity: 1;}
+  
+}
+.alert-box{
+  display: none;
+  background-color: #f44336;
+  color: white;
+  padding: 15px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  animation: fade-in-out 4s ease-in-out;
+}
+@keyframes fade-in-out {
+  0%, 100% {opacity: 0;}
+  10%, 90% {opacity: 1;}
+  
 }
 
 /* Footer */
@@ -683,9 +736,103 @@ ironlogo .footer-col-main {
 
 @media (max-width: 900px) {
   .footer {
-    grid-template-columns: 1fr 200px;
-  }
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem;
 }
+
+
+.footer-col-main {
+  margin-top: 1rem;
+}
+
+.footer-img{
+  margin-left: -30px;
+}
+
+.footer-p{
+  margin-left:50px;
+}
+
+.footer-social {
+  justify-content: center;
+  margin-left:20px;
+}
+
+.footer-col img {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.footer-bar p {
+  font-size: 0.8rem;
+  top: 0;
+  padding: 1rem 3rem;
+}
+
+
+}
+
+
+/* Small screens (mobile) */
+@media (max-width: 600px) {
+  .footer {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-col,
+  .footer-col-main {
+    margin: 0 auto;
+  }
+
+  .footer-img{
+    display:flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  #ironlogo{
+    margin-left:0;
+  }
+
+  .footer-p {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .footer-social {
+    justify-content: center;
+    gap: 0.5rem;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .footer-social i {
+    font-size: 1rem;
+    padding: 0.4rem;
+  }
+
+  .h46{
+    margin-left:0;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-col-main a {
+  margin-left: 0;
+  margin-bottom: 0.25rem;
+}
+
+.footer-bar p {
+  font-size: 0.8rem;
+  top:0;
+  padding: 1rem 3rem;
+}
+
+
+}
+
+
 /* Hamburger Menu */
 .burger {
   display: none;
@@ -960,7 +1107,7 @@ ironlogo .footer-col-main {
 /* Styling for movie headings */
 .movies-heading {
   font-size: 2.5rem;
-  font-family: "Arial", sans-serif;
+  font-family: 'Arial', sans-serif;
   font-weight: bold;
   text-align: center;
   color: white;
@@ -996,6 +1143,7 @@ body {
 .movies-section {
   padding: 50px;
   text-align: center;
+  background: linear-gradient(135deg,#1f1c2c,#928dab);
 }
 
 .movie-cards-container {
@@ -1008,14 +1156,14 @@ body {
 
 /* Styling for each movie card */
 .movie-card {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255,255, 255, 0.15);
   /* Transparent card background */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   width: 30%;
   margin: 20px 0;
   padding: 10px;
-  /* transition: transform 0.2s; */
+  transition: transform 0.3s ease,box-shadow 0.3s ease;
   text-align: center;
 }
 
@@ -1029,26 +1177,34 @@ body {
   width: 100%;
   height: auto;
   border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.movie-image:hover{
+  transform: scale(1.05);
 }
 
 /* Movie title below the image */
 .movie-title {
-  font-size: 1.3em;
+  font-size: 1.5em;
   font-weight: bold;
   color: #ffffff;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 h1,
 h2 {
   text-align: center;
   color: #ffffff;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
   /* Ensure text is visible on a dark background */
   margin-top: 20px;
   /* Optional: Adjust margin for spacing */
 }
 
 .imdb-rating {
+  font-size: 0.9em;
+  color: #ffd700;
   margin-left: 20px;
   /* Add space between title and IMDb rating */
 }
@@ -1066,21 +1222,21 @@ h2 {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 55px;
-  height: 55px;
-  background-color: rgb(170, 5, 5);
+  width: 60px;
+  height: 60px;
+  background-color: radial-gradient(circle,rgba(170,5,5),rgba(106,12,11));
   border-radius: 50%;
-  border: none;
+  border: 2px solid #fff;
   cursor: pointer;
   text-align: center;
-  line-height: 50px;
-  font-size: 24px;
+  line-height: 55px;
+  font-size: 26px;
+  color: #ffd700;
   z-index: 1000;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 1.5s, visibility 1.5s, box-shadow 0.3s ease;
-  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #262626,
-    0 0 6px 2px rgba(255, 255, 255, 0.2);
+  transition: opacity 0.5s, visibility 0.5s,transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 215, 0, 0.6);
   /* Adjusted outer rings */
   overflow: hidden;
 }
@@ -1094,7 +1250,8 @@ h2 {
 #BacktoTop:hover {
   background-color: rgb(106, 12, 11);
   /* Darker shade on hover */
-  transform: scale(1.1);
+  transform: scale(1.15);
+  box-shadow: 0 8px 16px rgba(255, 215, 0, 0.7), 0 0 10px rgba(255, 215, 0, 0.6);
   /* Slight zoom effect on hover */
 }
 
@@ -1107,8 +1264,8 @@ h2 {
   fill: #ffd700;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }

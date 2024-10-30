@@ -12,6 +12,8 @@
     <link rel="website icon" href="/assets/logo/icon.png">
     <link rel="icon" href="https://images.wallpapersden.com/image/download/marvel-iron-man-art_68122_2160x3840.jpg" type="image/png">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="subscribe.css">
+
     <style>
         /* Circle styles */
         .circle {
@@ -26,9 +28,75 @@
             z-index: 99999999;
             /* Stays on top of all elements */
         }
+        .bttn-four4{
+            width: 100px;
+            height: 50px;
+            background-color: black;
+            border-radius: 15px;
+            font-weight: bold;
+            box-shadow: 0 0 4px red, 0 0 8px red, 0 0 12px red, 0 0 16px red;
+            transition: 0.5s;
+        }
+        .bttn-four4:hover{
+            background-color: white;
+            height: 55px;
+            width: 105px;
+            box-shadow: 0 0 5px black, 0 0 9px black, 0 0 13px black, 0 0 17px black;
+            border: white;
+        }
     </style>
 </head>
 <body>
+
+
+        <!-- Preloader Section -->
+<div id="preloader">
+    <img src="arc-reactor.gif" alt="Loading...">
+</div>
+<style>
+/* Fullscreen Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    z-index: 999999999999;
+    opacity: 1;
+    transition: opacity 3s ease, visibility 3s ease;
+    visibility: visible;
+}
+    
+#preloader img {
+    width: 300px; /* Adjust width as desired */
+    height: 300px; /* Adjust height as desired */
+}
+/* Hide Content until Loaded */
+#content {
+    display: none;
+}
+
+</style>
+<script>
+// Hide preloader and show content after page loads
+window.addEventListener("load", function() {
+    const preloader = document.getElementById("preloader");
+    const content = document.getElementById("content");
+
+    // Apply fade-out effect
+    preloader.style.opacity = "0";
+    preloader.style.visibility = "hidden";
+
+    // Show content after the fade-out effect
+    setTimeout(() => {
+        content.style.display = "block";
+    }, 6000); // Match this delay to the CSS transition duration
+});
+</script>    
     <!-- Circles -->
     <div class="circle"></div>
     <div class="circle"></div>
@@ -62,6 +130,7 @@
             <li> <a href="Appearances.html">Appearances</a></li>
             <li> <a href="Comics.html">Comics</a></li>
             <li> <a href="#contact">Contact</a></li> 
+             <!-- <li> <a href="#subscribe" onclick="scrollToSection(event, 'subscribe')">Subscribe </a></li> -->
             
         </ul>
 
@@ -89,8 +158,8 @@
                 </p>
                 <div class="buttons">
                     <button class="btn btn-invert" onclick="window.location.href='movies.html'">Movies</button>
-                    <button class="btn btn-transparent " onclick="window.location.href='videos.html'" target="_blank">Watch Video</button>
-                    <button class="btn btn-transparent " onclick="window.location.href='sticker.html'" target="_blank">Stickers</button>
+                    <button class="btn btn-invert " onclick="window.location.href='videos.html'" target="_blank">Watch Video</button>
+                    <button class="btn btn-invert " onclick="window.location.href='sticker.html'" target="_blank">Stickers</button>
                 </div>
             </div>
         </div>
@@ -114,7 +183,8 @@
        <p class="sectionTag text-big">Tony Stark</p>
        <p class="sectionSubTag text-small">Tony Stark is a genius, billionaire, and philanthropist. He not only invented the Iron Man Armor, but wears the suit himself. He is a resourceful co-leader and one of the founding members of the Avengers. He is the CEO of Stark Industries, which once sold highly sophisticated weapons systems technologies to the government defense organizations such as S.H.I.E.L.D. who uses them to maintain peace and order, but has pulled his company away from the weapons business once he saw the damage they caused.Combining their genius, Tony and Yinsen built a mighty suit of iron armor that would be dubbed Iron Man. This first suit left a lot of room for improvement, but it still did what Tony couldn’t do <br></alone> <strong>"My armor, it was never a distraction or a hobby, it was a cocoon. And now, I'm a changed man. You can take away my house, all my tricks and toys. But one thing you can't take away... I am Iron Man."
         ―Tony Stark</strong></p>
-        <a href="variants.html" target="_blank">VARIANTS</a>
+        <br>
+        <button class="bttn-four4"><a href="variants.html" target="_blank">VARIANTS</a></button>
         </div>
         
        <div class="thumbnail">
@@ -135,38 +205,47 @@
         <h2 class="text-center ironman-title">Contact Us</h2>
         <p class="ironman-subtext">Want to get in touch? We'd love to hear from you. Here's how you can reach us.</p>
     
-        <div class="form ironman-form">
-            <input type="text" name="name" id="name" placeholder="Enter Your Name" class="ironman-input" required>
-            <input type="tel" name="phone" id="phone" placeholder="Your Contact Number" class="ironman-input" required>
-            <input type="email" name="email" id="email" placeholder="Your Email Address" class="ironman-input" required>
-            
-            <textarea name="message" id="message" rows="4" placeholder="Share Your Message" class="ironman-input"></textarea>
-            
-            <button type="button" class="btn submit-btn" onclick="validateForm()">Submit</button>
-        </div>
-    </section>
+        <form class="form ironman-form" onsubmit="validateForm(event)">
+            <input type="text" name="name" id="name" placeholder="Enter Your Name" class="ironman-input" required
+                   onfocus="handleFocus(this)" onblur="handleBlur(this, 'Enter Your Name')">
+            <input type="tel" name="phone" id="phone" placeholder="Your Contact Number" class="ironman-input" required
+                   onfocus="handleFocus(this)" onblur="handleBlur(this, 'Your Contact Number')">
+            <input type="email" name="email" id="email" placeholder="Your Email Address" class="ironman-input" required
+                   onfocus="handleFocus(this)" onblur="handleBlur(this, 'Your Email Address')">
+            <textarea name="message" id="message" rows="4" placeholder="Share Your Message" class="ironman-input"
+                      onfocus="handleFocus(this)" onblur="handleBlur(this, 'Share Your Message')"></textarea>
     
-    <script>
-       
+            <button type="submit" class="btn submit-btn">Submit</button>
+            
+<section>
+    <form id="contactForm">
+        <input type="email" id="email" placeholder="Enter your email" required />
+        <input type="text" id="phone" placeholder="Enter your phone number" required />
+
+        <button type="button" class="btn submit-btn" onclick="validateForm()">Submit</button>
+        <p id="success-message" class="success-message" style="display:none;">Thank you for contacting us! We'll get back to you soon.</p>
+        <div id="alert-box" class="alert-box" style="display: none;">Invalid input! Please check your email and phone number.</div>
+    </form>
+</section>
+
+<script>
     function validateForm() {
         const email = document.getElementById('email').value;
         const phone = document.getElementById('phone').value;
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple email regex
-        const phonePattern = /^\d{10}$/; // Example for 10-digit phone numbers
+        const phonePattern = /^\d{10}$/; // 10-digit phone number pattern
+        const successMessage = document.getElementById('success-message');
+        const alertBox = document.getElementById('alert-box');
 
-        if (!emailPattern.test(email)) {
-            alert('Please enter a valid email address.');
+        if (!emailPattern.test(email) || !phonePattern.test(phone)) {
+            successMessage.style.display = 'none';
+            alertBox.style.display = 'block';
             return;
         }
 
-        if (!phonePattern.test(phone)) {
-            alert('Please enter a valid phone number (10 digits).');
-            return;
-        }
-
-        // If validation passes, you can submit the form or perform another action
-        alert('Form submitted successfully!');
-        // Here you could submit the form via AJAX or similar
+        alertBox.style.display = 'none';
+        successMessage.style.display = 'block';
+        // Here, you could submit the form via AJAX if needed
     }
 
     function restrictInputToNumbers(event) {
@@ -181,12 +260,51 @@
         phoneInput.addEventListener('keydown', restrictInputToNumbers);
     });
 </script>
+
     
+
+<!-- Newsletter Section -->
+    <div class="news-main" id="subscribe">
+        
+        <div class="container">
+             <h2 class="text-center ironman-title">Subscribe Us</h2>
+            <div class="newsletter-wrapper">
+                
+                <section class="newsletter-section">
+                    <div class="newsletter-content">
+                        <h2>Stay Updated with Our Latest News</h2>
+                        <p>Subscribe to our newsletter to receive exclusive updates, promotions, and tips.</p>
+                        <form id="newsletterForm">
+                            <label for="email"></label>
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your email address"
+                                class="email-input"
+                                required
+                            />
+                            <button type="submit" class="btn submit-btn">Subscribe</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
     </section>
    <footer>
     <div class="footer background">
+        
         <div class="footer-col">
-            <img src="/assets/logo/icon.png" id="ironlogo"    alt="">
+            <div class="footer-img">
+                 <img src="/assets/logo/icon.png" id="ironlogo"    alt="">
+            </div>
+           
             <p class="footer-p">
 
                 <!-- Iron Man is a fictional superhero in the Marvel Comics universe, created by writer Stan Lee. His real name is Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech suit of powered armor to fight crime after a life-threatening injury. -->
