@@ -331,22 +331,28 @@ a:visited {
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s ease;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Open Sans",sans-serif;
 }
 
 .btn-invert {
   background: #ffffff;
   color: #a94040;
   border: 2px solid transparent;
-  font-size: 16px;
-  font-weight: 600;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: bold;
   font-family: "Open Sans", sans-serif;
   width: 145px;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(255, 126, 95, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .btn-invert:hover {
-  background: transparent;
-  color: white;
-  border: 2px solid white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(255, 126, 95, 0.6), 0 4px 8px rgba(0, 0, 0, 0.3);
+
 }
 
 .btn-transparent {
@@ -360,6 +366,8 @@ a:visited {
 }
 
 .btn-transparent:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(255, 126, 95, 0.6), 0 4px 8px rgba(0, 0, 0, 0.3);
   background: #ffffff;
   color: #a94040;
 }
@@ -1033,6 +1041,7 @@ body {
 .movies-section {
   padding: 50px;
   text-align: center;
+  background: linear-gradient(135deg,#1f1c2c,#928dab);
 }
 
 .movie-cards-container {
@@ -1045,14 +1054,14 @@ body {
 
 /* Styling for each movie card */
 .movie-card {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255,255, 255, 0.15);
   /* Transparent card background */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   width: 30%;
   margin: 20px 0;
   padding: 10px;
-  /* transition: transform 0.2s; */
+  transition: transform 0.3s ease,box-shadow 0.3s ease;
   text-align: center;
 }
 
@@ -1066,26 +1075,34 @@ body {
   width: 100%;
   height: auto;
   border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.movie-image:hover{
+  transform: scale(1.05);
 }
 
 /* Movie title below the image */
 .movie-title {
-  font-size: 1.3em;
+  font-size: 1.5em;
   font-weight: bold;
   color: #ffffff;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 h1,
 h2 {
   text-align: center;
   color: #ffffff;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
   /* Ensure text is visible on a dark background */
   margin-top: 20px;
   /* Optional: Adjust margin for spacing */
 }
 
 .imdb-rating {
+  font-size: 0.9em;
+  color: #ffd700;
   margin-left: 20px;
   /* Add space between title and IMDb rating */
 }
@@ -1103,21 +1120,21 @@ h2 {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 55px;
-  height: 55px;
-  background-color: rgb(170, 5, 5);
+  width: 60px;
+  height: 60px;
+  background-color: radial-gradient(circle,rgba(170,5,5),rgba(106,12,11));
   border-radius: 50%;
-  border: none;
+  border: 2px solid #fff;
   cursor: pointer;
   text-align: center;
-  line-height: 50px;
-  font-size: 24px;
+  line-height: 55px;
+  font-size: 26px;
+  color: #ffd700;
   z-index: 1000;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 1.5s, visibility 1.5s, box-shadow 0.3s ease;
-  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #262626,
-    0 0 6px 2px rgba(255, 255, 255, 0.2);
+  transition: opacity 0.5s, visibility 0.5s,transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 215, 0, 0.6);
   /* Adjusted outer rings */
   overflow: hidden;
 }
@@ -1131,7 +1148,8 @@ h2 {
 #BacktoTop:hover {
   background-color: rgb(106, 12, 11);
   /* Darker shade on hover */
-  transform: scale(1.1);
+  transform: scale(1.15);
+  box-shadow: 0 8px 16px rgba(255, 215, 0, 0.7), 0 0 10px rgba(255, 215, 0, 0.6);
   /* Slight zoom effect on hover */
 }
 
