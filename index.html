@@ -217,35 +217,42 @@ window.addEventListener("load", function() {
     
             <button type="submit" class="btn submit-btn">Submit</button>
             
-<section>
-    <form id="contactForm">
-        <input type="email" id="email" placeholder="Enter your email" required />
-        <input type="text" id="phone" placeholder="Enter your phone number" required />
-
-        <button type="button" class="btn submit-btn" onclick="validateForm()">Submit</button>
-        <p id="success-message" class="success-message" style="display:none;">Thank you for contacting us! We'll get back to you soon.</p>
-        <div id="alert-box" class="alert-box" style="display: none;">Invalid input! Please check your email and phone number.</div>
-    </form>
-</section>
-
-<script>
+<section class="contact" id="contact">
+        <h2 class="text-center ironman-title">Contact Us</h2>
+        <p class="ironman-subtext">Want to get in touch? We'd love to hear from you. Here's how you can reach us.</p>
+    
+        <div class="form ironman-form">
+            <input type="text" name="name" id="name" placeholder="Enter Your Name" class="ironman-input" required>
+            <input type="tel" name="phone" id="phone" placeholder="Your Contact Number" class="ironman-input" required>
+            <input type="email" name="email" id="email" placeholder="Your Email Address" class="ironman-input" required>
+            
+            <textarea name="message" id="message" rows="4" placeholder="Share Your Message" class="ironman-input"></textarea>
+            
+            <button type="button" class="btn submit-btn" onclick="validateForm()">Submit</button>
+        </div>
+    </section>
+    
+    <script>
+       
     function validateForm() {
         const email = document.getElementById('email').value;
         const phone = document.getElementById('phone').value;
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple email regex
-        const phonePattern = /^\d{10}$/; // 10-digit phone number pattern
-        const successMessage = document.getElementById('success-message');
-        const alertBox = document.getElementById('alert-box');
+        const phonePattern = /^\d{10}$/; // Example for 10-digit phone numbers
 
-        if (!emailPattern.test(email) || !phonePattern.test(phone)) {
-            successMessage.style.display = 'none';
-            alertBox.style.display = 'block';
+        if (!emailPattern.test(email)) {
+            alert('Please enter a valid email address.');
             return;
         }
 
-        alertBox.style.display = 'none';
-        successMessage.style.display = 'block';
-        // Here, you could submit the form via AJAX if needed
+        if (!phonePattern.test(phone)) {
+            alert('Please enter a valid phone number (10 digits).');
+            return;
+        }
+
+        // If validation passes, you can submit the form or perform another action
+        alert('Form submitted successfully!');
+        // Here you could submit the form via AJAX or similar
     }
 
     function restrictInputToNumbers(event) {
@@ -261,7 +268,6 @@ window.addEventListener("load", function() {
     });
 </script>
 
-    
 
 <!-- Newsletter Section -->
     <div class="news-main" id="subscribe">
