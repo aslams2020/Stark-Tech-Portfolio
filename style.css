@@ -557,66 +557,6 @@ a:visited {
   );
 }
 
-/* Footer */
-
-.footer {
-  padding: 5rem 1rem;
-  position: relative;
-  display: grid;
-  grid-template-columns: 400px repeat(3, 1fr);
-  gap: 2rem;
-  text-align: left;
-}
-.footer-col {
-  /* background-color: yellow; */
-  /* width: 300px; */
-  margin-left: 0px;
-  text-align: left;
-}
-.footer-col img {
-  width: 5rem;
-  height: 5rem;
-  position: relative;
-  top: -20px;
-  text-align: left;
-}
-
-.footer-p {
-  opacity: 0.7;
-  /* background-color: #c6e130; */
-  /* padding-top: 5px; */
-  margin-bottom: 1.3rem;
-  height: fit-content;
-  width: 66%;
-  margin-left: 80px;
-  right: 50px;
-}
-
-.footer-social {
-  display: flex;
-  align-items: center;
-  margin-left: 5rem;
-}
-
-.footer-social i {
-  color: white;
-  font-size: 1.25rem;
-  margin-right: 1rem;
-  opacity: 0.7;
-  border: 2px solid white;
-  border-radius: 13px;
-  padding: 0.5rem;
-  transition: all 1s ease;
-  transition-duration: 0.5s;
-}
-
-.footer-social i:hover {
-  opacity: 1;
-  background-color: rgb(238, 10, 10);
-  border-radius: 22px;
-  border-style: dotted;
-  font-size: 1.27rem;
-}
 
 .h46 {
   margin-bottom: 2rem;
@@ -625,7 +565,7 @@ a:visited {
   color: white;
   transition: all 1s ease;
   transition-duration: 0.4s;
-  margin-left: 50px;
+  /* margin-left: 50px; */
 }
 
 .h46:hover {
@@ -633,59 +573,12 @@ a:visited {
   font-size: 21px;
   color: #ee1919;
 }
-
-.footer-col-main a {
-  display: block;
-  font-size: 15px;
-  margin-bottom: 1rem;
-  color: white;
-  margin-left: 50px;
-  opacity: 0.7;
-  text-decoration: none;
-  transition-duration: 0.4s;
-  margin-left: 50px;
-}
-
-.footer-col-main a:hover {
-  color: #e61d1d;
-}
 ironlogo .footer-col-main {
   background-color: #1da1f2;
   text-align: left;
 }
-.footer background {
-  background-color: #1da1f2;
-}
-.footer-bar {
-  /* background-color: #0d0101; */
-  text-align: center;
-  margin: auto;
-  /* padding: 1rem; */
-  font-size: 1rem;
-  .mygithub {
-    color: white;
-    text-decoration: none;
-    text-shadow: rgba(255, 0, 144, 0.629) 1px 0 6px;
-  }
-}
-.footer-bar p span {
-  color: #d12323;
-}
 
-.footer-bar p {
-  position: relative;
-  top: -60px;
-}
 
-/* .footer-bar {
-  background-color: #040101;
-} */
-
-@media (max-width: 900px) {
-  .footer {
-    grid-template-columns: 1fr 200px;
-  }
-}
 /* Hamburger Menu */
 .burger {
   display: none;
@@ -880,24 +773,143 @@ ironlogo .footer-col-main {
 
 /*Added SOCIAL- Media icons */
 
-.footer-list {
+/* Footer */
+.footer {
+  padding: 3rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  text-align: left;
+  background-color: #1da1f2;
+}
+
+/* Footer Column Styling */
+.footer-col {
+  text-align: left;
+}
+
+.footer-col img {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer Paragraph Styling */
+.footer-p {
+  opacity: 0.7;
+  margin-bottom: 1.3rem;
+  max-width: 80%;
+}
+
+/* Social Icons */
+.footer-social {
   display: flex;
-  justify-content: end;
-  align-items: center;
-  flex-direction: column;
-  background-color: rgb(0, 0, 0);
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
-.footer-list ul {
-  list-style: none;
-}
-
-.footer-list h3 {
-  font-size: 20px;
+.footer-social i {
   color: white;
-
-  margin-top: 50px;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
 }
+
+.footer-social i:hover {
+  background-color: rgb(238, 10, 10);
+  border-style: dotted;
+}
+
+/* Footer Links */
+.footer-col-main a {
+  display: block;
+  font-size: 0.9rem;
+  color: white;
+  opacity: 0.8;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col-main a:hover {
+  color: #e61d1d;
+}
+
+/* Footer Bar */
+.footer-bar {
+  text-align: center;
+  padding: 1rem;
+  background-color: #0d0101;
+}
+
+.footer-bar p {
+  font-size: 0.9rem;
+  color: white;
+}
+
+.mygithub {
+  color: white;
+  text-decoration: none;
+  text-shadow: rgba(255, 0, 144, 0.629) 1px 0 6px;
+}
+
+/* Media Queries */
+
+/* Medium screens (tablets) */
+@media (max-width: 900px) {
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+  }
+
+  .footer-col-main {
+    margin-top: 1rem;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-col img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 600px) {
+  .footer {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-col,
+  .footer-col-main {
+    margin: 0 auto;
+  }
+
+  .footer-p {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .footer-social {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .footer-social i {
+    font-size: 1rem;
+    padding: 0.4rem;
+  }
+
+  .footer-bar p {
+    font-size: 0.8rem;
+  }
+}
+
 
 .social-icons {
   display: flex;
