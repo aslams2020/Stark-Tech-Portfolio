@@ -200,6 +200,7 @@ body {
   max-width: 600px;
   display: flex;
   align-items: center;
+    background-color: #414141 !important;
   background-color: white;
   border-radius: 60px;
   padding: 5px 10px;
@@ -217,11 +218,15 @@ body {
   color: rgb(238, 10, 10);
   margin-top: 3px;
 }
-
-::placeholder {
-  color: rgb(238, 10, 10);
+::placeholder,.email-input{
+  color: rgb(249, 246, 246);
 }
 
+/* ::placeholder {
+  color: rgb(238, 10, 10);
+} */
+
+ 
 .search-bar button {
   border: 0;
   border-radius: 50%;

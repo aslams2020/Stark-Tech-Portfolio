@@ -20,7 +20,7 @@
   max-width: 768px;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 20px rgba(244, 2, 2, 0.795), 0 0 30px rgba(237, 20, 4, 0.866);
+  /* box-shadow: 0 0 20px rgba(244, 2, 2, 0.795), 0 0 30px rgba(237, 20, 4, 0.866); */
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
@@ -48,13 +48,14 @@
 }
 
 .email-input {
-    color: black;
+    color: rgb(252, 251, 251) !important;
     width: 100%;
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     font-size: medium;
+     background-color: #414141 !important;
     
 }
 
@@ -85,6 +86,7 @@
 
     .newsletter-section {
         color: #e5e5e5;
+        
     }
 
     .newsletter-content h2 {
@@ -93,16 +95,17 @@
 
     .newsletter-content p {
         color: #e5e5e5;
+       
     }
 
     .email-input {
-        background-color: #444;
+        background-color: #25b43a !important;
         color: #e5e5e5;
         border: 1px solid #666;
     }
 
     .subscribe-button {
-        background-color: rgb(238, 10, 10);
+        background-color: rgb(27, 149, 53);
         color: #e5e5e5;
     }
 
