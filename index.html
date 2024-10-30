@@ -12,6 +12,8 @@
     <link rel="website icon" href="/assets/logo/icon.png">
     <link rel="icon" href="https://images.wallpapersden.com/image/download/marvel-iron-man-art_68122_2160x3840.jpg" type="image/png">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="subscribe.css">
+
     <style>
         /* Circle styles */
         .circle {
@@ -62,6 +64,7 @@
             <li> <a href="Appearances.html">Appearances</a></li>
             <li> <a href="Comics.html">Comics</a></li>
             <li> <a href="#contact">Contact</a></li> 
+             <li> <a href="#subscribe" onclick="scrollToSection(event, 'subscribe')">Newsletter </a></li>
             
         </ul>
 
@@ -149,6 +152,39 @@
     
     
     
+
+<!-- Newsletter Section -->
+    <div class="news-main" id="subscribe">
+        
+        <div class="container">
+             <h2 class="text-center ironman-title">Subscribe Us</h2>
+            <div class="newsletter-wrapper">
+                
+                <section class="newsletter-section">
+                    <div class="newsletter-content">
+                        <h2>Stay Updated with Our Latest News</h2>
+                        <p>Subscribe to our newsletter to receive exclusive updates, promotions, and tips.</p>
+                        <form id="newsletterForm">
+                            <label for="email"></label>
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your email address"
+                                class="email-input"
+                                required
+                            />
+                            <button type="submit" class="btn submit-btn">Subscribe</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
     </section>
    <footer>
     <div class="footer background">
