@@ -134,20 +134,25 @@
 
     <section class="contact" id="contact">
         <h2 class="text-center ironman-title">Contact Us</h2>
-        <p class="ironman-subtext">Want to get in touch? We'd love to hear from you.Here's how you can reach us.</p>
+        <p class="ironman-subtext">Want to get in touch? We'd love to hear from you. Here's how you can reach us.</p>
     
-        <div class="form ironman-form">
-            <input type="text" name="name" id="name" placeholder="Enter Your Name" class="ironman-input" required>
-            <input type="tel" name="phone" id="phone" placeholder="Your Contact Number" class="ironman-input" required>
-            <input type="email" name="email" id="email" placeholder="Your Email Address" class="ironman-input" required>
+        <form class="form ironman-form" onsubmit="validateForm(event)">
+            <input type="text" name="name" id="name" placeholder="Enter Your Name" class="ironman-input" required
+                   onfocus="handleFocus(this)" onblur="handleBlur(this, 'Enter Your Name')">
+            <input type="tel" name="phone" id="phone" placeholder="Your Contact Number" class="ironman-input" required
+                   onfocus="handleFocus(this)" onblur="handleBlur(this, 'Your Contact Number')">
+            <input type="email" name="email" id="email" placeholder="Your Email Address" class="ironman-input" required
+                   onfocus="handleFocus(this)" onblur="handleBlur(this, 'Your Email Address')">
+            <textarea name="message" id="message" rows="4" placeholder="Share Your Message" class="ironman-input"
+                      onfocus="handleFocus(this)" onblur="handleBlur(this, 'Share Your Message')"></textarea>
+    
+            <button type="submit" class="btn submit-btn">Submit</button>
             
-            <textarea name="message" id="message" rows="4" placeholder="Share Your Message" class="ironman-input"></textarea>
-            
-            <button class="btn submit-btn">Submit</button>
-        </div>
+            <p id="success-message" class="success-message" style="display:none;">Thank you for contacting us! We'll get back to you soon.</p>
+        </form>
+        
+        <div id="alert-box" class="alert-box" style="display: none;">Invalid input! Please check your email and phone number.</div>
     </section>
-    
-    
     
     </section>
    <footer>
