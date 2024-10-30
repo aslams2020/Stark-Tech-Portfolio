@@ -29,6 +29,56 @@
     </style>
 </head>
 <body>
+
+
+        <!-- Preloader Section -->
+<div id="preloader">
+    <img src="arc-reactor.gif" alt="Loading...">
+</div>
+<style>
+/* Fullscreen Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    z-index: 999999999999;
+    opacity: 1;
+    transition: opacity 3s ease, visibility 3s ease;
+    visibility: visible;
+}
+    
+#preloader img {
+    width: 300px; /* Adjust width as desired */
+    height: 300px; /* Adjust height as desired */
+}
+/* Hide Content until Loaded */
+#content {
+    display: none;
+}
+
+</style>
+<script>
+// Hide preloader and show content after page loads
+window.addEventListener("load", function() {
+    const preloader = document.getElementById("preloader");
+    const content = document.getElementById("content");
+
+    // Apply fade-out effect
+    preloader.style.opacity = "0";
+    preloader.style.visibility = "hidden";
+
+    // Show content after the fade-out effect
+    setTimeout(() => {
+        content.style.display = "block";
+    }, 6000); // Match this delay to the CSS transition duration
+});
+</script>    
     <!-- Circles -->
     <div class="circle"></div>
     <div class="circle"></div>
