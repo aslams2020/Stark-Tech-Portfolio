@@ -1,6 +1,3 @@
-
-## 📊 Project Metrics
-
 <table align="center">
     <thead align="center">
         <tr>
