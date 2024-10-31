@@ -224,10 +224,10 @@ window.addEventListener('scroll', updateActiveLink);
         <img src="./assets/robert.jpg" data-aos="fade-up-left" alt="Tony" class="imgFluid">
        </div>
     </section>
-
-    <section class="contact" id="contact">
+        <section class="contact" id="contact">
         <h2 class="text-center ironman-title">Contact Us</h2>
-        <p class="ironman-subtext">Want to get in touch? We'd love to hear from you.Here's how you can reach us.</p>
+         <p class="ironman-subtext">Want to get in touch? We'd love to hear from you. Here's how you can reach us.</p>
+
     
         <div class="form ironman-form">
             <input type="text" name="name" id="name" placeholder="Enter Your Name" class="ironman-input" required>
@@ -236,12 +236,45 @@ window.addEventListener('scroll', updateActiveLink);
             
             <textarea name="message" id="message" rows="4" placeholder="Share Your Message" class="ironman-input"></textarea>
             
-            <button class="btn submit-btn">Submit</button>
+<button type="button" class="btn submit-btn" onclick="validateForm()">Submit</button>
         </div>
     </section>
     
-    
-    
+    <script>
+    function validateForm() {
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple email regex
+        const phonePattern = /^\d{10}$/; // Example for 10-digit phone numbers
+
+        if (!emailPattern.test(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+
+        if (!phonePattern.test(phone)) {
+            alert('Please enter a valid phone number (10 digits).');
+            return;
+        }
+
+        // If validation passes, you can submit the form or perform another action
+        alert('Form submitted successfully!');
+        // Here you could submit the form via AJAX or similar
+    }
+
+    function restrictInputToNumbers(event) {
+        const key = event.key;
+        if (!/^\d$/.test(key) && key !== "Backspace" && key !== "Delete") {
+            event.preventDefault(); // Prevent input if it's not a digit
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const phoneInput = document.getElementById('phone');
+        phoneInput.addEventListener('keydown', restrictInputToNumbers);
+    });
+    </script>
+
 
 <!-- Newsletter Section -->
     <div class="news-main" id="subscribe">
