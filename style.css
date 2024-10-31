@@ -119,13 +119,9 @@ html,body{
   color: white;
   font-size: 21px;
   font-family: 'Alkatra', cursive;
-  transition: color 0.3s ease, text-shadow 0.4s ease-in-out;
+ 
 }
-.nav-list li a:hover{
-  color: rgb(238, 10, 10);
-  text-decoration: none;
-  text-shadow: 2px 2px 15px rgba(255, 238, 107, 0.847);
-}
+
 .nav-list li a.active{
   color: rgb(238, 10, 10);
   border-bottom: 2px solid rgb(238, 10, 10);
@@ -409,7 +405,6 @@ html,body{
   .navbar {
       flex-direction: column;
       align-items: center; /* Ensure content is centrally aligned */
-      transition: all 0.7s ease-out;
       height: 480px;
   }
   .rightNav {
