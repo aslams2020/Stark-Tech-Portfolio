@@ -96,6 +96,29 @@ window.addEventListener("load", function() {
         content.style.display = "block";
     }, 6000); // Match this delay to the CSS transition duration
 });
+
+function updateActiveLink() {
+    const sections = document.querySelectorAll('section'); // All your sections
+    const navLinks = document.querySelectorAll('.nav-list li a'); // All navigation links
+
+    let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if (scrollPosition >= sectionTop - 85 && scrollPosition < sectionTop + sectionHeight - 85) { //85 is header space
+            const activeLinkId = section.id; // Get the current section id
+            navLinks.forEach((link) => {
+                link.classList.remove('active-header'); // Remove active class from all links
+            });
+            // Add active class to the corresponding <a> tag
+            document.querySelector(`a[href="#${activeLinkId}"]`).classList.add('active-header');
+        }
+    });
+}
+
+window.addEventListener('scroll', updateActiveLink);
 </script>    
     <!-- Circles -->
     <div class="circle"></div>
@@ -125,11 +148,11 @@ window.addEventListener("load", function() {
     <nav class="navbar h-nav background">
         <ul class="nav-list visibility">
             <div class="logo" id="ironmask" ><a href="/index.html"><img src="assets\logo\icon.png"   alt="logo" srcset=""></a></div>
-            <li> <a href="#home"  onclick="scrollToSection(event, 'home')" >Home</a></li>
-            <li> <a href="#about" onclick="scrollToSection(event, 'about')">About</a></li>
-            <li> <a href="Appearances.html">Appearances</a></li>
-            <li> <a href="Comics.html">Comics</a></li>
-            <li> <a href="#contact">Contact</a></li> 
+            <li id="nav-home"> <a href="#home" class="active-header"  onclick="scrollToSection(event, 'home')" >Home</a></li>
+            <li id="nav-about"> <a href="#about" onclick="scrollToSection(event, 'about')">About</a></li>
+            <li id="nav-appearances"> <a href="Appearances.html">Appearances</a></li>
+            <li id="nav-comics"> <a href="Comics.html">Comics</a></li>
+            <li id="nav-contact"> <a href="#contact">Contact</a></li> 
              <!-- <li> <a href="#subscribe" onclick="scrollToSection(event, 'subscribe')">Subscribe </a></li> -->
             
         </ul>
