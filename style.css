@@ -336,22 +336,17 @@ a:visited {
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s ease;
-  font-size: 16px;
-  font-weight: 600;
-  font-family: "Open Sans",sans-serif;
-} 
+}
 
 .btn-invert {
   background: #ffffff;
   color: #a94040;
   border: 2px solid transparent;
-  border-radius: 8px;
   font-size: 16px;
-  font-weight: bold;
-  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
   width: 145px;
-  transition: box-shadow 0.3s ease, transform 0.2s ease, font-size 0.2s ease;
-  box-shadow: 0 4px 12px rgba(255, 126, 95, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 4px red, 0 0 8px red, 0 0 12px red, 0 0 16px red;
 }
 
 .btn-invert:hover {
@@ -359,8 +354,8 @@ a:visited {
   color: white;
   border: 2px solid white;
   font-size: 20px;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(255, 126, 95, 0.6), 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 12px whitesmoke, 0 0 24px whitesmoke;
+  left: 100%;
+  box-shadow: 0 0 12px whitesmoke, 0 0 24px whitesmoke, 0 0 36px whitesmoke, 0 0 48px whitesmoke;
 }
 
 .btn-transparent {
@@ -374,8 +369,6 @@ a:visited {
 }
 
 .btn-transparent:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(255, 126, 95, 0.6), 0 4px 8px rgba(0, 0, 0, 0.3);
   background: #ffffff;
   color: #a94040;
 }
@@ -507,10 +500,9 @@ a:visited {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 20px rgba(244, 2, 2, 0.795), 0 0 30px rgba(237, 20, 4, 0.85);
-  backdrop-filter: 10px;
+  box-shadow: 0 0 20px rgba(244, 2, 2, 0.795), 0 0 30px rgba(237, 20, 4, 0.866);
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.5);
-  transition: all 0.3s ease-in-out;
 }
 
 .form input,
@@ -544,28 +536,24 @@ a:visited {
 .form textarea:focus {
   outline: none;
   border-bottom: 3px solid #b71c1c;
-  background-color: rgba(255,255,255,0.1);
 }
 
 /* Button Styling */
 
 .submit-btn {
-  background-color: #b71c1c;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-
+  padding: 12px 25px;
+  color: #fff;
   font-weight: bold;
   background: linear-gradient(
     135deg,
     rgba(237, 20, 4, 0.8),
     rgba(200, 0, 0, 0.6)
   );
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-  
+  font-size: 16px;
 }
 
 .submit-btn:hover {
@@ -576,38 +564,6 @@ a:visited {
     rgba(255, 0, 0, 0.9),
     rgba(237, 20, 4, 0.8)
   );
-}
-.success-message{
-  display: none;
-  font-size: 16px;
-  color: #b8e994;
-  margin-top: 20px;
-  animation: fadeIn 1s ease forwards;
-  text-align: center;
-}
-@keyframes fadeIn {
-  0% { opacity: 0;}
-  100% { opacity: 1;}
-  
-}
-.alert-box{
-  display: none;
-  background-color: #f44336;
-  color: white;
-  padding: 15px;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-  border-radius: 5px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  animation: fade-in-out 4s ease-in-out;
-}
-@keyframes fade-in-out {
-  0%, 100% {opacity: 0;}
-  10%, 90% {opacity: 1;}
-  
 }
 
 /* Footer */
@@ -1143,7 +1099,6 @@ body {
 .movies-section {
   padding: 50px;
   text-align: center;
-  background: linear-gradient(135deg,#1f1c2c,#928dab);
 }
 
 .movie-cards-container {
@@ -1156,14 +1111,14 @@ body {
 
 /* Styling for each movie card */
 .movie-card {
-  background-color: rgba(255,255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.1);
   /* Transparent card background */
-  border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 30%;
   margin: 20px 0;
   padding: 10px;
-  transition: transform 0.3s ease,box-shadow 0.3s ease;
+  /* transition: transform 0.2s; */
   text-align: center;
 }
 
@@ -1177,34 +1132,26 @@ body {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-.movie-image:hover{
-  transform: scale(1.05);
 }
 
 /* Movie title below the image */
 .movie-title {
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: bold;
   color: #ffffff;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 h1,
 h2 {
   text-align: center;
   color: #ffffff;
-  font-size: 2.5em;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
   /* Ensure text is visible on a dark background */
   margin-top: 20px;
   /* Optional: Adjust margin for spacing */
 }
 
 .imdb-rating {
-  font-size: 0.9em;
-  color: #ffd700;
   margin-left: 20px;
   /* Add space between title and IMDb rating */
 }
@@ -1222,21 +1169,21 @@ h2 {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 60px;
-  height: 60px;
-  background-color: radial-gradient(circle,rgba(170,5,5),rgba(106,12,11));
+  width: 55px;
+  height: 55px;
+  background-color: rgb(170, 5, 5);
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: none;
   cursor: pointer;
   text-align: center;
-  line-height: 55px;
-  font-size: 26px;
-  color: #ffd700;
+  line-height: 50px;
+  font-size: 24px;
   z-index: 1000;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.5s, visibility 0.5s,transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 215, 0, 0.6);
+  transition: opacity 1.5s, visibility 1.5s, box-shadow 0.3s ease;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #262626,
+    0 0 6px 2px rgba(255, 255, 255, 0.2);
   /* Adjusted outer rings */
   overflow: hidden;
 }
@@ -1250,8 +1197,7 @@ h2 {
 #BacktoTop:hover {
   background-color: rgb(106, 12, 11);
   /* Darker shade on hover */
-  transform: scale(1.15);
-  box-shadow: 0 8px 16px rgba(255, 215, 0, 0.7), 0 0 10px rgba(255, 215, 0, 0.6);
+  transform: scale(1.1);
   /* Slight zoom effect on hover */
 }
 
