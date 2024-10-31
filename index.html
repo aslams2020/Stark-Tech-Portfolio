@@ -96,6 +96,29 @@ window.addEventListener("load", function() {
         content.style.display = "block";
     }, 6000); // Match this delay to the CSS transition duration
 });
+
+function updateActiveLink() {
+    const sections = document.querySelectorAll('section'); // All your sections
+    const navLinks = document.querySelectorAll('.nav-list li a'); // All navigation links
+
+    let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if (scrollPosition >= sectionTop - 85 && scrollPosition < sectionTop + sectionHeight - 85) { //85 is header space
+            const activeLinkId = section.id; // Get the current section id
+            navLinks.forEach((link) => {
+                link.classList.remove('active-header'); // Remove active class from all links
+            });
+            // Add active class to the corresponding <a> tag
+            document.querySelector(`a[href="#${activeLinkId}"]`).classList.add('active-header');
+        }
+    });
+}
+
+window.addEventListener('scroll', updateActiveLink);
 </script>    
     <!-- Circles -->
     <div class="circle"></div>
@@ -125,11 +148,11 @@ window.addEventListener("load", function() {
     <nav class="navbar h-nav background">
         <ul class="nav-list visibility">
             <div class="logo" id="ironmask" ><a href="/index.html"><img src="assets\logo\icon.png"   alt="logo" srcset=""></a></div>
-            <li> <a href="#home"  onclick="scrollToSection(event, 'home')" >Home</a></li>
-            <li> <a href="#about" onclick="scrollToSection(event, 'about')">About</a></li>
-            <li> <a href="Appearances.html">Appearances</a></li>
-            <li> <a href="Comics.html">Comics</a></li>
-            <li> <a href="#contact">Contact</a></li> 
+            <li id="nav-home"> <a href="#home" class="active-header"  onclick="scrollToSection(event, 'home')" >Home</a></li>
+            <li id="nav-about"> <a href="#about" onclick="scrollToSection(event, 'about')">About</a></li>
+            <li id="nav-appearances"> <a href="Appearances.html">Appearances</a></li>
+            <li id="nav-comics"> <a href="Comics.html">Comics</a></li>
+            <li id="nav-contact"> <a href="#contact">Contact</a></li> 
              <!-- <li> <a href="#subscribe" onclick="scrollToSection(event, 'subscribe')">Subscribe </a></li> -->
             
         </ul>
@@ -203,7 +226,8 @@ window.addEventListener("load", function() {
     </section>
         <section class="contact" id="contact">
         <h2 class="text-center ironman-title">Contact Us</h2>
-        <p class="ironman-subtext">Want to get in touch? We'd love to hear from you. Here's how you can reach us.</p>
+         <p class="ironman-subtext">Want to get in touch? We'd love to hear from you. Here's how you can reach us.</p>
+
     
         <div class="form ironman-form">
             <input type="text" name="name" id="name" placeholder="Enter Your Name" class="ironman-input" required>
@@ -212,12 +236,11 @@ window.addEventListener("load", function() {
             
             <textarea name="message" id="message" rows="4" placeholder="Share Your Message" class="ironman-input"></textarea>
             
-            <button type="button" class="btn submit-btn" onclick="validateForm()">Submit</button>
+<button type="button" class="btn submit-btn" onclick="validateForm()">Submit</button>
         </div>
     </section>
     
     <script>
-       
     function validateForm() {
         const email = document.getElementById('email').value;
         const phone = document.getElementById('phone').value;
@@ -250,7 +273,7 @@ window.addEventListener("load", function() {
         const phoneInput = document.getElementById('phone');
         phoneInput.addEventListener('keydown', restrictInputToNumbers);
     });
-</script>
+    </script>
 
 
 <!-- Newsletter Section -->
@@ -280,7 +303,6 @@ window.addEventListener("load", function() {
             </div>
         </div>
     </div>
-
 
 
 
