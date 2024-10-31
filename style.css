@@ -408,6 +408,59 @@ a:visited {
   text-shadow: rgba(255, 0, 195, 0.849) 1px 0 10px !important;
 }
 
+@media (max-width: 600px) {
+
+ .txt-big {
+  font-size: 35px;
+  margin-left:1rem;
+  }
+
+  .txt-small {
+    margin-left:1rem;
+  }
+
+  .secondHalf{
+    padding-left:0;
+    /* margin-left: 1rem; */
+  }
+  
+  .buttons {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.buttons .btn {
+  margin: 0 !important;
+  padding: 10px 15px;
+}
+
+.firstHalf {
+  display: flex;
+  justify-content:center;
+}
+
+.ironman-illustration {
+  width: 80%;
+
+}
+
+}
+
+@media (max-width: 900px) {
+.buttons{
+margin-bottom: 25px;
+
+}
+  
+.ironman-illustration {
+  width: 90%;
+}
+
+}
+
+
+
+
 .section {
   height: 500px;
   display: flex;
