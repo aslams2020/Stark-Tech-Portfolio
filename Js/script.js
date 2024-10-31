@@ -18,6 +18,23 @@ document.getElementById('ironmask').addEventListener('click', () => {
     document.getElementById('home').scrollIntoView({ behavior: 'smooth'});
 });
 
+// Add this function to handle section navigation
+function scrollToSection(event, sectionId) {
+    const isComicsLink = sectionId === 'Comics.html'; // Check if it's the Comics link
+    if (isComicsLink) {
+        // Let the default behavior happen (navigate to Comics.html)
+        return;
+    }
+
+    event.preventDefault();
+    const section = document.getElementById(sectionId);
+    const navbarHeight = 85; // Fixed navbar height
+
+    window.scrollTo({
+        top: section.offsetTop - navbarHeight,
+        behavior: 'smooth'
+    });
+}
 
 //highlight functionality
 window.addEventListener('scroll', () => {
