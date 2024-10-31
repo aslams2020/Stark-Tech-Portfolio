@@ -260,7 +260,36 @@ window.addEventListener("load", function() {
             <div class="footer-img">
                  <img src="/assets/logo/icon.png" id="ironlogo"    alt="">
             </div>
-           
+            <div class="visitor-counter">
+                <span class="icon">👁️</span> <!-- You can replace this with an eye icon image if you prefer -->
+                <span id="visitorCount">Visitors Count:</span>
+                <span class="website-counter">0</span>
+            </div>
+        <script>
+              // Function to get the count from localStorage or initialize it
+        function getVisitorCount() {
+        return localStorage.getItem('visitorCount') || 0;
+        }
+        
+        // Function to increment and save the count
+        function incrementVisitorCount() {
+        let count = parseInt(getVisitorCount()) + 1;
+        localStorage.setItem('visitorCount', count);
+        return count;
+        }
+        
+        // Function to display the count
+        function displayVisitorCount() {
+        const counterElement = document.querySelector('.website-counter');
+        const count = incrementVisitorCount();
+        counterElement.textContent = count;
+        }
+        
+        // Call the display function when the page loads
+        document.addEventListener('DOMContentLoaded', displayVisitorCount);
+        </script>
+      
+            
             <p class="footer-p">
 
                 <!-- Iron Man is a fictional superhero in the Marvel Comics universe, created by writer Stan Lee. His real name is Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech suit of powered armor to fight crime after a life-threatening injury. -->
@@ -278,6 +307,7 @@ window.addEventListener("load", function() {
                 <a href="#"><i class="fa-brands fa-linkedin"></i></a>
             </div> 
         </div>
+  
         <div class="footer-col-main">
             <h4 class="h46">Overview</h4>
             <a href="#">Who is Iron Man?</a>
@@ -300,6 +330,8 @@ window.addEventListener("load", function() {
             <a href="#">Advertising</a>
         </div>
     </div>
+
+
     <div class="footer-bar background"> 
         <p>
             &copy; Copyright 2024- All Rights Reserved -Made With ❤️ by <a class="mygithub" href="https://github.com/aslams2020"><span>Aslam</span> Sayyad</a>

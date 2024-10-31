@@ -590,6 +590,26 @@ a:visited {
   text-align: left;
 }
 
+
+.visitor-counter {
+  position: absolute;
+  background-color: #801111;
+  color: rgb(235, 213, 14);
+  top: 85px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  margin-left: 190px;
+  z-index: 10; /* Ensure it stays on top of the border */
+}  
+
+.visitor-counter .icon {
+  margin-right: 10px;
+}
+
+
 .footer-p {
   opacity: 0.7;
   /* background-color: #c6e130; */
@@ -665,6 +685,7 @@ ironlogo .footer-col-main {
 .footer background {
   background-color: #1da1f2;
 }
+
 .footer-bar {
   /* background-color: #0d0101; */
   text-align: center;
@@ -690,6 +711,8 @@ ironlogo .footer-col-main {
   background-color: #040101;
 } */
 
+
+
 @media (max-width: 900px) {
   .footer {
   grid-template-columns: 1fr 1fr;
@@ -703,7 +726,11 @@ ironlogo .footer-col-main {
 
 .footer-img{
   margin-left: -30px;
+  margin-right: 200px;
 }
+
+
+
 
 .footer-p{
   margin-left:50px;
@@ -718,6 +745,7 @@ ironlogo .footer-col-main {
   width: 3.5rem;
   height: 3.5rem;
 }
+
 
 .footer-bar p {
   font-size: 0.8rem;
