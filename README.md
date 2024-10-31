@@ -1,5 +1,28 @@
-# Stark Tech Portfolio<img src="https://freepngimg.com/download/chibi/149662-chibi-iron-man-png-download-free.png" alt="Back to Top" width="35" height="35">
 
+## 📊 Project Metrics
+
+<table align="center">
+    <thead align="center">
+        <tr>
+            <td><b>🌟 Stars</b></td>
+            <td><b>🍴 Forks</b></td>
+            <td><b>🐛 Issues</b></td>
+            <td><b>🔔 Open PRs</b></td>
+            <td><b>🔕 Closed PRs</b></td>
+        </tr>
+     </thead>
+    <tbody>
+         <tr>
+            <td><img alt="Stars" src="https://img.shields.io/github/stars/aslams2020/Stark-Tech-Portfolio?style=flat&logo=github"/></td>
+            <td><img alt="Forks" src="https://img.shields.io/github/forks/aslams2020/Stark-Tech-Portfolio?style=flat&logo=github"/></td>
+            <td><img alt="Issues" src="https://img.shields.io/github/issues/aslams2020/Stark-Tech-Portfolio?style=flat&logo=github"/></td>
+            <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/aslams2020/Stark-Tech-Portfolio?style=flat&logo=github"/></td>
+            <td><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/aslams2020/Stark-Tech-Portfolio?style=flat&color=green&logo=github"/></td>
+        </tr>
+    </tbody>
+</table>
+
+# Stark Tech Portfolio<img src="https://freepngimg.com/download/chibi/149662-chibi-iron-man-png-download-free.png" alt="Back to Top" width="35" height="35">
 
 🌟 **Overview** 🌟
 
@@ -27,31 +50,6 @@ Inspired by Tony Stark, this portfolio is designed with cutting-edge technology 
 |-----------------------|-----------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
 | GSSoC'2024-Extd       | ![GSSoC Logo](assets/GSSoC-Ext.png)             | The coding period is from October 1st to October 30th, during which contributors make contributions and earn points on the platform. |
 | Hacktoberfest 2024    | ![Hacktoberfest Logo](assets/hacktoberfest.png) | Hacktoberfest is a month-long October event welcoming all skill levels to join the open-source community.     |
-
----
-
-## 📊 Project Metrics
-
-<table align="center">
-    <thead align="center">
-        <tr>
-            <td><b>🌟 Stars</b></td>
-            <td><b>🍴 Forks</b></td>
-            <td><b>🐛 Issues</b></td>
-            <td><b>🔔 Open PRs</b></td>
-            <td><b>🔕 Closed PRs</b></td>
-        </tr>
-     </thead>
-    <tbody>
-         <tr>
-            <td><img alt="Stars" src="https://img.shields.io/github/stars/aslams2020/Stark-Tech-Portfolio?style=flat&logo=github"/></td>
-            <td><img alt="Forks" src="https://img.shields.io/github/forks/aslams2020/Stark-Tech-Portfolio?style=flat&logo=github"/></td>
-            <td><img alt="Issues" src="https://img.shields.io/github/issues/aslams2020/Stark-Tech-Portfolio?style=flat&logo=github"/></td>
-            <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/aslams2020/Stark-Tech-Portfolio?style=flat&logo=github"/></td>
-            <td><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/aslams2020/Stark-Tech-Portfolio?style=flat&color=green&logo=github"/></td>
-        </tr>
-    </tbody>
-</table>
 
 ---
 
