@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stark Tech Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="website icon" href="/assets/logo/icon.png">
+    <link rel="icon" href="https://images.wallpapersden.com/image/download/marvel-iron-man-art_68122_2160x3840.jpg" type="image/png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Circle styles */
+        .circle {
+            height: 24px;
+            width: 24px;
+            border-radius: 24px;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 99999999;
+            /* Stays on top of all elements */
+        }
+        
+        .checkout-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+        
+        .checkout-items {
+            /* background: white; */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .checkout-summary {
+           
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            height: fit-content;
+        }
+        
+        .checkout-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .checkout-item:last-child {
+            border-bottom: none;
+        }
+        
+        .item-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .item-details {
+            flex-grow: 1;
+            padding: 0 20px;
+        }
+        
+        .item-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .item-price {
+            color: #ffbf00;
+            font-weight: bold;
+        }
+        
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .summary-total {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+        }
+        
+        .place-order-button {
+            width: 100%;
+            padding: 15px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.2s;
+        }
+        
+        .place-order-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Circles -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+<nav class="navbar h-nav background">
+    <ul class="nav-list visibility">
+        <div class="logo" id="ironmask"><a href="/index.html"><img src="assets\logo\icon.png" alt="logo" srcset=""></a></div>
+        <li> <a href="index.html">Home</a></li>
+        <li> <a href="index.html#about" onclick="scrollToSection(event, 'home')">About</a></li>
+        <li> <a href="Appearances.html">Appearances</a></li>
+        <li> <a href="Comics.html">Comics</a></li>
+        <li> <a href="index.html#contact">Contact</a></li>
+    </ul>
+
+    <div class="rightNav visibility">
+        <form class="search-bar">
+        <input type="text" name="search"  placeholder="Search the website">
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
+    <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</nav>
+
+<section class="movies-section background1" id="home">
+    <div class="box-main">
+    </div>
+
+    
+
+    <div class="checkout-container">
+        <div class="checkout-items">
+            <h2>Order Summary</h2>
+            <div id="checkoutItemsList">
+                <!-- Checkout items will be added here dynamically -->
+            </div>
+        </div>
+        
+        <div class="checkout-summary">
+            <h2>Order Details</h2>
+            <div class="summary-row">
+                <span>Subtotal:</span>
+                <span id="subtotal">$0.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Shipping:</span>
+                <span>$5.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Tax (10%):</span>
+                <span id="tax">$0.00</span>
+            </div>
+            <div class="summary-row summary-total">
+                <span>Total:</span>
+                <span id="total">$0.00</span>
+            </div>
+            <button class="place-order-button" onclick="placeOrder()">Place Order</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load cart items from localStorage
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const subtotal = parseFloat(localStorage.getItem('cartTotal')) || 0;
+            
+            // Display checkout items
+            const checkoutItemsList = document.getElementById('checkoutItemsList');
+
+// Create a product mapping with correct details
+const productDetails = {
+    'Ironman T-Shirt': {
+        image: 'assets/merchandise/tshirt585.webp',
+        price: 25
+    },
+    'Ironman Mug': {
+        image: 'assets/merchandise/ironmanmug.webp',
+        price: 15
+    },
+    'Ironman Action Figure': {
+        image: 'assets/merchandise/actionfigure.webp',
+        price: 50
+    },
+    'Ironman Bottle': {
+        image: 'assets/merchandise/bottle.webp',
+        price: 9
+    },
+    'Ironman keyChain': {
+        image: 'assets/merchandise/keychain.webp',
+        price: 19
+    },
+    'Ironman Action Figure 2': {
+        image: 'assets/merchandise/actionfigure2.webp',
+        price: 25
+    },
+    'Ironman Miniature': {
+        image: 'assets/merchandise/acf3.webp',
+        price: 25
+    },
+    'Ironman Keychain Heart': {
+        image: 'assets/merchandise/ironman_heart.webp',
+        price: 15
+    },
+    'Ironman Jacket': {
+        image: 'assets/merchandise/jacket.webp',
+        price: 50
+    },
+    'Ironman Poster': {
+        image: 'assets/merchandise/ironman_posters.webp',
+        price: 25
+    },
+    'Ironman Reactor': {
+        image: 'assets/merchandise/reactor_keychain.webp',
+        price: 35
+    },
+    'Ironman Stickers Pack': {
+        image: 'assets/merchandise/stickers.webp',
+        price: 23
+    },
+    'Ironman WallPoster': {
+        image: 'assets/merchandise/tony_stark_poster.webp',
+        price: 25
+    },
+    'Ironman Wallpaper': {
+        image: 'assets/merchandise/wallart.webp',
+        price: 15
+    },
+    'Ironman Action Figure Deluxe': {
+        image: 'assets/merchandise/acf4_.webp',
+        price: 35
+    },
+    'Ironman Mask': {
+        image: 'assets/merchandise/mask_.webp',
+        price: 350
+    },
+    'Ironman Premium Jacket': {
+        image: 'assets/merchandise/jacket.webp',
+        price: 55
+    },
+    'Ironman LunchBag': {
+        image: 'assets/merchandise/lunchbag.webp',
+        price: 80
+    },
+    'Ironman Robot': {
+        image: 'assets/merchandise/robot.webp',
+        price: 95
+    },
+    'Ironman Watch': {
+        image: 'assets/merchandise/watch.webp',
+        price: 50
+    }
+};
+
+// Modified addToCart function
+function addToCart(itemName, price) {
+    const item = {
+        item: itemName,
+        price: price,
+        quantity: 1,
+        image: productDetails[itemName].image,
+        totalPrice: price
+    };
+    
+    // Add to cart logic here
+    cartItems.push(item);
+    updateCart();
+}
+
+// Display checkout items with correct images
+cartItems.forEach(item => {
+    const itemElement = document.createElement('div');
+    itemElement.className = 'checkout-item';
+    itemElement.innerHTML = `
+        <img src="${productDetails[item.item].image}" alt="${item.item}" class="item-image">
+        <div class="item-details">
+            <div class="item-title">${item.item}</div>
+            <div>Quantity: ${item.quantity}</div>
+        </div>
+        <div class="item-price">$${item.totalPrice.toFixed(2)}</div>
+    `;
+    checkoutItemsList.appendChild(itemElement);
+});
+            
+            // Calculate and display totals
+            const shipping = 5.00;
+            const tax = subtotal * 0.1;
+            const total = subtotal + shipping + tax;
+            
+            document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
+            document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
+            document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+        });
+        
+        function placeOrder() {
+            // Here you would typically handle the order submission
+            alert('Thank you for your order!');
+            // Clear the cart
+            localStorage.removeItem('cartItems');
+            localStorage.removeItem('cartTotal');
+            // Redirect to home page
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
