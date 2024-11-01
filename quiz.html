@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Man Quiz</title>
+    <style>
+        /* Iron Man Theme CSS */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+        body {
+            background: rgba(0, 0, 0, 0.8) url(assets/bg3.jpg);
+            background-size: cover;
+            background-blend-mode: darken;
+            font-family: 'Orbitron', sans-serif;
+            color: #f2f2f2;
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        h2 {
+            color: #f4b400;
+            font-size: 1.5em;
+            text-shadow: 0 0 5px #f4b400;
+            margin-bottom: 20px;
+            text-align: center; /* Center align the title */
+        }
+
+        .container {
+            display: flex; /* Use flexbox to align items side by side */
+            align-items: flex-start; /* Align items at the start */
+            margin-top: 20px; /* Add margin for spacing from the title */
+            width: 90%; /* Set width for the container */
+            max-width: 1200px; /* Set a max width for large screens */
+        }
+
+        .firstHalf {
+            flex: 0.5; /* Image takes up half of the container */
+            margin-right: 20px; /* Space between image and quiz */
+        }
+
+        .ironman-illustration {
+            width: 90%;
+            height: auto;
+            animation: IronImage 5s ease forwards,
+                float 3.5s ease-in-out infinite alternate;
+            float: left; /* Allow the image to float */
+            max-width: 100%; /* Ensure the image does not overflow */
+        }
+
+        .quiz-container {
+            background-color: #1c1c1c;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 0.5; /* Quiz takes up half of the container */
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+            text-align: center;
+            border: 2px solid #f4b400;
+        }
+
+        h1 {
+            color: #f4b400;
+            font-size: 2em;
+            text-shadow: 0 0 10px #f4b400;
+            margin-bottom: 10px;
+        }
+
+        .question {
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .options {
+            margin: 10px 0;
+        }
+
+        .options label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+            color: #ff4b4b;
+            transition: color 0.2s ease;
+        }
+
+        .options input {
+            margin-right: 10px;
+        }
+
+        .options label:hover {
+            color: #f4b400;
+        }
+
+        #submit,
+        #quit {
+            background-color: #ff4b4b;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #f2f2f2;
+            cursor: pointer;
+            border-radius: 5px;
+            text-shadow: 0 0 10px #f4b400;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin: 5px;
+        }
+
+        #submit:hover,
+        #quit:hover {
+            background-color: #f4b400;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #ff4b4b, 0 0 20px #f4b400;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #f4b400;
+            text-shadow: 0 0 10px #f4b400;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column; /* Stack elements vertically on smaller screens */
+            }
+
+            .firstHalf {
+                margin-right: 0; /* Remove right margin on smaller screens */
+                margin-bottom: 20px; /* Add bottom margin for spacing */
+            }
+
+            .quiz-container {
+                width: 100%; /* Full width for quiz on smaller screens */
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            #submit,
+            #quit {
+                font-size: 14px;
+            }
+
+            #result {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Arc Reactor Challenge: <br>How Well Do You Know Iron Man?</h2> <!-- Title placed at the top -->
+    <div class="container">
+        <div class="firstHalf">
+            <img id="img" class="ironman-illustration" src="assets/ironman_illustration.png" alt="Ironman Illustration">
+        </div>
+        <div class="quiz-container">
+            <h1>Iron Man Quiz</h1>
+            <div id="quiz"></div>
+            <button id="submit">Submit Answer</button>
+            <button id="quit">Quit</button>
+            <div id="result"></div>
+        </div>
+    </div>
+    <script>
+        const quizData = [
+            {
+                question: "What is Iron Man's real name?",
+                options: ["Tony Stark", "Steve Rogers", "Bruce Banner", "Peter Parker"],
+                answer: "Tony Stark"
+            },
+            {
+                question: "What powers Iron Man's suit?",
+                options: ["Arc Reactor", "Magic", "Gamma Radiation", "Electricity"],
+                answer: "Arc Reactor"
+            },
+            {
+                question: "Who created Iron Man's suit?",
+                options: ["Pepper Potts", "Tony Stark", "Bruce Wayne", "Nick Fury"],
+                answer: "Tony Stark"
+            },
+            {
+                question: "What company does Tony Stark own?",
+                options: ["Stark Industries", "Oscorp", "Wayne Enterprises", "LexCorp"],
+                answer: "Stark Industries"
+            },
+            {
+                question: "Which element does Tony Stark create to replace his palladium core?",
+                options: ["Vibranium", "Titanium", "Plutonium", "New Element"],
+                answer: "New Element"
+            },
+            {
+                question: "What is the name of Iron Man's AI assistant?",
+                options: ["J.A.R.V.I.S.", "Friday", "Ultron", "Vision"],
+                answer: "J.A.R.V.I.S."
+            },
+            {
+                question: "What color is Iron Man's Mark III suit?",
+                options: ["Red and Gold", "Black and Silver", "Blue and White", "Green and Yellow"],
+                answer: "Red and Gold"
+            },
+            {
+                question: "Which superhero team is Iron Man a founding member of?",
+                options: ["The Avengers", "X-Men", "Fantastic Four", "Guardians of the Galaxy"],
+                answer: "The Avengers"
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        const quizContainer = document.getElementById("quiz");
+        const submitButton = document.getElementById("submit");
+        const quitButton = document.getElementById("quit");
+        const resultContainer = document.getElementById("result");
+
+        function loadQuestion() {
+            const currentQuestion = quizData[currentQuestionIndex];
+            quizContainer.innerHTML = `
+                <div class="question">
+                    <p>${currentQuestion.question}</p>
+                    <div class="options">
+                        ${currentQuestion.options.map(option => `
+                            <label>
+                                <input type="radio" name="option" value="${option}">
+                                ${option}
+                            </label>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function calculateScore() {
+            const selectedOption = document.querySelector(`input[name="option"]:checked`);
+            if (selectedOption && selectedOption.value === quizData[currentQuestionIndex].answer) {
+                score++;
+            }
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex < quizData.length) {
+                loadQuestion();
+            } else {
+                displayScore();
+            }
+        }
+
+        function displayScore() {
+            quizContainer.style.display = 'none';
+            submitButton.style.display = 'none';
+            quitButton.style.display = 'none';
+            resultContainer.innerHTML = `
+                <p>Your final score: ${score} out of ${quizData.length}</p>
+                <p>Great job! Thanks for playing!</p>
+            `;
+        }
+
+        function quitQuiz() {
+            quizContainer.style.display = 'none';
+            submitButton.style.display = 'none';
+            quitButton.style.display = 'none';
+            resultContainer.innerHTML = `
+                <p>Quiz exited. Your score was: ${score} out of ${quizData.length}</p>
+                <p>Come back to try again!</p>
+            `;
+        }
+
+        loadQuestion();
+
+        submitButton.addEventListener("click", calculateScore);
+        quitButton.addEventListener("click", quitQuiz);
+    </script>
+</body>
+
+</html>
