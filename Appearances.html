@@ -37,6 +37,52 @@
         z-index: 99999999;
         /* Stays on top of all elements */
       }
+
+    #snap-overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 600px; /* Adjust width to make it smaller */
+    height: auto; /* Maintain aspect ratio */
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1000;
+    object-fit: contain;
+}
+
+#message-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #ff0000;
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Creepster', cursive; /* Use a creepy font */
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 4px #000, 0 0 10px #ff0000, 0 0 20px #ff0000;
+    animation: flicker 1.5s infinite alternate;
+}
+
+/* Flickering effect */
+@keyframes flicker {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.02); }
+    75% { opacity: 0.5; }
+}
+
+  @keyframes fadeOut {
+      0% { opacity: 1; }
+      100% { opacity: 0; }
+  }
+
+
     </style>
   </head>
 
@@ -48,6 +94,7 @@
     </div>
   </button>
   <body class="custom-page">
+    
     <!-- Circles -->
     <div class="circle"></div>
     <div class="circle"></div>
@@ -111,7 +158,8 @@
       <header>
         <h1 class="text-big">Appearances</h1>
       </header>
-
+      <div id="message-overlay" style="display: none;">Demons are coming...</div>
+      <img id="snap-overlay" src="assets/Gifs/snap.gif" style="display: none;" alt="Thanos Snap">
       <section class="movies-section">
         <div class="movie" data-aos="fade-up">
           <img
@@ -141,14 +189,13 @@
           </div>
         </div>
         <div class="movie" data-aos="fade-up">
-          <img
-            src="https://i.pinimg.com/474x/f2/dd/0a/f2dd0a6bc71ef23cdd5df81f36d68c58.jpg"
-          />
-          <div class="text-container">
-            <h2>Iron Man 3 (2013)</h2>
-            <p class="quote">"We create our own demons."</p>
+          <img src = "https://i.pinimg.com/474x/f2/dd/0a/f2dd0a6bc71ef23cdd5df81f36d68c58.jpg">
+          <div class = "text-container">
+          <h2>Iron Man 3 (2013)</h2>
+          <p class="quote">"We create our own <span class="Hidden_Clickable" onclick="replaceImages()">demons</span>."</p>
           </div>
-        </div>
+      </div>
+        
         <div class="movie" data-aos="fade-up">
           <img
             src="https://m.media-amazon.com/images/M/MV5BODBhYTg1NGQtNGVmNS00ZTdiLThjYTYtZDFkNzRiNTZmNDZjXkEyXkFqcGc@._V1_.jpg"
@@ -298,6 +345,7 @@
       });
     </script>
     <script src="./Js/script.js"></script>
+    <script src="./Js/secrets.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
@@ -372,24 +420,22 @@
 
       // Start the animation
       animateCircles();
-
-
               //js for go top button
-const goTopBtn = document.querySelector('.go-top-btn');
-    window.addEventListener('scroll', checkHeight)
-    function checkHeight() {
-      if (window.scrollY > 200) {
-        goTopBtn.style.display = "flex"
-      } else {
-        goTopBtn.style.display = "none"
+  const goTopBtn = document.querySelector('.go-top-btn');
+      window.addEventListener('scroll', checkHeight)
+      function checkHeight() {
+        if (window.scrollY > 200) {
+          goTopBtn.style.display = "flex"
+        } else {
+          goTopBtn.style.display = "none"
+        }
       }
-    }
-    goTopBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+      goTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        })
       })
-    })
     </script>
   </body>
 </html>
