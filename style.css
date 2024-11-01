@@ -591,6 +591,37 @@ margin-bottom: 25px;
   border-bottom: 3px solid #b71c1c;
 }
 
+/* Drop down menu phone code */
+
+.country-input-group {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 450px;
+}
+
+.country-select {
+  width: 19%;
+  height: 35px; 
+  padding: 5px;
+  color: black; 
+  background-color: rgba(255, 255, 255, 1); 
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.country-select:focus {
+  outline: none;
+  border: 2px solid #b71c1c; 
+}
+
+.country-select option {
+  padding: 10px;
+}
+
+
 /* Button Styling */
 
 .submit-btn {
