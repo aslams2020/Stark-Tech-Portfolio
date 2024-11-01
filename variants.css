@@ -1,30 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alkatra&display=swap");
 
-/* css for scroll to top button  */
-
-.go-top-btn {
-  position: fixed;
-  bottom: 35px;
-  right: 35px;
-  cursor: pointer;
-  border-radius: 50%;
-  height: 60px;
-  width: 60px;
-  background: #ff0015;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-}
-.go-top-btn:hover {
-  background-color: #ac0000;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
-  transform: translateY(-2px);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -639,4 +615,50 @@ body {
   color: rgb(255, 252, 252) rgb(255, 255, 255) rgb(250, 250, 250);
   border-radius: 5px 5px;
   cursor: pointer;
+}
+#BacktoTop {
+  display: block;
+  /* Ensure the button is part of the layout */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background-color: rgb(170, 5, 5);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1.5s, visibility 1.5s, box-shadow 0.3s ease;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #262626,
+    0 0 6px 2px rgba(255, 255, 255, 0.2);
+  /* Adjusted outer rings */
+  overflow: hidden;
+}
+
+.circle1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#BacktoTop:hover {
+  background-color: rgb(106, 12, 11);
+  /* Darker shade on hover */
+  transform: scale(1.1);
+  /* Slight zoom effect on hover */
+}
+
+#BacktoTop svg {
+  fill: #b4a933;
+  transition: fill 0.3s ease-in-out;
+}
+
+#BacktoTop:hover svg {
+  fill: #ffd700;
 }

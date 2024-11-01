@@ -86,6 +86,13 @@
     </style>
   </head>
 
+  <button id="BacktoTop">
+    <div class="circle1">
+        <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"></path>
+        </svg>
+    </div>
+  </button>
   <body class="custom-page">
     
     <!-- Circles -->
@@ -271,6 +278,9 @@
             <a href="/contributor.html">Contributors</a>
             <a href="#">Careers</a>
           </div>
+
+
+          
           <div class="footer-col-main">
             <h4 class="h46">Contact Us</h4>
             <a href="#">Help/Faq's</a>
@@ -410,9 +420,22 @@
 
       // Start the animation
       animateCircles();
-      
-
-     
+              //js for go top button
+  const goTopBtn = document.querySelector('.go-top-btn');
+      window.addEventListener('scroll', checkHeight)
+      function checkHeight() {
+        if (window.scrollY > 200) {
+          goTopBtn.style.display = "flex"
+        } else {
+          goTopBtn.style.display = "none"
+        }
+      }
+      goTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        })
+      })
     </script>
   </body>
 </html>

@@ -446,6 +446,7 @@ footer p {
   margin-right: 100px;
   text-shadow: rgba(255, 77, 0, 0.849) 1px 0 10px !important;
   text-align: center;
+  margin-top: 80px;
 }
 @keyframes flicker {
   0%,

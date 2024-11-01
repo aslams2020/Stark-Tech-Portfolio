@@ -1,16 +1,3 @@
-
-
-## 📋 Participating Programs
-
-| Name                  | Logo                                                      | Purpose                                                                                                      |
-|-----------------------|-----------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| GSSoC'2024-Extd       | ![GSSoC Logo](assets/GSSoC-Ext.png)             | The coding period is from October 1st to October 30th, during which contributors make contributions and earn points on the platform. |
-| Hacktoberfest 2024    | ![Hacktoberfest Logo](assets/hacktoberfest.png) | Hacktoberfest is a month-long October event welcoming all skill levels to join the open-source community.     |
-
----
-
-## 📊 Project Metrics
-
 <table align="center">
     <thead align="center">
         <tr>
@@ -32,31 +19,13 @@
     </tbody>
 </table>
 
----
-
-## How to Contribute
-
-1. Fork the repository.
-2. Clone the forked repo locally.
-3. Create a new branch for your changes.
-4. Make your changes and commit them.
-5. Push the changes to your forked repo.
-6. Open a Pull Request (PR) and describe your changes.
-
-Happy coding!
-
-
-
-
 # Stark Tech Portfolio<img src="https://freepngimg.com/download/chibi/149662-chibi-iron-man-png-download-free.png" alt="Back to Top" width="35" height="35">
-
 
 🌟 **Overview** 🌟
 
 Welcome to the Stark Tech Portfolio, a tribute to the legendary Tony Stark! This cutting-edge portfolio mirrors the innovation and futuristic flair of Stark Industries, blending sleek design with powerful functionality. Dive into a showcase of projects, skills, and experiences, all presented with the same high-tech, forward-thinking energy that defines Stark's genius.
 
 <img align="right" src="https://i.pinimg.com/originals/a8/d5/ba/a8d5baeb06fc12c77ccefd0121010d20.gif" alt="Back to Top" width="255" height="255">
-
 
 ## ✨ Key Features ✨
 
@@ -70,37 +39,22 @@ Inspired by Tony Stark, this portfolio is designed with cutting-edge technology 
 
 ---
 
+
+
+## 📋 Participating Programs
+
+| Name                  | Logo                                                      | Purpose                                                                                                      |
+|-----------------------|-----------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| GSSoC'2024-Extd       | ![GSSoC Logo](assets/GSSoC-Ext.png)             | The coding period is from October 1st to October 30th, during which contributors make contributions and earn points on the platform. |
+| Hacktoberfest 2024    | ![Hacktoberfest Logo](assets/hacktoberfest.png) | Hacktoberfest is a month-long October event welcoming all skill levels to join the open-source community.     |
+
+---
+
 ## 🛠 Tech Stack
 
 - **HTML5**: The backbone of the web, defining the structure and layout of each page.
 - **CSS3**: Styling the web with vibrant designs, responsive layouts, and animations to create a polished, user-friendly interface.
 - **JavaScript**: Bringing life to the website with interactive elements, dynamic content updates, and enhanced user experiences.
-
-## ⚙️ Functionalities
-
-### Modern Portfolio Showcase:
--A sleek digital portfolio inspired by Tony Stark, showcasing a range of projects, skills, and experiences. The layout reflects the high-tech and innovative spirit of Stark Industries.
-
-### Dynamic Hero Section:
--The homepage features a striking hero section with animated visuals of Iron Man, paired with a captivating introduction to the portfolio theme.
-
-### Multi-Page Navigation:
--Effortless navigation across sections like **"About," "Appearances," "Comics,"** and **"Contact,"** offering a smooth user experience.
-
-### Themed Design & UI:
--With its bold colors, futuristic typography, and superhero-inspired visuals, the website embodies the advanced tech aesthetics associated with Tony Stark and Iron Man.
-
-### Interactive Elements:
--Engage users with action-driven buttons like **"Movies"** and **"Watch Video,"** allowing them to explore multimedia content inspired by the Iron Man universe.
-
-### Responsive Layout:
--The portfolio is fully responsive, ensuring an optimal viewing experience on devices ranging from desktops to mobile phones.
-
-### Search Functionality:
--A built-in search feature helps users quickly navigate to specific content within the portfolio.
-
-### Call-to-Action Buttons:
--Intuitive buttons encourage users to explore projects, watch videos, and dive deeper into the showcased work, driving engagement throughout the site.
 
 ## 🚀 How to Contribute to This Project 
 -We’re thrilled that you’re interested in contributing to the Stark Tech Portfolio project! Follow these steps to get started: 
