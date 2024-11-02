@@ -100,6 +100,120 @@ body {
     margin-top: 50px;
   }
   
+
+
+  /* footer */
+  /* Footer styling */
+footer {
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+.footer.background {
+  background-color: #1a1a1a; /* Dark background for footer */
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer-col {
+  flex: 1;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.footer-col-main {
+  flex: 1;
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+#ironlogo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.footer-p {
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+.footer-col-main h4 {
+  color: #e63946; /* Red heading color */
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.footer-col-main a {
+  display: block;
+  color: #c4c4c4;
+  font-size: 0.9em;
+  margin-bottom: 8px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col-main a:hover {
+  color: #e63946; /* Hover color in red */
+}
+
+.footer-social a {
+  color: #c4c4c4;
+  font-size: 1.5em;
+  margin-right: 10px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #e63946; /* Hover color for social icons */
+}
+
+.footer-bar {
+  background-color: #141414; /* Slightly darker for the bar */
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.footer-bar p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #c4c4c4;
+}
+
+.footer-bar a {
+  color: #e63946; /* Red link color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-bar a:hover {
+  color: #fff;
+}
+
+/* Responsive styling for mobile view */
+@media (max-width: 768px) {
+  .footer.background {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-col, .footer-col-main {
+      max-width: 100%;
+      text-align: center;
+  }
+
+  .footer-social {
+      justify-content: center;
+  }
+
+  .footer-bar {
+      padding: 20px;
+  }
+}
+
   .social-icons {
     display: flex;
     align-items: center;
