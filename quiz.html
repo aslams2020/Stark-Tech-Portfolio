@@ -24,8 +24,9 @@
         }
 
         h2 {
+            font-family: Arial, sans-serif;
             color: #f4b400;
-            font-size: 1.5em;
+            font-size: 2em;
             text-shadow: 0 0 5px #f4b400;
             margin-bottom: 20px;
             text-align: center; /* Center align the title */
@@ -69,6 +70,13 @@
             text-shadow: 0 0 10px #f4b400;
             margin-bottom: 10px;
         }
+        .title {
+            font-family: 'Roboto', cursive;
+            color: #f4b400;
+            font-size: 10em;
+            text-shadow: 0 0 1px #f4b400;
+            margin-bottom: 10px;
+        }
 
         .question {
             margin-bottom: 15px;
@@ -76,11 +84,13 @@
         }
 
         .options {
-            margin: 10px 0;
+            margin: 30px 0;
+            align-items: left;
         }
 
         .options label {
-            display: block;
+           padding-left: 190px;
+            display: flex;
             margin: 8px 0;
             cursor: pointer;
             color: #ff4b4b;
@@ -159,7 +169,7 @@
 </head>
 
 <body>
-    <h2>Arc Reactor Challenge: <br>How Well Do You Know Iron Man?</h2> <!-- Title placed at the top -->
+    <h2 class="Title">Arc Reactor Challenge: <br>How Well Do You Know Iron Man?</h2> <!-- Title placed at the top -->
     <div class="container">
         <div class="firstHalf">
             <img id="img" class="ironman-illustration" src="assets/ironman_illustration.png" alt="Ironman Illustration">
