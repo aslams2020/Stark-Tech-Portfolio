@@ -446,6 +446,7 @@ footer p {
   margin-right: 100px;
   text-shadow: rgba(255, 77, 0, 0.849) 1px 0 10px !important;
   text-align: center;
+  margin-top: 80px;
 }
 @keyframes flicker {
   0%,
@@ -616,4 +617,66 @@ footer p {
 
 #BacktoTop:hover svg {
   fill: #ffd700;
+}
+
+@keyframes snap {
+  0% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+  100% {
+      opacity: 0;
+      transform: translateX(100px) rotate(30deg);
+  }
+}
+
+.snap-gif {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: none; /* Initially hidden */
+}
+
+#fun-fact-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+#fun-fact-content {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+#fun-fact-message {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+#fun-fact-ok-button {
+  padding: 10px 20px;
+  background-color: #ff3333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+#fun-fact-ok-button:hover {
+  background-color: #ff5555;
 }
