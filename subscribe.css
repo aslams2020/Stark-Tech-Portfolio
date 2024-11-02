@@ -20,7 +20,7 @@
   max-width: 768px;
   flex-direction: column;
   align-items: center;
-  /* box-shadow: 0 0 20px rgba(244, 2, 2, 0.795), 0 0 30px rgba(237, 20, 4, 0.866); */
+  box-shadow: 0 0 20px rgba(255, 204, 1, 0.8), 0 0 30px rgba(255, 230, 0, 0.866);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
@@ -75,7 +75,7 @@
 }
 
 .subscribe-button:hover {
-    background-color: #45a049;
+    background-color: #580303;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -99,13 +99,13 @@
     }
 
     .email-input {
-        background-color: #25b43a !important;
+        background-color: #ac0606 !important;
         color: #e5e5e5;
         border: 1px solid #666;
     }
 
     .subscribe-button {
-        background-color: rgb(27, 149, 53);
+        background-color: #580303;
         color: #e5e5e5;
     }
 
