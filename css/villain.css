@@ -517,13 +517,18 @@ body {
   transform: translateX(0);
 }
 
+.ag-timeline-card_inner h2{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #ffeb3b;
+  font-size: 30px;
+}
+
 .ag-timeline-card_paragraph {
   opacity: 0;
   color: white;
   padding: 15px 25px;
   text-align: center;
   font-family: 'ESL Legend', sans-serif;
-  font-size: 20px;
   font-size: 18px;
   transform: translateY(20px);
   transition: all 0.6s ease;
