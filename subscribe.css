@@ -1,0 +1,115 @@
+.news-main {
+    padding-top: 0px;
+    padding-bottom: 60px;
+}
+
+.newsletter-wrapper {
+    background-color: rgb(94, 94, 94);
+    border-radius: 8px;
+    padding: 1rem;
+    
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+    min-height: 30vh;
+    max-width: 500px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  max-width: 768px;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(255, 204, 1, 0.8), 0 0 30px rgba(255, 230, 0, 0.866);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.newsletter-section {
+    color: white;
+    padding: 40px 0;
+}
+
+.newsletter-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.newsletter-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.newsletter-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.email-input {
+    color: rgb(252, 251, 251) !important;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    font-size: medium;
+     background-color: #414141 !important;
+    
+}
+
+@media (max-width: 780px) {
+    .email-input {
+        width: 80%;
+    }
+}
+
+.subscribe-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(238, 10, 10);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subscribe-button:hover {
+    background-color: #580303;
+}
+
+@media (prefers-color-scheme: dark) {
+    .newsletter-wrapper {
+        background-color: #333;
+        color: #e5e5e5;
+    }
+
+    .newsletter-section {
+        color: #e5e5e5;
+        
+    }
+
+    .newsletter-content h2 {
+        color: #e5e5e5;
+    }
+
+    .newsletter-content p {
+        color: #e5e5e5;
+       
+    }
+
+    .email-input {
+        background-color: #ac0606 !important;
+        color: #e5e5e5;
+        border: 1px solid #666;
+    }
+
+    .subscribe-button {
+        background-color: #580303;
+        color: #e5e5e5;
+    }
+
+    .subscribe-button:hover {
+        background-color: #357ae8;
+    }
+}

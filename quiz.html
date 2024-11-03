@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="website icon" href="/assets/logo/icon.png">
+    <link rel="icon" href="https://images.wallpapersden.com/image/download/marvel-iron-man-art_68122_2160x3840.jpg"
+        type="image/png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/Appearances.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="icon" href="https://images.wallpapersden.com/image/download/marvel-iron-man-art_68122_2160x3840.jpg"
+        type="image/png" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="./Js/script.js"></script>
+    <script src="./Js/secrets.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Iron Man Quiz</title>
+    <nav class="navbar h-nav background">
+        <div class="logo" id="ironmask">
+            <a href="/index.html"><img src="assets/logo/icon.png" alt="logo"></a>
+        </div>
+        <ul class="nav-list visibility">
+            <li id="nav-home"><a href="#home" class="active-header" onclick="scrollToSection(event, 'home')">Home</a>
+            </li>
+            <li id="nav-about"><a href="#home" onclick="scrollToSection(event, 'about')">About</a></li>
+            <li id="nav-appearances"><a href="Appearances.html">Appearances</a></li>
+            <li id="nav-comics"><a href="Comics.html">Comics</a></li>
+            <li id="nav-contact"><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="rightNav visibility">
+            <form class="search-bar">
+                <input type="text" id="search-bar" name="search" placeholder="Search the website">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    <style>
+        .nav-list {
+            margin-top: 30px;
+            background-color: black;
+            display: flex;
+            /* or whatever your default is */
+            /* Other styles */
+        }
+    </style>
+    <script>
+        // Select the burger and nav-list elements
+        const burger = document.querySelector('.burger');
+        const navList = document.querySelector('.nav-list');
+
+        // Add an event listener to the burger
+        burger.addEventListener('click', () => {
+            navList.classList.toggle('visibility'); // Toggle the visibility class
+        });
+
+        // Hide preloader and show content after page loads
+        window.addEventListener("load", function () {
+            const preloader = document.getElementById("preloader");
+            const content = document.getElementById("content");
+
+            // Apply fade-out effect
+            preloader.style.opacity = "0";
+            preloader.style.visibility = "hidden";
+
+            // Show content after the fade-out effect
+            setTimeout(() => {
+                content.style.display = "block";
+            }, 6000); // Match this delay to the CSS transition duration
+        });
+
+        function updateActiveLink() {
+            const sections = document.querySelectorAll('section'); // All your sections
+            const navLinks = document.querySelectorAll('.nav-list li a'); // All navigation links
+
+            let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (scrollPosition >= sectionTop - 85 && scrollPosition < sectionTop + sectionHeight - 85) { //85 is header space
+                    const activeLinkId = section.id; // Get the current section id
+                    navLinks.forEach((link) => {
+                        link.classList.remove('active-header'); // Remove active class from all links
+                    });
+                    // Add active class to the corresponding <a> tag
+                    document.querySelector(`a[href="#${activeLinkId}"]`).classList.add('active-header');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveLink);
+    </script>
+    <!-- Circles -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+
+    <style>
+        /* Iron Man Theme CSS */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+        body {
+            background: rgba(0, 0, 0, 0.8) url(assets/bg3.jpg);
+            background-size: cover;
+            background-blend-mode: darken;
+            font-family: 'Orbitron', sans-serif;
+            color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            /* Stack elements vertically */
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        h2 {
+            margin-top: 90px;
+            font-family: Arial, sans-serif;
+            color: #f4b400;
+            font-size: 2em;
+            text-shadow: 0 0 5px #f4b400;
+            margin-bottom: 20px;
+            text-align: center;
+            /* Center align the title */
+        }
+
+        .container {
+            display: flex;
+            /* Use flexbox to align items side by side */
+            align-items: flex-start;
+            /* Align items at the start */
+            margin-top: 20px;
+            /* Add margin for spacing from the title */
+            width: 90%;
+            /* Set width for the container */
+            max-width: 1200px;
+            /* Set a max width for large screens */
+        }
+
+        .firstHalf {
+            flex: 0.5;
+            /* Image takes up half of the container */
+            margin-right: 20px;
+            /* Space between image and quiz */
+        }
+
+        .ironman-illustration {
+            width: 90%;
+            height: auto;
+            animation: IronImage 5s ease forwards,
+                float 3.5s ease-in-out infinite alternate;
+            float: left;
+            /* Allow the image to float */
+            max-width: 100%;
+            /* Ensure the image does not overflow */
+        }
+
+        .quiz-container {
+            background-color: #1c1c1c;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 0.5;
+            /* Quiz takes up half of the container */
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+            text-align: center;
+            border: 2px solid #f4b400;
+        }
+
+        h1 {
+            color: #f4b400;
+            font-size: 2em;
+            text-shadow: 0 0 10px #f4b400;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-family: 'Roboto', cursive;
+            color: #f4b400;
+            font-size: 10em;
+            text-shadow: 0 0 1px #f4b400;
+            margin-bottom: 10px;
+        }
+
+        .question {
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .options {
+            margin: 30px 0;
+            align-items: left;
+        }
+
+        .options label {
+            padding-left: 190px;
+            display: flex;
+            margin: 8px 0;
+            cursor: pointer;
+            color: #ff4b4b;
+            transition: color 0.2s ease;
+        }
+
+        .options input {
+            margin-right: 10px;
+        }
+
+        .options label:hover {
+            color: #f4b400;
+        }
+
+        #submit,
+        #quit {
+            background-color: #ff4b4b;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #f2f2f2;
+            cursor: pointer;
+            border-radius: 5px;
+            text-shadow: 0 0 10px #f4b400;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin: 5px;
+        }
+
+        #submit:hover,
+        #quit:hover {
+            background-color: #f4b400;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #ff4b4b, 0 0 20px #f4b400;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #f4b400;
+            text-shadow: 0 0 10px #f4b400;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column;
+                /* Stack elements vertically on smaller screens */
+            }
+
+            .firstHalf {
+                margin-right: 0;
+                /* Remove right margin on smaller screens */
+                margin-bottom: 20px;
+                /* Add bottom margin for spacing */
+            }
+
+            .quiz-container {
+                width: 100%;
+                /* Full width for quiz on smaller screens */
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            #submit,
+            #quit {
+                font-size: 14px;
+            }
+
+            #result {
+                font-size: 1.2em;
+            }
+        }
+
+        /* Hamburger Menu */
+        .burger {
+            display: none;
+            position: absolute;
+            cursor: pointer;
+            right: 5%;
+            top: 15px;
+        }
+
+        .line {
+            width: 33px;
+            background-color: white;
+            height: 4px;
+            margin: 5px 3px;
+        }
+
+        /* Responsiveness ^_^ */
+        @media only screen and (max-width: 1020px) {
+            .logo img {
+                max-width: 100px;
+                border: 3px solid white;
+                border-radius: 50%;
+                padding: 5px;
+                margin: 20px 0px;
+                animation: glow 5s infinite alternate;
+            }
+
+            @keyframes glow {
+                from {
+                    box-shadow: 0 0 5px -8px #6a0a0a;
+                }
+
+                to {
+                    box-shadow: 0 0 10px 8px #7b0a0a;
+                }
+            }
+
+            .nav-list {
+                flex-direction: column;
+                align-items: center;
+                /* Added for central alignment */
+                margin-right: 0px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+                /* Ensure content is centrally aligned */
+                transition: all 0.7s ease-out;
+                height: 480px;
+            }
+
+            .rightNav {
+                text-align: center;
+                width: 100%;
+                /* Added to adjust width */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* Center-align the elements */
+            }
+
+            #search {
+                width: 300px;
+                /* Adjust this value to set the desired width */
+                padding: 8px;
+                margin-bottom: 10px;
+                text-align: center;
+                /* Center the placeholder text */
+            }
+
+            .btn {
+                width: 100px;
+            }
+
+            .secondHalf img {
+                width: 100%;
+                margin: 15px 0;
+                /* Adjust the top and bottom margin for spacing */
+            }
+
+            .burger {
+                display: block;
+            }
+
+            .h-nav {
+                height: 85px;
+            }
+
+            .visibility {
+                visibility: hidden;
+            }
+
+            .box-main {
+                max-width: 100%;
+                flex-direction: column-reverse;
+                align-items: center;
+                /* Ensure central alignment */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="Title">Arc Reactor Challenge: <br>How Well Do You Know Iron Man?</h2> <!-- Title placed at the top -->
+    <div class="container">
+        <div class="firstHalf">
+            <img id="img" class="ironman-illustration" src="assets/ironman_illustration.png" alt="Ironman Illustration">
+        </div>
+        <div class="quiz-container">
+            <h1>Iron Man Quiz</h1>
+            <div id="quiz"></div>
+            <button id="submit">Submit Answer</button>
+            <button id="quit">Quit</button>
+            <div id="result"></div>
+        </div>
+    </div>
+    <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top" style="bottom: 25px;">
+        <div class="scroll-top-icon">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+        <svg class="progress-ring" width="60" height="60">
+            <circle class="progress-ring__circle" stroke="#ffffff" stroke-width="4" fill="transparent" r="28" cx="30"
+                cy="30"></circle>
+        </svg>
+    </button>
+    <style>
+        .scroll-top {
+            position: fixed;
+            right: 1.6%;
+            background: linear-gradient(100deg, #b33535, #ff903c, #ff6905);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+            overflow: visible;
+            z-index: 10;
+            /* Ensure button is on top */
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: scale(1.1);
+            /* Subtle scaling instead of expanding */
+            box-shadow: 0 8px 20px rgba(255, 69, 159, 0.6);
+            /* Slightly larger shadow */
+        }
+
+        .scroll-top:active {
+            transform: scale(1.05);
+            /* Minor scale reduction on click */
+        }
+
+        .scroll-top-icon {
+            position: relative;
+            z-index: 2;
+            transition: transform 0.3s ease;
+        }
+
+        .scroll-top:hover .scroll-top-icon {
+            transform: translateY(-3px);
+        }
+
+        /* Progress Ring Styling */
+        .progress-ring {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+            /* To start from the top */
+        }
+
+        .progress-ring__circle {
+            transition: stroke-dashoffset 0.35s;
+            transform-origin: 50% 50%;
+        }
+
+        /* Pulse Animation */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 5px 15px rgba(255, 69, 159, 0.7);
+            }
+
+            100% {
+                box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+            }
+        }
+
+        .scroll-top:hover {
+            animation: pulse 1.5s infinite;
+        }
+
+        .scroll-top.show {
+            animation: none;
+            /* No animation when showing the button */
+        }
+
+        .scroll-top.show:hover {
+            animation: pulse 1.5s infinite;
+            /* Pulse on hover */
+        }
+    </style>
+    <script>
+        // Get the button
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        const progressCircle = document.querySelector(".progress-ring__circle");
+        const radius = progressCircle.r.baseVal.value;
+        const circumference = 2 * Math.PI * radius;
+
+        // Set the circle progress properties
+        progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
+        progressCircle.style.strokeDashoffset = circumference;
+
+        // Function to show or hide the button based on scroll position
+        function toggleScrollButton() {
+            if (window.scrollY > 100) {
+                scrollToTopBtn.classList.add("show");
+            } else {
+                scrollToTopBtn.classList.remove("show");
+            }
+        }
+
+        // Function to set the scroll progress on the button ring
+        function setProgress(percent) {
+            const offset = circumference - (percent / 100) * circumference;
+            progressCircle.style.strokeDashoffset = offset;
+        }
+
+        // Listen for scroll events to update button visibility and progress
+        window.addEventListener("scroll", () => {
+            toggleScrollButton();
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            setProgress(scrollPercent);
+        });
+
+        // Smooth scroll to top when the button is clicked
+        scrollToTopBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+    </script>
+    <footer>
+        <div class="footer background" style="font-family: Arial, sans-serif;">
+
+            <div class="footer-col">
+                <div class="footer-img">
+                    <img src="/assets/logo/icon.png" id="ironlogo" alt="">
+                </div>
+                <div class="visitor-counter">
+                    <span class="icon">👁️</span> <!-- You can replace this with an eye icon image if you prefer -->
+                    <span id="visitorCount">Visitors Count:</span>
+                    <span class="website-counter">0</span>
+                </div>
+                <script>
+                    // Function to get the count from localStorage or initialize it
+                    function getVisitorCount() {
+                        return localStorage.getItem('visitorCount') || 0;
+                    }
+
+                    // Function to increment and save the count
+                    function incrementVisitorCount() {
+                        let count = parseInt(getVisitorCount()) + 1;
+                        localStorage.setItem('visitorCount', count);
+                        return count;
+                    }
+
+                    // Function to display the count
+                    function displayVisitorCount() {
+                        const counterElement = document.querySelector('.website-counter');
+                        const count = incrementVisitorCount();
+                        counterElement.textContent = count;
+                    }
+
+                    // Call the display function when the page loads
+                    document.addEventListener('DOMContentLoaded', displayVisitorCount);
+                </script>
+
+
+                <p class="footer-p">
+
+                    <!-- Iron Man is a fictional superhero in the Marvel Comics universe, created by writer Stan Lee. His real name is Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech suit of powered armor to fight crime after a life-threatening injury. -->
+                    <!-- Iron Man, or Tony Stark, is a billionaire genius who becomes a superhero with his advanced armored suit. -->
+                    <!-- Iron Man, Tony Stark, is a tech genius who fights for justice in a powerful, high-tech suit of armor he created. -->
+                    Iron Man, aka Tony Stark, is a tech genius and billionaire who uses his advanced armored suit to
+                    fight for justice.
+
+                </p>
+
+                <div class="footer-social">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col-main">
+                <h4 class="h46">Overview</h4>
+                <a href="#">Who is Iron Man?</a>
+                <a href="/merchandise.html">Buy Merchandise</a>
+                <a href="#">Community</a>
+    
+                <a href="#">Franchise</a>
+                <a href="Achievements.html">Remarkable Achievements</a>
+    
+                <a href="#">Media Kit</a>
+            </div>
+            <div class="footer-col-main">
+                <h4 class="h46">About Us</h4>
+                <a href="#">Blogs</a>
+                <a href="/contributor.html">Contributors</a>
+                <a href="#">Careers</a>
+            </div>
+            <div class="footer-col-main">
+                <h4 class="h46">Contact Us</h4>
+                <a href="#">Help/Faq's</a>
+                <a href="">Contact</a>
+                <a href="PrivacyPolicy.html">Privacy Policy</a>
+                <a href="Terms&Conditions.html">Terms & Conditions</a>
+                <a href="#">Advertising</a>
+            </div>
+        </div>
+
+
+        <div class="footer-bar background" style="font-family: Arial, sans-serif;">
+            <p>
+                &copy; Copyright 2024- All Rights Reserved -Made With ❤️ by <a class="mygithub"
+                    href="https://github.com/aslams2020"><span>Aslam</span> Sayyad</a>
+            </p>
+
+        </div>
+        <style>
+            .footer-bar p{
+                    font-weight: 300;
+                    font-size: 1em;
+            }
+            .footer-p{
+                    color: white;
+                    font-weight: 300;
+                    font-size: 1em;
+            }
+        </style>
+    </footer>
+    <script>
+        const quizData = [
+            {
+                question: "What is Iron Man's real name?",
+                options: ["Tony Stark", "Steve Rogers", "Bruce Banner", "Peter Parker"],
+                answer: "Tony Stark"
+            },
+            {
+                question: "What powers Iron Man's suit?",
+                options: ["Arc Reactor", "Magic", "Gamma Radiation", "Electricity"],
+                answer: "Arc Reactor"
+            },
+            {
+                question: "Who created Iron Man's suit?",
+                options: ["Pepper Potts", "Tony Stark", "Bruce Wayne", "Nick Fury"],
+                answer: "Tony Stark"
+            },
+            {
+                question: "What company does Tony Stark own?",
+                options: ["Stark Industries", "Oscorp", "Wayne Enterprises", "LexCorp"],
+                answer: "Stark Industries"
+            },
+            {
+                question: "Which element does Tony Stark create to replace his palladium core?",
+                options: ["Vibranium", "Titanium", "Plutonium", "New Element"],
+                answer: "New Element"
+            },
+            {
+                question: "What is the name of Iron Man's AI assistant?",
+                options: ["J.A.R.V.I.S.", "Friday", "Ultron", "Vision"],
+                answer: "J.A.R.V.I.S."
+            },
+            {
+                question: "What color is Iron Man's Mark III suit?",
+                options: ["Red and Gold", "Black and Silver", "Blue and White", "Green and Yellow"],
+                answer: "Red and Gold"
+            },
+            {
+                question: "Which superhero team is Iron Man a founding member of?",
+                options: ["The Avengers", "X-Men", "Fantastic Four", "Guardians of the Galaxy"],
+                answer: "The Avengers"
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        const quizContainer = document.getElementById("quiz");
+        const submitButton = document.getElementById("submit");
+        const quitButton = document.getElementById("quit");
+        const resultContainer = document.getElementById("result");
+
+        function loadQuestion() {
+            const currentQuestion = quizData[currentQuestionIndex];
+            quizContainer.innerHTML = `
+                <div class="question">
+                    <p>${currentQuestion.question}</p>
+                    <div class="options">
+                        ${currentQuestion.options.map(option => `
+                            <label>
+                                <input type="radio" name="option" value="${option}">
+                                ${option}
+                            </label>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function calculateScore() {
+            const selectedOption = document.querySelector(`input[name="option"]:checked`);
+            if (selectedOption && selectedOption.value === quizData[currentQuestionIndex].answer) {
+                score++;
+            }
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex < quizData.length) {
+                loadQuestion();
+            } else {
+                displayScore();
+            }
+        }
+
+        function displayScore() {
+            quizContainer.style.display = 'none';
+            submitButton.style.display = 'none';
+            quitButton.style.display = 'none';
+            resultContainer.innerHTML = `
+                <p>Your final score: ${score} out of ${quizData.length}</p>
+                <p>Great job! Thanks for playing!</p>
+            `;
+        }
+
+        function quitQuiz() {
+            quizContainer.style.display = 'none';
+            submitButton.style.display = 'none';
+            quitButton.style.display = 'none';
+            resultContainer.innerHTML = `
+                <p>Quiz exited. Your score was: ${score} out of ${quizData.length}</p>
+                <p>Come back to try again!</p>
+            `;
+        }
+
+        loadQuestion();
+
+        submitButton.addEventListener("click", calculateScore);
+        quitButton.addEventListener("click", quitQuiz);
+    </script>
+</body>
+
+</html>
