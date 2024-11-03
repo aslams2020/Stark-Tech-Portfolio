@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stark Tech Portfolio - Villains</title>
+    <!-- Favicon -->
+    <link rel="website icon" href="/assets/logo/icon.png">
+    <!-- Linked CSS files -->
+    <link rel="stylesheet" href="css/villain.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="icon" href="https://images.wallpapersden.com/image/download/marvel-iron-man-art_68122_2160x3840.jpg"
+        type="image/png" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+        /* Circle styles */
+        .circle {
+            height: 24px;
+            width: 24px;
+            border-radius: 24px;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 99999999;
+            /* Stays on top of all elements */
+        }
+
+        .go-top-btn {
+            position: fixed;
+            bottom: 35px;
+            right: 35px;
+            cursor: pointer;
+            border-radius: 50%;
+            height: 60px;
+            width: 60px;
+            background: #ff0015;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+        }
+
+        .go-top-btn:hover {
+            background-color: #ac0000;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<button class="go-top-btn">
+    <img width="35px" src="cropped_image.png" alt="go top">
+</button>
+
+<body class="custom-page">
+    <!-- Circles -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar h-nav background">
+            <ul class="nav-list visibility">
+                <div class="logo" id="ironmask">
+                    <a href="/index.html"><img src="assets\logo\icon.png" alt="logo" srcset="" /></a>
+                </div>
+                <li><a href="index.html#home" class="active">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="#" id="appearance_active">Appearances</a></li>
+                <li><a href="Comics.html">Comics</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <!-- Added Blog page in navbar -->
+                <li> <a href="/blog.html">Blogs</a></li>
+            </ul>
+
+            <div class="rightNav visibility">
+                <form class="search-bar">
+                    <input type="text" name="search" id="search-bar" placeholder="Search the website" />
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="background1">
+
+        <section class="hero">
+            <h1 class="text-big">Villains</h1>
+            <p class="vil-descrp">
+                Throughout Iron Man's journey, he has faced some of the most notorious villains, each bringing their own
+                unique threats and ideologies. From the tech-savvy mastermind Obadiah Stane to the electrifying
+                Whiplash, and the cunning Mandarin, these villains have tested Iron Man's strength, intellect, and
+                resilience. Dive into the battles, witness the clash of power and ideals, and discover the challenges
+                that defined Iron Man's legacy in his fight to protect humanity from those who seek to bring it down.
+            </p>
+        </section>
+
+
+        <!-- Timeline -->
+        <div class="Villain">
+            <!-- TopTile Code -->
+            <div class="TopTitle">
+                <div class="secTitle Heading">MCU Villains Timeline</div>
+            </div>
+    
+            <!-- <section class="Main-section"> -->
+            <section class="Villain-section">
+                <div class="Container">
+                    <div class="js-timeline ag-timeline">
+    
+                        <!-- Progress Bar Line Code -->
+                        <div class="js-timeline_line ag-timeline_line">
+                            <div class="js-timeline_line-progress ag-timeline_line-progress"></div>
+                        </div>
+    
+                        <div class="ag-timeline_list">
+    
+                            <!-- Left: Obadiah Stane / Iron Monger [Iron Man (2008)] -->
+                            <div class="js-timeline_item ag-timeline_item">
+                                <div class="ag-timeline-card_box">
+                                    <!-- Number Code -->
+                                    <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                        <div class="ag-timeline-card_point">01</div>
+                                    </div>
+    
+                                    <!-- Name Code -->
+                                    <div class="ag-timeline-card_meta-box">
+                                        <div class="ag-timeline-card_meta">Iron Monger</div>
+                                    </div>
+                                </div>
+    
+                                <!-- Image Code -->
+                                <div class="ag-timeline-card_item">
+                                    <div class="ag-timeline-card_inner">
+                                        <div class="ag-timeline-card_img-box">
+                                            <img src="/Assets/Villains/Iron_Monger.png" alt=""
+                                                class="ag-timeline-card_img">
+                                        </div>
+                                        <!-- Card heading -->
+                                        <h2>Obadiah Stane / Iron Monger <br>
+                                            Iron Man (2008)
+                                        </h2>
+                                        <!-- Iron Monger Description -->
+                                        <p class="ag-timeline-card_paragraph">Tony's mentor turned adversary. Obadiah steals Stark's arc reactor technology to create a massive armored suit, leading to Iron Man's first major battle.</p>
+                                    </div>
+                                    <div class="ag-timeline-card_arrow"></div>
+                                </div>
+                            </div>
+    
+                            <!-- Right: Ivan Vanko / Whiplash [Iron Man 2 (2010)] -->
+                            <div class="js-timeline_item ag-timeline_item">
+                                <div class="ag-timeline-card_box">
+                                    <!-- Name Code -->
+                                    <div class="ag-timeline-card_meta-box">
+                                        <div class="ag-timeline-card_meta">Whiplash</div>
+                                    </div>
+    
+                                    <!-- Number Code -->
+                                    <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                        <div class="ag-timeline-card_point">02</div>
+                                    </div>
+                                </div>
+    
+                                <!-- Image Code -->
+                                <div class="ag-timeline-card_item">
+                                    <div class="ag-timeline-card_inner">
+                                        <div class="ag-timeline-card_img-box">
+                                            <img src="/Assets/Villains/Whiplash.jpg" alt=""
+                                                class="ag-timeline-card_img">
+                                        </div>
+                                        <!-- Card heading -->
+                                        <h2>Ivan Vanko / Whiplash <br>
+                                            Iron Man 2 (2010)
+                                        </h2>
+                                        <!-- Whiplash Description -->
+                                        <p class="ag-timeline-card_paragraph">A vengeful engineer with his own arc reactor-powered whips. Vanko exposes weaknesses in Iron Man's technology and allies with Justin Hammer to challenge Tony.</p>
+                                    </div>
+                                    <div class="ag-timeline-card_arrow"></div>
+                                </div>
+                            </div>
+    
+                            <!-- Left: Justin Hammer [Iron Man 2 (2010)] -->
+                            <div class="js-timeline_item ag-timeline_item">
+                                <div class="ag-timeline-card_box">
+                                    <!-- Number Code -->
+                                    <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                        <div class="ag-timeline-card_point">03</div>
+                                    </div>
+    
+                                    <!-- Name Code -->
+                                    <div class="ag-timeline-card_meta-box">
+                                        <div class="ag-timeline-card_meta">Justin Hammer</div>
+                                    </div>
+                                </div>
+    
+                                <!-- Image Code -->
+                                <div class="ag-timeline-card_item">
+                                    <div class="ag-timeline-card_inner">
+                                        <div class="ag-timeline-card_img-box">
+                                            <img src="/Assets/Villains/Justin Hammer.webp" alt=""
+                                                class="ag-timeline-card_img">
+                                        </div>
+                                        <!-- Card heading -->
+                                        <h2>Justin Hammer <br>
+                                            Iron Man 2 (2010)
+                                        </h2>
+                                        <!-- Justin Hammer Description -->
+                                        <p class="ag-timeline-card_paragraph">A rival weapons manufacturer who supplies Vanko with resources to create drones and disrupt Tony’s reputation.</p>
+                                    </div>
+                                    <div class="ag-timeline-card_arrow"></div>
+                                </div>
+                            </div>
+    
+                            <!-- Right: Loki [The Avengers (2012)] -->
+                            <div class="js-timeline_item ag-timeline_item">
+                                <div class="ag-timeline-card_box">
+                                    <!-- Name Code -->
+                                    <div class="ag-timeline-card_meta-box">
+                                        <div class="ag-timeline-card_meta">Loki</div>
+                                    </div>
+    
+                                    <!-- Number Code -->
+                                    <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                        <div class="ag-timeline-card_point">04</div>
+                                    </div>
+                                </div>
+    
+                                <!-- Image Code -->
+                                <div class="ag-timeline-card_item">
+                                    <div class="ag-timeline-card_inner">
+                                        <div class="ag-timeline-card_img-box">
+                                            <img src="/Assets/Villains/Loki.jpg" alt="" class="ag-timeline-card_img">
+                                        </div>
+                                        <!-- Card heading -->
+                                        <h2>Loki <br>
+                                            The Avengers (2012)
+                                        </h2>
+                                        <!-- Loki Description -->
+                                        <p class="ag-timeline-card_paragraph">Although not Iron Man’s sole adversary, Loki leads the Chitauri army in an attack on New York, prompting Tony to confront intergalactic threats and push his limits.</p>
+                                    </div>
+                                    <div class="ag-timeline-card_arrow"></div>
+                                </div>
+                            </div>
+    
+                            <!-- Left: Aldrich Killian [Iron Man 3 (2013)] -->
+                            <div class="js-timeline_item ag-timeline_item">
+                                <div class="ag-timeline-card_box">
+                                    <!-- Number Code -->
+                                    <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                        <div class="ag-timeline-card_point">05</div>
+                                    </div>
+    
+                                    <!-- Name Code -->
+                                    <div class="ag-timeline-card_meta-box">
+                                        <div class="ag-timeline-card_meta">Aldrich Killian</div>
+                                    </div>
+                                </div>
+    
+                                <!-- Image Code -->
+                                <div class="ag-timeline-card_item">
+                                    <div class="ag-timeline-card_inner">
+                                        <div class="ag-timeline-card_img-box">
+                                            <img src="/Assets/Villains/Aldrich Killian.webp" alt=""
+                                                class="ag-timeline-card_img">
+                                        </div>
+                                        <!-- Card heading -->
+                                        <h2>Aldrich Killian <br>
+                                            Iron Man 3 (2013)
+                                        </h2>
+                                        <!-- Aldrich Killian Description -->
+                                        <p class="ag-timeline-card_paragraph">The head of Advanced Idea Mechanics (AIM) and the true power behind the Mandarin facade. He uses the Extremis virus to enhance his abilities, presenting Iron Man with a new biological challenge.</p>
+                                    </div>
+                                    <div class="ag-timeline-card_arrow"></div>
+                                </div>
+                            </div>
+    
+                            <!-- Right: The Mandarin (Trevor Slattery) [Iron Man 3 (2013)] -->
+                            <div class="js-timeline_item ag-timeline_item">
+                                <div class="ag-timeline-card_box">
+                                    <!-- Name Code -->
+                                    <div class="ag-timeline-card_meta-box">
+                                        <div class="ag-timeline-card_meta">The Mandarin</div>
+                                    </div>
+    
+                                    <!-- Number Code -->
+                                    <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                        <div class="ag-timeline-card_point">06</div>
+                                    </div>
+                                </div>
+    
+                                <!-- Image Code -->
+                                <div class="ag-timeline-card_item">
+                                    <div class="ag-timeline-card_inner">
+                                        <div class="ag-timeline-card_img-box">
+                                            <img src="/Assets/Villains/TheMandarin.jpg" alt=""
+                                                class="ag-timeline-card_img">
+                                        </div>
+                                        <!-- Card heading -->
+                                        <h2>The Mandarin (Trevor Slattery) <br>
+                                            Iron Man 3 (2013)
+                                        </h2>
+                                        <!-- The Mandarin Description -->
+                                        <p class="ag-timeline-card_paragraph">Poses as a global terrorist but is later revealed to be a decoy set up by Killian.</p>
+                                    </div>
+                                    <div class="ag-timeline-card_arrow"></div>
+                                </div>
+                            </div>
+    
+                            <!-- Left: Ultron [Avengers: Age of Ultron (2015)] -->
+                            <div class="js-timeline_item ag-timeline_item">
+                                <div class="ag-timeline-card_box">
+                                    <!-- Number Code -->
+                                    <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                        <div class="ag-timeline-card_point">07</div>
+                                    </div>
+    
+                                    <!-- Name Code -->
+                                    <div class="ag-timeline-card_meta-box">
+                                        <div class="ag-timeline-card_meta">Ultron</div>
+                                    </div>
+                                </div>
+    
+                                <!-- Image Code -->
+                                <div class="ag-timeline-card_item">
+                                    <div class="ag-timeline-card_inner">
+                                        <div class="ag-timeline-card_img-box">
+                                            <img src="/Assets/Villains/Ultron.jpg" alt="" class="ag-timeline-card_img">
+                                        </div>
+                                        <!-- Card heading -->
+                                        <h2>Ultron <br>
+                                            Avengers: Age of Ultron (2015)
+                                        </h2>
+                                        <!-- Ultron Description -->
+                                        <p class="ag-timeline-card_paragraph">An AI villain accidentally created by Tony Stark and Bruce Banner. Ultron's goal to achieve “peace” through human extinction forces Iron Man to confront the ethical implications of his inventions.</p>
+                                    </div>
+                                    <div class="ag-timeline-card_arrow"></div>
+                                </div>
+                            </div>
+    
+                            <!-- Right: Winter Soldier (Bucky) [Captain America: Civil War (2016)] -->
+                            <div class="js-timeline_item ag-timeline_item">
+                                <div class="ag-timeline-card_box">
+                                    <!-- Name Code -->
+                                    <div class="ag-timeline-card_meta-box">
+                                        <div class="ag-timeline-card_meta">Winter Soldier(Bucky)</div>
+                                    </div>
+    
+                                    <!-- Number Code -->
+                                    <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                        <div class="ag-timeline-card_point">08</div>
+                                    </div>
+                                </div>
+    
+                                <!-- Image Code -->
+                                <div class="ag-timeline-card_item">
+                                    <div class="ag-timeline-card_inner">
+                                        <div class="ag-timeline-card_img-box">
+                                            <img src="/Assets/Villains/Winter_Soldier.webp" alt=""
+                                                class="ag-timeline-card_img">
+                                        </div>
+                                        <!-- Card heading -->
+                                        <h2>Winter Soldier (Bucky) <br>
+                                            Captain America: Civil War (2016)
+                                        </h2>
+                                        <!-- Winter Soldier Description -->
+                                        <p class="ag-timeline-card_paragraph">Tony confronts the Winter Soldier after discovering his role in his parents' death, leading to one of Iron Man's most emotionally charged battles.</p>
+                                    </div>
+                                    <div class="ag-timeline-card_arrow"></div>
+                                </div>
+                            </div>
+    
+                            <!-- Left: Thanos [Avengers: Infinity War (2018) / Avengers: Endgame (2019)] -->
+                            <div class="js-timeline_item ag-timeline_item">
+                                <div class="ag-timeline-card_box">
+                                    <!-- Number Code -->
+                                    <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                        <div class="ag-timeline-card_point">09</div>
+                                    </div>
+    
+                                    <!-- Name Code -->
+                                    <div class="ag-timeline-card_meta-box">
+                                        <div class="ag-timeline-card_meta">Thanos</div>
+                                    </div>
+                                </div>
+    
+                                <!-- Image Code -->
+                                <div class="ag-timeline-card_item">
+                                    <div class="ag-timeline-card_inner">
+                                        <div class="ag-timeline-card_img-box">
+                                            <img src="/Assets/Villains/Thanos.jpg" alt="" class="ag-timeline-card_img">
+                                        </div>
+                                        <!-- Card heading -->
+                                        <h2>Thanos <br>
+                                            Avengers: Infinity War (2018) <br>
+                                            Avengers: Endgame (2019)
+                                        </h2>
+                                        <!-- Thanos Description -->
+                                        <p class="ag-timeline-card_paragraph">One of Iron Man's greatest threats, Thanos battles Tony on Titan. The fight pushes Tony to his limits, as he barely survives after witnessing the scale of Thanos's power. In the final battle on Earth, Tony faces Thanos once again. This time, he sacrifices himself to wield the Infinity Stones and defeat Thanos, bringing closure to his journey.
+                                        </p>
+                                    </div>
+                                    <div class="ag-timeline-card_arrow"></div>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+        
+        
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer background">
+            <div class="footer-col">
+                <img src="/assets/logo/icon.png" id="ironlogo" alt="" />
+                <p class="footer-p">
+                    <!-- Iron Man is a fictional superhero in the Marvel Comics universe, created by writer Stan Lee. His real name is Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech suit of powered armor to fight crime after a life-threatening injury. -->
+                    <!-- Iron Man, or Tony Stark, is a billionaire genius who becomes a superhero with his advanced armored suit. -->
+                    <!-- Iron Man, Tony Stark, is a tech genius who fights for justice in a powerful, high-tech suit of armor he created. -->
+                    Iron Man, aka Tony Stark, is a tech genius and billionaire who
+                    uses his advanced armored suit to fight for justice.
+                </p>
+
+                <div class="footer-social">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-col-main">
+                <h4 class="h46">Overview</h4>
+                <a href="#">Who is Iron Man?</a>
+                <a href="#">Franchise</a>
+                <a href="#">Community</a>
+                <!-- Added Villain page redirect -->
+                <a href="villain.html">Marvel Villains</a>
+            </div>
+            <div class="footer-col-main">
+                <h4 class="h46">About Us</h4>
+                <a href="#">Blogs</a>
+                <a href="/contributor.html">Contributors</a>
+                <a href="#">Careers</a>
+            </div>
+
+
+
+            <div class="footer-col-main">
+                <h4 class="h46">Contact Us</h4>
+                <a href="#">Help/Faq's</a>
+                <a href="">Contact</a>
+                <a href="PrivacyPolicy.html">Privacy Policy</a>
+                <a href="Terms&Conditions.html">Terms & Conditions</a>
+                <a href="#">Advertising</a>
+            </div>
+        </div>
+        <div class="footer-bar background">
+            <p>
+                &copy; Copyright 2024- All Rights Reserved -Made With ❤️ by
+                <a class="mygithub" href="https://github.com/aslams2020"><span>Aslam</span> Sayyad</a>
+            </p>
+        </div>
+    </footer>
+
+
+    <script>
+        /* Back to Top Button */
+        const scrollToTopBtn = document.getElementById("BacktoTop");
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 50 ||
+                document.documentElement.scrollTop > 50
+            ) {
+                scrollToTopBtn.style.visibility = "visible";
+                scrollToTopBtn.style.opacity = "1";
+            } else {
+                scrollToTopBtn.style.visibility = "hidden";
+                scrollToTopBtn.style.opacity = "0";
+            }
+        }
+
+        scrollToTopBtn.addEventListener("click", function () {
+            // Smooth scroll back to top
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+
+    <script>
+        window.onload = function () {
+            document.getElementById("search-bar").focus();
+        };
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const winScroll =
+                document.body.scrollTop || document.documentElement.scrollTop;
+            const height =
+                document.documentElement.scrollHeight -
+                document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./Js/script.js"></script>
+    <script src="./Js/villain.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        // Coordinates for the cursor
+        const coords = { x: 0, y: 0 };
+        const circles = document.querySelectorAll(".circle");
+
+        // Colors for the circles
+        const colors = [
+            "#ffb56b",
+            "#fdaf69",
+            "#f89d63",
+            "#f59761",
+            "#ef865e",
+            "#ec805d",
+            "#e36e5c",
+            "#df685c",
+            "#d5585c",
+            "#d1525c",
+            "#c5415d",
+            "#c03b5d",
+            "#b22c5e",
+            "#ac265e",
+            "#9c155f",
+            "#950f5f",
+            "#830060",
+            "#7c0060",
+            "#680060",
+            "#60005f",
+            "#48005f",
+            "#3d005e",
+        ];
+
+        // Assign colors and initial position to each circle
+        circles.forEach(function (circle, index) {
+            circle.x = 0;
+            circle.y = 0;
+            circle.style.backgroundColor = colors[index % colors.length];
+        });
+
+        // Update the coordinates when the mouse moves
+        window.addEventListener("mousemove", function (e) {
+            coords.x = e.clientX;
+            coords.y = e.clientY;
+        });
+
+        // Animation function to move the circles
+        function animateCircles() {
+            let x = coords.x;
+            let y = coords.y;
+
+            circles.forEach(function (circle, index) {
+                // Update the position and scale of each circle
+                circle.style.left = x - 12 + "px";
+                circle.style.top = y - 12 + "px";
+                circle.style.scale = (circles.length - index) / circles.length;
+
+                circle.x = x;
+                circle.y = y;
+
+                // Get the next circle in the sequence
+                const nextCircle = circles[index + 1] || circles[0];
+                x += (nextCircle.x - x) * 0.3;
+                y += (nextCircle.y - y) * 0.3;
+            });
+
+            // Repeat the animation
+            requestAnimationFrame(animateCircles);
+        }
+
+        // Start the animation
+        animateCircles();
+
+
+        //js for go top button
+        const goTopBtn = document.querySelector('.go-top-btn');
+        window.addEventListener('scroll', checkHeight)
+        function checkHeight() {
+            if (window.scrollY > 200) {
+                goTopBtn.style.display = "flex"
+            } else {
+                goTopBtn.style.display = "none"
+            }
+        }
+        goTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        })
+    </script>
+</body>
+
+</html>
