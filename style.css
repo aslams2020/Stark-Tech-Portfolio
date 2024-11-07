@@ -674,7 +674,48 @@ margin-bottom: 25px;
   text-align: left;
 }
 
+.movie-cards-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+}
 
+/* Styling for each movie card */
+.movie-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Transparent card background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 30%;
+  margin: 20px 0;
+  padding: 10px;
+  /* transition: transform 0.2s; */
+  text-align: center;
+}
+
+/* .movie-card:hover {
+  /* transform: scale(1.05);  */
+/* Slight zoom effect on hover */
+/* } */
+
+/* Movie image inside card */
+.movie-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Movie title below the image */
+.movie-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+  
 .visitor-counter {
   position: absolute;
   background-color: #801111;
@@ -842,64 +883,6 @@ ironlogo .footer-col-main {
 
 
 /* Small screens (mobile) */
-@media (max-width: 600px) {
-  .footer {
-    grid-template-columns: 1fr;
-    padding: 1.5rem;
-    text-align: center;
-  }
-
-  .footer-col,
-  .footer-col-main {
-    margin: 0 auto;
-  }
-
-  .footer-img{
-    display:flex;
-    justify-content: center;
-    margin-top: 1rem;
-  }
-
-  #ironlogo{
-    margin-left:0;
-  }
-
-  .footer-p {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .footer-social {
-    justify-content: center;
-    gap: 0.5rem;
-    margin-left: 0;
-    margin-top: 1rem;
-  }
-
-  .footer-social i {
-    font-size: 1rem;
-    padding: 0.4rem;
-  }
-
-  .h46{
-    margin-left:0;
-    margin-bottom: 0.5rem;
-  }
-
-  .footer-col-main a {
-  margin-left: 0;
-  margin-bottom: 0.25rem;
-}
-
-.footer-bar p {
-  font-size: 0.8rem;
-  top:0;
-  padding: 1rem 3rem;
-}
-
-
-}
-
 
 /* Hamburger Menu */
 .burger {
@@ -1366,4 +1349,90 @@ input[type='number']::-webkit-outer-spin-button {
   color: rgb(238, 10, 10);
   text-decoration: underline;
 }
+@media (max-width: 600px) {
+ 
+  .movie-cards-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  
+  /* Styling for each movie card */
+  .movie-card {
+    width:100%;
+    height: auto;
+  }
+  
+  .movie-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  .movie-title {
+    font-size:1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 10px;
+  }
+ 
+ 
+ 
+ 
+  .footer {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    text-align: center;
+  }
 
+  .footer-col,
+  .footer-col-main {
+    margin: 0 auto;
+  }
+
+  .footer-img{
+    display:flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  #ironlogo{
+    margin-left:0;
+  }
+
+  .footer-p {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .footer-social {
+    justify-content: center;
+    gap: 0.5rem;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .footer-social i {
+    font-size: 1rem;
+    padding: 0.4rem;
+  }
+
+  .h46{
+    margin-left:0;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-col-main a {
+  margin-left: 0;
+  margin-bottom: 0.25rem;
+}
+
+.footer-bar p {
+  font-size: 0.8rem;
+  top:0;
+  padding: 1rem 3rem;
+}
+
+
+}
