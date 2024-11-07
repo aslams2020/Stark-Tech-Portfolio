@@ -716,7 +716,7 @@ margin-bottom: 25px;
 }
 
   
-.visitor-counter {
+.visitor-counter { 
   position: absolute;
   background-color: #801111;
   color: rgb(235, 213, 14);
@@ -1377,7 +1377,10 @@ input[type='number']::-webkit-outer-spin-button {
     margin-top: 10px;
   }
  
- 
+  .visitor-counter {
+    margin-left: 170px;
+    top: 30px;
+  }
  
  
   .footer {
