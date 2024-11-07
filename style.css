@@ -1174,6 +1174,7 @@ ironlogo .footer-col-main {
 
 /* Styling for movie headings */
 .movies-heading {
+  margin-top: 70px;
   font-size: 2.5rem;
   font-family: 'Arial', sans-serif;
   font-weight: bold;
@@ -1204,15 +1205,10 @@ body {
 
 /* Background section should remain the same */
 .background1 {
-  padding: 40px 0;
+  padding: 0.1px ;
 }
 
 /* Movie Cards Section */
-.movies-section {
-  padding: 50px;
-  text-align: center;
-}
-
 .movie-cards-container {
   display: flex;
   justify-content: space-around;
@@ -1221,18 +1217,16 @@ body {
   max-width: 1200px;
 }
 
-/* Styling for each movie card */
 .movie-card {
   background-color: rgba(255, 255, 255, 0.1);
-  /* Transparent card background */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 30%;
-  margin: 20px 0;
+  margin: 20px 0; /* Maintains spacing around cards */
   padding: 10px;
-  /* transition: transform 0.2s; */
   text-align: center;
 }
+
 
 /* .movie-card:hover {
   /* transform: scale(1.05);  */
