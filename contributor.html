@@ -147,77 +147,93 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const contributorsContainer = document.getElementById("contributors");
-        const statsContainer = document.getElementById("stats");
-        const loadingIndicator = document.getElementById("loading");
+  const contributorsContainer = document.getElementById("contributors");
+  const statsContainer = document.getElementById("stats");
+  const loadingIndicator = document.getElementById("loading");
 
-        async function fetchData() {
-          loadingIndicator.style.display = "flex";
+  async function fetchData() {
+    loadingIndicator.style.display = "flex";
+    let allContributors = [];
+    let page = 1;
+    const perPage = 100; // Maximum number of contributors per page (GitHub's limit)
 
-          try {
-            const contributorsResponse = await axios.get(
-              "https://api.github.com/repos/aslams2020/Stark-Tech-Portfolio/contributors"
-            );
-            const contributorsData = contributorsResponse.data;
-
-            const repoResponse = await axios.get(
-              "https://api.github.com/repos/aslams2020/Stark-Tech-Portfolio"
-            );
-            const repoData = repoResponse.data;
-
-            populateStats(repoData, contributorsData);
-            populateContributors(contributorsData);
-          } catch (error) {
-            console.error("Error fetching data:", error);
-          } finally {
-            loadingIndicator.style.display = "none";
+    try {
+      // Loop to fetch all pages
+      while (true) {
+        const contributorsResponse = await axios.get(
+          `https://api.github.com/repos/aslams2020/Stark-Tech-Portfolio/contributors`,
+          {
+            params: {
+              page: page,
+              per_page: perPage,
+            }
           }
-        }
+        );
 
-        function populateStats(repoData, contributors) {
-          const stats = [
-            { label: "Forks", value: repoData.forks_count },
-            {
-              label: "GitHub Stars",
-              value: repoData.stargazers_count,
-            },
+        const contributorsData = contributorsResponse.data;
+        if (contributorsData.length === 0) break; // No more contributors to load
 
-            {
-              label: "Total Contributions",
-              value: contributors.reduce(
-                (sum, contributor) => sum + contributor.contributions,
-                0
-              ),
-            },
-            { label: "Contributors", value: contributors.length },
-          ];
+        allContributors = [...allContributors, ...contributorsData]; // Append the contributors to the list
+        page++; // Increment the page number for the next iteration
+      }
 
-          statsContainer.innerHTML = "";
-          stats.forEach((stat) => {
-            const statCard = document.createElement("div");
-            statCard.className = "stat-card";
-            statCard.innerHTML = `<h3>${stat.value}</h3><p>${stat.label}</p>`;
-            statsContainer.appendChild(statCard);
-          });
-        }
+      // Fetch repo stats
+      const repoResponse = await axios.get(
+        "https://api.github.com/repos/aslams2020/Stark-Tech-Portfolio"
+      );
+      const repoData = repoResponse.data;
 
-        function populateContributors(contributors) {
-          contributorsContainer.innerHTML = "";
-          contributors.forEach((contributor) => {
-            const contributorCard = document.createElement("div");
-            contributorCard.className = "contributor-card";
-            contributorCard.innerHTML = `
+      populateStats(repoData, allContributors);
+      populateContributors(allContributors);
+
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    } finally {
+      loadingIndicator.style.display = "none";
+    }
+  }
+
+  function populateStats(repoData, contributors) {
+    const stats = [
+      { label: "Forks", value: repoData.forks_count },
+      { label: "GitHub Stars", value: repoData.stargazers_count },
+      {
+        label: "Total Contributions",
+        value: contributors.reduce(
+          (sum, contributor) => sum + contributor.contributions,
+          0
+        ),
+      },
+      { label: "Contributors", value: contributors.length },
+    ];
+
+    statsContainer.innerHTML = "";
+    stats.forEach((stat) => {
+      const statCard = document.createElement("div");
+      statCard.className = "stat-card";
+      statCard.innerHTML = `<h3>${stat.value}</h3><p>${stat.label}</p>`;
+      statsContainer.appendChild(statCard);
+    });
+  }
+
+  function populateContributors(contributors) {
+    contributorsContainer.innerHTML = "";
+    contributors.forEach((contributor) => {
+      const contributorCard = document.createElement("div");
+      contributorCard.className = "contributor-card";
+      contributorCard.innerHTML = `
         <a href="${contributor.html_url}" target="_blank" class="card-link">
             <img src="${contributor.avatar_url}" alt="${contributor.login}" />
             <h3>${contributor.login}</h3>
             <div class="contributions">${contributor.contributions} contributions</div>
         </a>`;
-            contributorsContainer.appendChild(contributorCard);
-          });
-        }
+      contributorsContainer.appendChild(contributorCard);
+    });
+  }
 
-        fetchData();
-      });
+  fetchData();
+});
+
     </script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
