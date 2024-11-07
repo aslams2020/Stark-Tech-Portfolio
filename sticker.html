@@ -71,11 +71,25 @@
 .sticker a:hover {
     background-color: #ff1a1a;
 }
-
+.progress-bar{
+          position: fixed;
+          width:100%;
+          height: 0.4vh;
+          z-index: 1200;  
+        }
+.filled{
+     width :0%;
+     height: 100%;
+     background-image: linear-gradient(to right,red,orange);
+     z-index: 100;
+}
 
     </style>
 </head>
 <body>
+    <div class="progress-bar">
+        <div class="filled"></div>
+     </div>
     <!-- Circles -->
     <div class="circle"></div>
     <div class="circle"></div>
@@ -543,6 +557,16 @@
     
         // Start the animation
         animateCircles();
+
+          //js 
+
+const filled = document.querySelector('.filled');
+
+function update () {
+    filled.style.width = `${((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 100)}%`;
+requestAnimationFrame(update);
+}
+update();
     </script>
     
     </body>
