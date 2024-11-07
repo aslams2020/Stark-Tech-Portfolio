@@ -161,6 +161,7 @@ body {
   background: rgb(0, 0, 0, 0.5) url(assets/bg3.jpg);
   background-size: cover;
   background-blend-mode: darken;
+  margin-top: 40px;
 }
 .nav-list {
   width: 75%;
@@ -338,7 +339,7 @@ body {
   flex-wrap: wrap; /* Allow items to wrap to the next line */
   justify-content: center; /* Center items in the row */
   gap: 30px; /* Space between the cards */
-  padding: 20px;
+  padding: 50px;
 }
 
 .movie {
@@ -409,7 +410,7 @@ body {
 /* Footer */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 0px;
   background-color: #161b2200;
   color: #c9d1d9;
   margin-top: 50px;
