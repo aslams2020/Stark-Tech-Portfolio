@@ -1,0 +1,441 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stark Tech Portfolio - FAQ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="website icon" href="/assets/logo/icon.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            border-left: 3px solid #007bff;
+            background-color: #f9f9f9; /* Light grey background for answers */
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            right: 1.6%;
+            bottom: 25px;
+            background: linear-gradient(100deg, #b33535, #ff903c, #ff6905);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible; 
+        }
+
+        .scroll-top:hover {
+            transform: scale(1.1);
+        }
+
+        .scroll-top-icon {
+            position: relative; 
+        }
+    </style>
+</head>
+<body>
+    <div class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-item">
+            <h2 class="faq-question">What is the Stark Tech Portfolio?</h2>
+            <p class="faq-answer">The Stark Tech Portfolio showcases projects, skills, and experiences inspired by Tony Stark's innovation and technology.</p>
+        </div>
+        <div class="faq-item">
+            <h2 class="faq-question">How can I contact support?</h2>
+            <p class="faq-answer">You can reach out to support via the contact form on our website or email us directly at support@starktech.com.</p>
+        </div>
+        <div class="faq-item">
+            <h2 class="faq-question">Is the portfolio mobile-friendly?</h2>
+            <p class="faq-answer">Yes, the Stark Tech Portfolio is fully responsive and adapts seamlessly across all devices.</p>
+        </div>
+        <div class="faq-item">
+            <h2 class="faq-question">What technologies are used in this portfolio?</h2>
+            <p class="faq-answer">The portfolio utilizes HTML, CSS, and JavaScript to create an interactive and engaging user experience.</p>
+        </div>
+    </div>
+
+    Scroll to Top Button
+    <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up scroll-top-icon"></i>
+    </button>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+
+                // Toggle the display of the answer
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                answer.style.transition = 'display 0.5s ease';
+                // Close other answers if needed
+                document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                    if (otherAnswer !== answer) otherAnswer.style.display = 'none';
+                });
+                
+                // Optional smooth scroll effect
+                question.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Close other answers if needed
+                document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                    if (otherAnswer !== answer) otherAnswer.style.display = 'none';
+                });
+                
+                // Scroll to the clicked question
+                question.scrollIntoView({ behavior: "smooth", block: "start" });
+                
+                // Show or hide the scroll button based on scroll position
+                toggleScrollButton();
+                const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+                setProgress(scrollPercent);
+                
+                // Function to show or hide the button based on scroll position
+                function toggleScrollButton() {
+                    if (window.scrollY > 100) {
+                        scrollToTopBtn.classList.add("show");
+                    } else {
+                        scrollToTopBtn.classList.remove("show");
+                    }
+                }
+                
+                // Smooth scroll to top when the button is clicked
+                scrollToTopBtn.addEventListener("click", () => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                });
+                
+                // Listen for scroll events to update button visibility
+                window.addEventListener("scroll", toggleScrollButton);
+                
+                // Initial check for button visibility
+                toggleScrollButton();
+                
+                // Smooth scroll effect for questions
+                question.scrollIntoView({ behavior:"smooth", block:"start"});
+                
+                // Update progress on scroll
+                window.addEventListener("scroll", () => {
+                    const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+                    setProgress(scrollPercent);
+                    
+                    function setProgress(percent) {
+                        const offset = circumference - (percent / 100) * circumference; 
+                        progressCircle.style.strokeDashoffset = offset; 
+                    }
+                    
+                    setProgress(scrollPercent);
+                    
+                    toggleScrollButton();
+                    
+                    const progressCircle = document.querySelector(".progress-ring__circle");
+                    const radius = progressCircle.r.baseVal.value; 
+                    const circumference = 2 * Math.PI * radius; 
+                    
+                    progressCircle.style.strokeDasharray = `${circumference} ${circumference}`; 
+                    progressCircle.style.strokeDashoffset = circumference; 
+                    
+                    window.addEventListener("scroll", () => { 
+                        toggleScrollButton(); 
+                        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100; 
+                        setProgress(scrollPercent); 
+                    }); 
+                    
+                    scrollToTopBtn.addEventListener("click", () => { 
+                        window.scrollTo({ top: 0, behavior:"smooth"}); 
+                    }); 
+
+                    toggleScrollButton();
+                    
+                    window.addEventListener("scroll", () => { 
+                        toggleScrollButton(); 
+                        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100; 
+                        setProgress(scrollPercent); 
+                    }); 
+
+                    scrollToTopBtn.addEventListener("click", () => { 
+                        window.scrollTo({ top :0 , behavior : "smooth"}); 
+                    }); 
+
+                    toggleScrollButton();
+                    
+                    window.addEventListener("scroll", () => { 
+                        toggleScrollButton(); 
+                        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100; 
+                        setProgress(scrollPercent); 
+                    }); 
+
+                    scrollToTopBtn.addEventListener("click", () => { 
+                        window.scrollTo({ top :0 , behavior : "smooth"}); 
+                    }); 
+
+                    toggleScrollButton();
+                    
+                    window.addEventListener("scroll", () => { 
+                        toggleScrollButton(); 
+                        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100; 
+                        setProgress(scrollPercent); 
+                    }); 
+
+                    scrollToTopBtn.addEventListener("click", () => { 
+                        window.scrollTo({ top :0 , behavior : "smooth"}); 
+                    });      
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Stark Tech Defense - FAQ</title>
+    <link rel="icon" href="ironman-icon.png" type="image/x-icon">
+    
+    <style>
+        /* CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: #1A1A1D;
+            color: #FFD700;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #C8102E;
+            margin: 30px 0;
+        }
+
+        .faq-section {
+            width: 90%;
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 15px;
+            background: #2D2D30;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
+            transition: background 0.3s ease;
+        }
+        
+        .faq-section:hover {
+            background: #3A3A3D;
+        }
+
+        .faq-section h2 {
+            font-size: 1.3rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #FFD700;
+            margin: 0;
+        }
+
+        .arrow {
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-section p, .faq-section ul {
+            display: none;
+            font-size: 1rem;
+            color: #E5E5E5;
+            margin-top: 10px;
+        }
+
+        .faq-section ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        .ironman-img {
+            width: 100px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            animation: float 3s ease-in-out infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9rem;
+            background: #111;
+            color: #bbb;
+            margin-top: 30px;
+        }
+
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        footer ul li {
+            display: inline;
+            margin: 0 12px;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #C8102E;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Stark Tech Defense - FAQ</h1>
+    </header>
+
+    <main>
+        <!-- FAQ Section 1 -->
+        <section class="faq-section">
+            <h2 onclick="toggleAnswer(this)">
+                1. What is Stark Tech Defense?
+                <span class="arrow">▼</span>
+            </h2>
+            <p>Stark Tech Defense is a cutting-edge action game where you step into the role of a highly advanced Iron Man, utilizing an array of powerful suits and AI-powered drones to defend Earth from a relentless invasion. Engage in immersive battles, make real-time tactical decisions, and experience Tony Stark’s latest innovations in combat tech.</p>
+        </section>
+
+        <!-- FAQ Section 2: Controls -->
+        <section class="faq-section">
+            <h2 onclick="toggleAnswer(this)">
+                2. How do I control the Iron Man suit?
+                <span class="arrow">▼</span>
+            </h2>
+            <p>Controlling the suit requires precision and quick reflexes. Here’s how to master the suit’s unique capabilities:</p>
+            <ul>
+                <li><strong>Flight</strong>: Navigate the skies using the arrow keys or WASD. Avoiding enemy fire while positioning for attacks is key to survival.</li>
+                <li><strong>Repulsor Blasts</strong>: Press the spacebar to fire repulsor beams. Aim carefully to conserve energy while delivering maximum impact.</li>
+                <li><strong>Upgrades</strong>: Enemies drop tech boosts throughout combat. Collect them to enhance firepower, improve shields, or gain agility boosts that can make the difference in a tight battle.</li>
+            </ul>
+        </section>
+
+        <!-- Advanced Tips -->
+        <section class="faq-section">
+            <h2 onclick="toggleAnswer(this)">
+                3. Advanced Tips for Combat Efficiency
+                <span class="arrow">▼</span>
+            </h2>
+            <p>Take your gameplay to the next level with these expert tips:</p>
+            <ul>
+                <li><strong>Utilize Vertical Space</strong>: Maintain constant movement to avoid enemy fire. Fly high, dive, and circle around foes to stay unpredictable.</li>
+                <li><strong>Prioritize Targets</strong>: Drones often swarm and can be distracting, so take them out first to clear the battlefield. This will allow you to focus on larger, more dangerous foes.</li>
+                <li><strong>Energy Management</strong>: Keep an eye on your energy levels and save high-power moves, like the Unibeam, for the most challenging adversaries.</li>
+            </ul>
+        </section>
+
+        <!-- Compatibility and Support -->
+        <section class="faq-section">
+            <h2 onclick="toggleAnswer(this)">
+                4. Device Compatibility and Support
+                <span class="arrow">▼</span>
+            </h2>
+            <ul>
+                <li><strong>Browsers</strong>: Fully supported on the latest versions of Chrome, Firefox, Edge, and Safari.</li>
+                <li><strong>Devices</strong>: Playable on desktops, laptops, and select tablets with modern browsers. While mobile compatibility is available, it’s recommended for the best experience to use larger screens.</li>
+            </ul>
+        </section>
+
+        <!-- Customer Support -->
+        <section class="faq-section">
+            <h2 onclick="toggleAnswer(this)">
+                5. Contact Stark Tech Support
+                <span class="arrow">▼</span>
+            </h2>
+            <p>For assistance with the game or technical support, reach out to our dedicated support team at <strong>1-800-STARK-TECH</strong> between 9 AM and 6 PM EST. Our team of experts is here to help with any questions or issues.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Stark Industries. All Rights Reserved.</p>
+        <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="https://www.facebook.com/StarkTech" target="_blank">Facebook</a></li>
+            <li><a href="https://twitter.com/StarkTech" target="_blank">Twitter</a></li>
+            <li><a href="https://www.instagram.com/StarkTech" target="_blank">Instagram</a></li>
+        </ul>
+    </footer>
+
+    <img src="ironman-silhouette.png" class="ironman-img" alt="Iron Man">
+
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            element.querySelector('.arrow').style.transform = answer.style.display === 'block' ? 'rotate(180deg)' : 'rotate(0)';
+        }
+    </script>
+</body>
+</html>
