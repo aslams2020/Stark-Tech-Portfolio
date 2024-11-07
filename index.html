@@ -147,15 +147,13 @@ window.addEventListener('scroll', updateActiveLink);
 
     <nav class="navbar h-nav background">
         <ul class="nav-list visibility">
-            <div class="logo" id="ironmask" ><a href="/index.html"><img src="assets\logo\icon.png"   alt="logo" srcset=""></a></div>
-            <li id="nav-home"> <a href="#home" class="active-header"  onclick="scrollToSection(event, 'home')" >Home</a></li>
-            <li id="nav-about"> <a href="#about" onclick="scrollToSection(event, 'about')">About</a></li>
-            <li id="nav-appearances"> <a href="Appearances.html">Appearances</a></li>
-            <li id="nav-comics"> <a href="Comics.html">Comics</a></li>
-            <li id="nav-contact"> <a href="#contact">Contact</a></li> 
-             <!-- <li> <a href="#subscribe" onclick="scrollToSection(event, 'subscribe')">Subscribe </a></li> -->
-            <li> <a href="/blog.html">Blogs</a></li>
-            
+            <div onclick="handleLink()" class="logo" id="ironmask" ><a href="./index.html"><img src="assets\logo\icon.png"   alt="logo" srcset=""></a></div>
+            <li onclick="handleLink()"> <a href="#home" class="active-header">Home</a></li>
+            <li onclick="handleLink()"> <a href="#about">About</a></li>
+            <li onclick="handleLink()"> <a href="Appearances.html">Appearances</a></li>
+            <li onclick="handleLink()"> <a href="./Comics.html">Comics</a></li>
+            <li onclick="handleLink()"> <a href="#contact">Contact</a></li> 
+            <li onclick="handleLink()"> <a href="./blog.html">Blogs</a></li> 
         </ul>
 
         <div class="rightNav visibility">
