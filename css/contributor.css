@@ -286,7 +286,7 @@
             footer {
                 background-color: #0a0a0a;
                 color: white;
-                padding: 2rem 0;
+                padding: 0;
                 position: relative;
                 overflow: hidden;
             }
@@ -317,7 +317,7 @@
             }
 
             footer p {
-                margin-bottom: 1rem;
+                margin-bottom: 0;
                 font-size: 0.9rem;
             }
 
