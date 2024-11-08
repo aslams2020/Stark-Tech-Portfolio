@@ -147,15 +147,13 @@ window.addEventListener('scroll', updateActiveLink);
 
     <nav class="navbar h-nav background">
         <ul class="nav-list visibility">
-            <div class="logo" id="ironmask" ><a href="/index.html"><img src="assets\logo\icon.png"   alt="logo" srcset=""></a></div>
-            <li id="nav-home"> <a href="#home" class="active-header"  onclick="scrollToSection(event, 'home')" >Home</a></li>
-            <li id="nav-about"> <a href="#about" onclick="scrollToSection(event, 'about')">About</a></li>
-            <li id="nav-appearances"> <a href="Appearances.html">Appearances</a></li>
-            <li id="nav-comics"> <a href="Comics.html">Comics</a></li>
-            <li id="nav-contact"> <a href="#contact">Contact</a></li> 
-             <!-- <li> <a href="#subscribe" onclick="scrollToSection(event, 'subscribe')">Subscribe </a></li> -->
-            <li> <a href="/blog.html">Blogs</a></li>
-            
+            <div onclick="handleLink()" class="logo" id="ironmask" ><a href="./index.html"><img src="assets\logo\icon.png"   alt="logo" srcset=""></a></div>
+            <li onclick="handleLink()"> <a href="#home" class="active-header">Home</a></li>
+            <li onclick="handleLink()"> <a href="#about">About</a></li>
+            <li onclick="handleLink()"> <a href="Appearances.html">Appearances</a></li>
+            <li onclick="handleLink()"> <a href="./Comics.html">Comics</a></li>
+            <li onclick="handleLink()"> <a href="#contact">Contact</a></li> 
+            <li onclick="handleLink()"> <a href="./blog.html">Blogs</a></li> 
         </ul>
 
         <div class="rightNav visibility">
@@ -178,7 +176,7 @@ window.addEventListener('scroll', updateActiveLink);
             <div class="secondHalf">
                 <h1 class="txt-big">Who is Ironman?</h1>
                 <p class="txt-small">
-                    Iron Man is a superhero appearing in American comic books published by Marvel Comics. The character was co-created by writer and editor Stan Lee, developed by scripter Larry Lieber, and designed by artists Don Heck and Jack Kirby. The character made his first appearance in Tales of Suspense and received his own title in Iron Man. In 1963, the character founded the Avengers superhero team with Thor, Ant-Man, Wasp, and the Hulk.
+                Iron Man is a legendary superhero from Marvel Comics, co-created by writer and editor Stan Lee, with scripter Larry Lieber and artists Don Heck and Jack Kirby contributing to his development and design. First appearing in Tales of Suspense, Iron Man later starred in his own comic series. In 1963, Tony Stark's Iron Man joined forces with Thor, Ant-Man, Wasp, and the Hulk to become a founding member of the iconic Avengers team.
                 </p>
                 <div class="buttons">
                     <button class="btn btn-invert" onclick="window.location.href='movies.html'">Movies</button>
@@ -193,7 +191,7 @@ window.addEventListener('scroll', updateActiveLink);
         <div class="paras"  data-aos="fade-up-right">
        <p class="sectionTag text-big" >Which Cinematic Universe Does He Belong?</p>
        <p class="sectionSubTag text-small"><strong>Iron Man (real name Anthony Edward "Tony" Stark) is a superhero from Marvel Comics and the Marvel Cinematic Universe, first appearing in the 2008 film Iron Man. He is also one of the protagonists of the TV series The Avengers: Earth's Mightiest Heroes and Avengers Assemble.</strong>
-        <br>The Marvel Cinematic Universe (MCU) is an American media franchise and shared universe centered on a series of superhero films produced by Marvel Studios. The films are based on characters that appear in American comic books published by Marvel Comics.Marvel Studios releases its films in groups called "Phases", with the first three phases collectively known as "The Infinity Saga" and the following three phases as "The Multiverse Saga".  </p>
+        <br>The Marvel Cinematic Universe (MCU) is a groundbreaking American media franchise and shared universe focused on superhero films produced by Marvel Studios. These films feature characters from Marvel Comics, creating an interconnected world. Marvel Studios organizes its releases into "Phases," with the first three phases known as The Infinity Saga and the next three phases as The Multiverse Saga. This approach has made the MCU a global entertainment powerhouse.</p>
         <br>
         <button class="bttn-four4"><a href="quiz.html" target="_blank" style="text-decoration: none;">PLAY A QUIZ!</a></button>
     </div>
@@ -207,7 +205,7 @@ window.addEventListener('scroll', updateActiveLink);
     <section class="section left" id="services">
         <div class="paras paraRight" data-aos="fade-up-left">
        <p class="sectionTag text-big">Tony Stark</p>
-       <p class="sectionSubTag text-small">Tony Stark is a genius, billionaire, and philanthropist. He not only invented the Iron Man Armor, but wears the suit himself. He is a resourceful co-leader and one of the founding members of the Avengers. He is the CEO of Stark Industries, which once sold highly sophisticated weapons systems technologies to the government defense organizations such as S.H.I.E.L.D. who uses them to maintain peace and order, but has pulled his company away from the weapons business once he saw the damage they caused.Combining their genius, Tony and Yinsen built a mighty suit of iron armor that would be dubbed Iron Man. This first suit left a lot of room for improvement, but it still did what Tony couldn’t do <br></alone> <strong>"My armor, it was never a distraction or a hobby, it was a cocoon. And now, I'm a changed man. You can take away my house, all my tricks and toys. But one thing you can't take away... I am Iron Man."
+       <p class="sectionSubTag text-small">Tony Stark, the genius billionaire and philanthropist, revolutionized heroism by creating and wearing the iconic Iron Man suit. As CEO of Stark Industries and a founding Avenger, he once powered global defense, even working with S.H.I.E.L.D., until he saw the damage his tech could cause. That revelation sparked a change. Teaming up with Yinsen, Tony built his first Iron Man suit, marking the moment he shifted from arms dealer to a hero fighting for peace and justice. Iron Man was born—a symbol of redemption, innovation, and unyielding courage. <br></alone> <strong>"My armor, it was never a distraction or a hobby, it was a cocoon. And now, I'm a changed man. You can take away my house, all my tricks and toys. But one thing you can't take away... I am Iron Man."
         ―Tony Stark</strong></p>
         <br>
         <button class="bttn-four4"><a href="variants.html" target="_blank">VARIANTS</a></button>
@@ -220,7 +218,7 @@ window.addEventListener('scroll', updateActiveLink);
     <section class="section" id="services">
         <div class="paras" data-aos="fade-up-right">
        <p class="sectionTag text-big">Robert Downey Jr</p>
-       <p class="sectionSubTag text-small">Robert John Downey Jr. (born April 4, 1965) is an American actor and producer. His career has been characterized by critical and popular success in his youth, followed by a period of substance abuse and legal troubles, before a resurgence of commercial success later in his career. <br> RDJ gained global recognition for starring as Tony Stark/Iron Man in ten films within the Marvel Cinematic Universe, beginning with Iron Man (2008), and leading up to Avengers: Endgame (2019). He has also played the title character in Guy Ritchie's Sherlock Holmes (2009), which earned him his second Golden Globe, and its sequel, Sherlock Holmes: A Game of Shadows (2011). <br> <strong>Robert Downey Jr. has evolved into one of the most respected actors in Hollywood. With an amazing list of credits to his name, he has managed to stay new and fresh even after over four decades in the business. </strong>
+       <p class="sectionSubTag text-small">Robert John Downey Jr. (born April 4, 1965) is an American actor and producer known for his remarkable career that has seen both critical acclaim and personal challenges. After a period of substance abuse and legal issues, he made a major comeback to become one of Hollywood’s most respected stars. <br> RDJ gained worldwide fame for his portrayal of Tony Stark/Iron Man in the Marvel Cinematic Universe, beginning with Iron Man (2008) and culminating in Avengers: Endgame (2019). He also starred as Sherlock Holmes in Guy Ritchie's films, earning a Golden Globe for his performance. <br> <strong>With a career spanning over four decades, Robert Downey Jr. remains an enduring and innovative figure in the entertainment industry.</strong>
     </p>
         </div>
        <div class="thumbnail">
@@ -571,6 +569,7 @@ window.addEventListener('scroll', updateActiveLink);
             <a href="Achievements.html">Remarkable Achievements</a>
             <!-- Added Villain page redirect -->
             <a href="villain.html">Marvel Villains</a>
+            <a href="wallpaper.html">Ironman Wallpaper Gallery</a>
         </div>
         <div class="footer-col-main">
             <h4 class="h46">About Us</h4>

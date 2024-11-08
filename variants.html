@@ -17,6 +17,10 @@
     
 </head>
 <body>
+
+    <div class="progress-bar">
+        <div class="filled"></div>
+     </div>
     <div id="progress-container">
         <div id="progress-bar"></div>
   </div>
@@ -267,6 +271,15 @@
         duration: 2000,
        
       });
+       //js 
+
+const filled = document.querySelector('.filled');
+
+function update () {
+    filled.style.width = `${((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 100)}%`;
+requestAnimationFrame(update);
+}
+update();
     </script>
     <script src="./Js/secrets.js"></script>
 
