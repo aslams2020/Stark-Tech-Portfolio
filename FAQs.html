@@ -1,250 +1,10 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stark Tech Portfolio - FAQ</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="website icon" href="/assets/logo/icon.png">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .faq-container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-
-        .faq-item {
-            margin-bottom: 15px;
-        }
-
-        .faq-question {
-            cursor: pointer;
-            background-color: #007bff;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .faq-question:hover {
-            background-color: #0056b3; /* Darker blue on hover */
-        }
-
-        .faq-answer {
-            display: none;
-            padding: 10px;
-            border-left: 3px solid #007bff;
-            background-color: #f9f9f9; /* Light grey background for answers */
-        }
-
-        /* Scroll to Top Button */
-        .scroll-top {
-            position: fixed;
-            right: 1.6%;
-            bottom: 25px;
-            background: linear-gradient(100deg, #b33535, #ff903c, #ff6905);
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .scroll-top.show {
-            opacity: 1;
-            visibility: visible; 
-        }
-
-        .scroll-top:hover {
-            transform: scale(1.1);
-        }
-
-        .scroll-top-icon {
-            position: relative; 
-        }
-    </style>
-</head>
-<body>
-    <div class="faq-container">
-        <h1>Frequently Asked Questions</h1>
-        <div class="faq-item">
-            <h2 class="faq-question">What is the Stark Tech Portfolio?</h2>
-            <p class="faq-answer">The Stark Tech Portfolio showcases projects, skills, and experiences inspired by Tony Stark's innovation and technology.</p>
-        </div>
-        <div class="faq-item">
-            <h2 class="faq-question">How can I contact support?</h2>
-            <p class="faq-answer">You can reach out to support via the contact form on our website or email us directly at support@starktech.com.</p>
-        </div>
-        <div class="faq-item">
-            <h2 class="faq-question">Is the portfolio mobile-friendly?</h2>
-            <p class="faq-answer">Yes, the Stark Tech Portfolio is fully responsive and adapts seamlessly across all devices.</p>
-        </div>
-        <div class="faq-item">
-            <h2 class="faq-question">What technologies are used in this portfolio?</h2>
-            <p class="faq-answer">The portfolio utilizes HTML, CSS, and JavaScript to create an interactive and engaging user experience.</p>
-        </div>
-    </div>
-
-    Scroll to Top Button
-    <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
-        <i class="fa-solid fa-arrow-up scroll-top-icon"></i>
-    </button>
-
-    <script>
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-
-                // Toggle the display of the answer
-                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-                answer.style.transition = 'display 0.5s ease';
-                // Close other answers if needed
-                document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
-                    if (otherAnswer !== answer) otherAnswer.style.display = 'none';
-                });
-                
-                // Optional smooth scroll effect
-                question.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                
-                // Close other answers if needed
-                document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
-                    if (otherAnswer !== answer) otherAnswer.style.display = 'none';
-                });
-                
-                // Scroll to the clicked question
-                question.scrollIntoView({ behavior: "smooth", block: "start" });
-                
-                // Show or hide the scroll button based on scroll position
-                toggleScrollButton();
-                const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-
-                setProgress(scrollPercent);
-                
-                // Function to show or hide the button based on scroll position
-                function toggleScrollButton() {
-                    if (window.scrollY > 100) {
-                        scrollToTopBtn.classList.add("show");
-                    } else {
-                        scrollToTopBtn.classList.remove("show");
-                    }
-                }
-                
-                // Smooth scroll to top when the button is clicked
-                scrollToTopBtn.addEventListener("click", () => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                });
-                
-                // Listen for scroll events to update button visibility
-                window.addEventListener("scroll", toggleScrollButton);
-                
-                // Initial check for button visibility
-                toggleScrollButton();
-                
-                // Smooth scroll effect for questions
-                question.scrollIntoView({ behavior:"smooth", block:"start"});
-                
-                // Update progress on scroll
-                window.addEventListener("scroll", () => {
-                    const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-
-                    setProgress(scrollPercent);
-                    
-                    function setProgress(percent) {
-                        const offset = circumference - (percent / 100) * circumference; 
-                        progressCircle.style.strokeDashoffset = offset; 
-                    }
-                    
-                    setProgress(scrollPercent);
-                    
-                    toggleScrollButton();
-                    
-                    const progressCircle = document.querySelector(".progress-ring__circle");
-                    const radius = progressCircle.r.baseVal.value; 
-                    const circumference = 2 * Math.PI * radius; 
-                    
-                    progressCircle.style.strokeDasharray = `${circumference} ${circumference}`; 
-                    progressCircle.style.strokeDashoffset = circumference; 
-                    
-                    window.addEventListener("scroll", () => { 
-                        toggleScrollButton(); 
-                        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100; 
-                        setProgress(scrollPercent); 
-                    }); 
-                    
-                    scrollToTopBtn.addEventListener("click", () => { 
-                        window.scrollTo({ top: 0, behavior:"smooth"}); 
-                    }); 
-
-                    toggleScrollButton();
-                    
-                    window.addEventListener("scroll", () => { 
-                        toggleScrollButton(); 
-                        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100; 
-                        setProgress(scrollPercent); 
-                    }); 
-
-                    scrollToTopBtn.addEventListener("click", () => { 
-                        window.scrollTo({ top :0 , behavior : "smooth"}); 
-                    }); 
-
-                    toggleScrollButton();
-                    
-                    window.addEventListener("scroll", () => { 
-                        toggleScrollButton(); 
-                        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100; 
-                        setProgress(scrollPercent); 
-                    }); 
-
-                    scrollToTopBtn.addEventListener("click", () => { 
-                        window.scrollTo({ top :0 , behavior : "smooth"}); 
-                    }); 
-
-                    toggleScrollButton();
-                    
-                    window.addEventListener("scroll", () => { 
-                        toggleScrollButton(); 
-                        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100; 
-                        setProgress(scrollPercent); 
-                    }); 
-
-                    scrollToTopBtn.addEventListener("click", () => { 
-                        window.scrollTo({ top :0 , behavior : "smooth"}); 
-                    });      
-    </script>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Stark Tech Defense - FAQ</title>
+    <title>Stark Tech Defense - Iron Man FAQ</title>
     <link rel="icon" href="ironman-icon.png" type="image/x-icon">
     
     <style>
@@ -294,16 +54,11 @@
             transition: transform 0.3s ease;
         }
 
-        .faq-section p, .faq-section ul {
+        .faq-section p {
             display: none;
             font-size: 1rem;
             color: #E5E5E5;
             margin-top: 10px;
-        }
-
-        .faq-section ul {
-            padding-left: 20px;
-            list-style-type: disc;
         }
 
         .ironman-img {
@@ -354,66 +109,53 @@
 
 <body>
     <header>
-        <h1>Stark Tech Defense - FAQ</h1>
+        <h1>Stark Tech Portfolio - FAQ</h1>
     </header>
 
     <main>
         <!-- FAQ Section 1 -->
         <section class="faq-section">
             <h2 onclick="toggleAnswer(this)">
-                1. What is Stark Tech Defense?
+                1. What is the latest Iron Man armor model?
                 <span class="arrow">▼</span>
             </h2>
-            <p>Stark Tech Defense is a cutting-edge action game where you step into the role of a highly advanced Iron Man, utilizing an array of powerful suits and AI-powered drones to defend Earth from a relentless invasion. Engage in immersive battles, make real-time tactical decisions, and experience Tony Stark’s latest innovations in combat tech.</p>
+            <p>Tony Stark has developed multiple models of the Iron Man armor, with the most recent being the Model Prime. This suit adapts to various environments and can transform for different types of combat scenarios.</p>
         </section>
 
-        <!-- FAQ Section 2: Controls -->
+        <!-- FAQ Section 2 -->
         <section class="faq-section">
             <h2 onclick="toggleAnswer(this)">
-                2. How do I control the Iron Man suit?
+                2. How does Iron Man’s arc reactor work?
                 <span class="arrow">▼</span>
             </h2>
-            <p>Controlling the suit requires precision and quick reflexes. Here’s how to master the suit’s unique capabilities:</p>
-            <ul>
-                <li><strong>Flight</strong>: Navigate the skies using the arrow keys or WASD. Avoiding enemy fire while positioning for attacks is key to survival.</li>
-                <li><strong>Repulsor Blasts</strong>: Press the spacebar to fire repulsor beams. Aim carefully to conserve energy while delivering maximum impact.</li>
-                <li><strong>Upgrades</strong>: Enemies drop tech boosts throughout combat. Collect them to enhance firepower, improve shields, or gain agility boosts that can make the difference in a tight battle.</li>
-            </ul>
+            <p>The arc reactor is a clean energy source that powers Tony Stark's suits and was initially built to prevent shrapnel from reaching his heart. It uses palladium, vibranium, or other energy sources in different suit versions.</p>
         </section>
 
-        <!-- Advanced Tips -->
+        <!-- FAQ Section 3 -->
         <section class="faq-section">
             <h2 onclick="toggleAnswer(this)">
-                3. Advanced Tips for Combat Efficiency
+                3. What are Iron Man’s most advanced weapons?
                 <span class="arrow">▼</span>
             </h2>
-            <p>Take your gameplay to the next level with these expert tips:</p>
-            <ul>
-                <li><strong>Utilize Vertical Space</strong>: Maintain constant movement to avoid enemy fire. Fly high, dive, and circle around foes to stay unpredictable.</li>
-                <li><strong>Prioritize Targets</strong>: Drones often swarm and can be distracting, so take them out first to clear the battlefield. This will allow you to focus on larger, more dangerous foes.</li>
-                <li><strong>Energy Management</strong>: Keep an eye on your energy levels and save high-power moves, like the Unibeam, for the most challenging adversaries.</li>
-            </ul>
+            <p>The Iron Man suit features numerous advanced weapons, including repulsor blasts, the Unibeam, smart missiles, and nanotech-based weapons. These allow for versatile and powerful combat responses.</p>
         </section>
 
-        <!-- Compatibility and Support -->
+        <!-- FAQ Section 4 -->
         <section class="faq-section">
             <h2 onclick="toggleAnswer(this)">
-                4. Device Compatibility and Support
+                4. Which suit is the best for space missions?
                 <span class="arrow">▼</span>
             </h2>
-            <ul>
-                <li><strong>Browsers</strong>: Fully supported on the latest versions of Chrome, Firefox, Edge, and Safari.</li>
-                <li><strong>Devices</strong>: Playable on desktops, laptops, and select tablets with modern browsers. While mobile compatibility is available, it’s recommended for the best experience to use larger screens.</li>
-            </ul>
+            <p>The Space Armor suits are specifically designed for space exploration. They include enhanced life support, radiation shielding, and propulsion for maneuverability in zero-gravity environments.</p>
         </section>
 
-        <!-- Customer Support -->
+        <!-- FAQ Section 5 -->
         <section class="faq-section">
             <h2 onclick="toggleAnswer(this)">
-                5. Contact Stark Tech Support
+                5. How many suits has Tony Stark created?
                 <span class="arrow">▼</span>
             </h2>
-            <p>For assistance with the game or technical support, reach out to our dedicated support team at <strong>1-800-STARK-TECH</strong> between 9 AM and 6 PM EST. Our team of experts is here to help with any questions or issues.</p>
+            <p>Throughout his career, Tony Stark has created over 50 unique Iron Man suits, each with specialized capabilities for different environments, combat scenarios, and missions.</p>
         </section>
     </main>
 
@@ -428,7 +170,7 @@
         </ul>
     </footer>
 
-    <img src="ironman-silhouette.png" class="ironman-img" alt="Iron Man">
+    <img src="https://camo.githubusercontent.com/09371c8a0b17bc61adb79966def9a7df86ee583dd28444cf5cf563bbf82c6936/68747470733a2f2f692e70696e696d672e636f6d2f6f726967696e616c732f61382f64352f62612f61386435626165623036666331326337376363656664303132313031306432302e676966" class="ironman-img" alt="Iron Man">
 
     <script>
         function toggleAnswer(element) {
