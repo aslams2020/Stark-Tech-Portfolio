@@ -31,35 +31,9 @@
             z-index: 99999999;
             /* Stays on top of all elements */
         }
-
-        .go-top-btn {
-            position: fixed;
-            bottom: 35px;
-            right: 35px;
-            cursor: pointer;
-            border-radius: 50%;
-            height: 60px;
-            width: 60px;
-            background: #ff0015;
-            border: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-        }
-
-        .go-top-btn:hover {
-            background-color: #ac0000;
-            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
-            transform: translateY(-2px);
-        }
     </style>
 </head>
 
-<button class="go-top-btn">
-    <img width="35px" src="cropped_image.png" alt="go top">
-</button>
 
 <body class="custom-page">
     <!-- Circles -->
@@ -96,7 +70,7 @@
                 </div>
                 <li><a href="index.html#home" class="active">Home</a></li>
                 <li><a href="index.html#about">About</a></li>
-                <li><a href="#" id="appearance_active">Appearances</a></li>
+                <li><a href="Appearances.html" id="appearance_active">Appearances</a></li>
                 <li><a href="Comics.html">Comics</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
                 <!-- Added Blog page in navbar -->
@@ -500,7 +474,23 @@
             </p>
         </div>
     </footer>
-
+    <button id="BacktoTop">
+        <div class="circle1">
+          <svg
+            id="back-to-top"
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            class="bi bi-arrow-up-circle-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"
+            ></path>
+          </svg>
+        </div>
+      </button>
 
     <script>
         /* Back to Top Button */
@@ -622,24 +612,6 @@
 
         // Start the animation
         animateCircles();
-
-
-        //js for go top button
-        const goTopBtn = document.querySelector('.go-top-btn');
-        window.addEventListener('scroll', checkHeight)
-        function checkHeight() {
-            if (window.scrollY > 200) {
-                goTopBtn.style.display = "flex"
-            } else {
-                goTopBtn.style.display = "none"
-            }
-        }
-        goTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            })
-        })
     </script>
 </body>
 

@@ -7,6 +7,7 @@
     <title>Stark Tech Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/merchandise.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="website icon" href="/assets/logo/icon.png">
@@ -54,13 +55,13 @@
 }
 
 .sticker p {
-    font-size: 12px;
+    font-size: 14px;
     color: #333;
     margin: 5px 0;
 }
 
 .sticker a {
-    padding: 5px;
+    padding: 9px;
     background-color: #ff4c4c;
     color: white;
     text-decoration: none;
@@ -115,7 +116,7 @@
     <ul class="nav-list visibility">
         <div class="logo" id="ironmask"><a href="/index.html"><img src="assets\logo\icon.png" alt="logo" srcset=""></a></div>
         <li> <a href="index.html">Home</a></li>
-        <li> <a href="index.html#about" onclick="scrollToSection(event, 'home')">About</a></li>
+        <li> <a href="index.html#about">About</a></li>
         <li> <a href="Appearances.html">Appearances</a></li>
         <li> <a href="Comics.html">Comics</a></li>
         <li> <a href="index.html#contact">Contact</a></li>
@@ -150,113 +151,307 @@
                 <div class="sticker">
                     <img src="assets/stickers/cartoon-red-yellow-robot.jpg" alt="Ironman Sticker 1">
                     <p>Sticker 1 - $1.99</p>
-                    <a href="assets/stickers/cartoon-red-yellow-robot.jpg" target="_blank">View Now</a>
+                    <div>
+                        <a href="assets/stickers/cartoon-red-yellow-robot.jpg" target="_blank">View Now</a>
+                        <button class="add-to-cart" onclick="addToCart('Sticker 1', 1.99)">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="sticker">
                     <img src="assets/stickers/drawing-iron-man-character.jpg" alt="Ironman Sticker 2">
                     <p>Sticker 2 - $1.99</p>
-                    <a href="assets/stickers/drawing-iron-man-character.jpg" target="_blank">View Now</a>
+                    <div>
+                        <a href="assets/stickers/drawing-iron-man-character.jpg" target="_blank">View Now</a>
+                        <button class="add-to-cart" onclick="addToCart('Sticker 2', 1.99)">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="sticker">
                     <img src="assets/stickers/iron-man-simplified-head.avif" alt="Ironman Sticker 3">
                     <p>Sticker 3 - $1.99</p>
-                    <a href="assets/stickers/iron-man-simplified-head.avif" target="_blank">View Now</a>
+                    <div>
+                        <a href="assets/stickers/iron-man-simplified-head.avif" target="_blank">View Now</a>
+                        <button  class="add-to-cart" onclick="addToCart('Sticker 3', 1.99)">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="sticker">
                     <img src="assets/stickers/iron-man-vector-illustration-flat-2.avif" alt="Ironman Sticker 4">
                     <p>Sticker 4 - $1.99</p>
+                <div>
                     <a href="assets/stickers/iron-man-vector-illustration-flat-2.avif" target="_blank">View Now</a>
+                    <button class="add-to-cart" onclick="addToCart('Sticker 4', 1.99)">Add to Cart</button>
+                </div>
                 </div>
                 <div class="sticker">
                     <img src="assets/stickers/iron-man-vector-illustration3.avif" alt="Ironman Sticker 5">
                     <p>Sticker 5 - $1.99</p>
-                    <a href="assets/stickers/iron-man-vector-illustration3.avif" target="_blank">View Now</a>
+                    <div>
+                        <a href="assets/stickers/iron-man-vector-illustration3.avif" target="_blank">View Now</a>
+                        <button class="add-to-cart" onclick="addToCart('Sticker 5', 1.99)">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="sticker">
                     <img src="assets/stickers/ironman-sticker_1141877-798.avif" alt="Ironman Sticker 6">
                     <p>Sticker 6 - $1.99</p>
-                    <a href="assets/stickers/ironman-sticker_1141877-798.avif" target="_blank">View Now</a>
+                    <div>
+                        <a href="assets/stickers/ironman-sticker_1141877-798.avif" target="_blank">View Now</a>
+                        <button class="add-to-cart" onclick="addToCart('Sticker 6', 1.99)">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="sticker">
                     <img src="assets/stickers/ironman-sticker_2.avif" alt="Ironman Sticker 7">
                     <p>Sticker 7 - $1.99</p>
-                    <a href="assets/stickers/ironman-sticker_2.avif" target="_blank">View Now</a>
+                    <div>
+                        <a href="assets/stickers/ironman-sticker_2.avif" target="_blank">View Now</a>
+                        <button class="add-to-cart" onclick="addToCart('Sticker 7', 1.99)">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="sticker">
                     <img src="assets/stickers/sticker-iron-man-flying-through-air.jpg" alt="Ironman Sticker 8">
                     <p>Sticker 8 - $1.99</p>
-                    <a href="assets/stickers/sticker-iron-man-flying-through-air.jpg" target="_blank">View Now</a>
+                    <div>
+                        <a href="assets/stickers/sticker-iron-man-flying-through-air.jpg" target="_blank">View Now</a>
+                        <button class="add-to-cart" onclick="addToCart('Sticker 8', 1.99)">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="sticker">
                     <img src="assets/stickers/sticker-iron-man-with-glowing-eyes.jpg" alt="Ironman Sticker 9">
                     <p>Sticker 9 - $1.99</p>
-                    <a href="assets/stickers/sticker-iron-man-with-glowing-eyes.jpg" target="_blank">View Now</a>
+                    <div>
+                        <a href="assets/stickers/sticker-iron-man-with-glowing-eyes.jpg" target="_blank">View Now</a>
+                        <button class="add-to-cart" onclick="addToCart('Sticker 9', 1.99)">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="sticker">
                     <img src="assets/stickers/iron-man-sticker_10.jpg" alt="Ironman Sticker 10">
                     <p>Sticker 10 - $1.99</p>
-                    <a href="assets/stickers/iron-man-sticker_10.jpg" target="_blank">View Now</a>
+                    <div>
+                        <a href="assets/stickers/iron-man-sticker_10.jpg" target="_blank">View Now</a>
+                        <button class="add-to-cart" onclick="addToCart('Sticker 10', 1.99)">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="sticker">
                     <img src="assets/stickers/sticker11.avif" alt="Ironman Sticker 11">
                     <p>Sticker 11 - $1.99</p>
-                    <a href="assets/stickers/sticker11.avif" target="_blank">View Now</a>
+                    <div>
+                        <a href="assets/stickers/sticker11.avif" target="_blank">View Now</a>
+                        <button class="add-to-cart" onclick="addToCart('Sticker 11', 1.99)">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="sticker">
                     <img src="assets/stickers/ironman-character-2-numberj_12.jpg" alt="Ironman Sticker 12">
                     <p>Sticker 12 - $1.99</p>
-                    <a href="assets/stickers/ironman-character-2-numberj_12.jpg" target="_blank">View Now</a>
+                    <div>
+                        <a href="assets/stickers/ironman-character-2-numberj_12.jpg" target="_blank">View Now</a>
+                        <button class="add-to-cart" onclick="addToCart('Sticker 12', 1.99)">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="sticker">
                     <img src="assets/stickers/hand-drawing-little-realistic-ironman-13.avif" alt="Ironman Sticker 13">
                     <p>Sticker 13 - $1.99</p>
-                    <a href="assets/stickers/hand-drawing-little-realistic-ironman-13.avif" target="_blank">View Now</a>
+                    <div>
+                        <a href="assets/stickers/hand-drawing-little-realistic-ironman-13.avif" target="_blank">View Now</a>
+                        <button class="add-to-cart" onclick="addToCart('Sticker 13', 1.99)">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="sticker">
                     <img src="assets/stickers/sticker15.avif" alt="Ironman Sticker 14">
                     <p>Sticker 14 - $1.99</p>
-                    <a href="assets/stickers/sticker15.avif" target="_blank">View Now</a>
+                    <div>
+                        <a href="assets/stickers/sticker15.avif" target="_blank">View Now</a>
+                        <button class="add-to-cart" onclick="addToCart('Sticker 14', 1.99)">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="sticker">
                     <img src="assets/stickers/sticker16-1.avif" alt="Ironman Sticker 15">
                     <p>Sticker 15 - $1.99</p>
-                    <a href="assets/stickers/sticker16-1.avif" target="_blank">View Now</a>
+                    <div>
+                        <a href="assets/stickers/sticker16-1.avif" target="_blank">View Now</a>
+                        <button class="add-to-cart" onclick="addToCart('Sticker 15', 1.99)">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="sticker">
                     <img src="assets/stickers/sticker16.jpg" alt="Ironman Sticker 16">
                     <p>Sticker 16 - $1.99</p>
-                    <a href="assets/stickers/sticker16.jpg" target="_blank">View Now</a>
+                    <div>
+                        <a href="assets/stickers/sticker16.jpg" target="_blank">View Now</a>
+                        <button class="add-to-cart" onclick="addToCart('Sticker 16', 1.99)">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="sticker">
                     <img src="assets/stickers/sticker17.jpg" alt="Ironman Sticker 17">
                     <p>Sticker 17 - $1.99</p>
-                    <a href="assets/stickers/sticker17.jpg" target="_blank">View Now</a>
+                    <div>
+                        <a href="assets/stickers/sticker17.jpg" target="_blank">View Now</a>
+                        <button class="add-to-cart" onclick="addToCart('Sticker 17', 1.99)">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="sticker">
                     <img src="assets/stickers/sticker18.jpg" alt="Ironman Sticker 18">
                     <p>Sticker 18 - $1.99</p>
-                    <a href="assets/stickers/sticker18.jpg" target="_blank">View Now</a>
+                    <div>
+                        <a href="assets/stickers/sticker18.jpg" target="_blank">View Now</a>
+                        <button class="add-to-cart" onclick="addToCart('Sticker 18', 1.99)">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="sticker">
                     <img src="assets/stickers/sticker19.avif" alt="Ironman Sticker 18">
                     <p>Sticker 19 - $1.99</p>
-                    <a href="assets/stickers/sticker19.avif" target="_blank">View Now</a>
+                    <div>
+                        <a href="assets/stickers/sticker19.avif" target="_blank">View Now</a>
+                        <button class="add-to-cart" onclick="addToCart('Sticker 19', 1.99)">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="sticker">
                     <img src="assets/stickers/sticker20.jpg" alt="Ironman Sticker 18">
                     <p>Sticker 20 - $1.99</p>
-                    <a href="assets/stickers/sticker20.jpg" target="_blank">View Now</a>
+                    <div>
+                        <a href="assets/stickers/sticker20.jpg" target="_blank">View Now</a>
+                        <button class="add-to-cart" onclick="addToCart('Sticker 20', 1.99)">Add to Cart</button>
+                    </div>
                 </div>
 
             </div>
+            <div class="floating-cart">
+                <button id="cartButton" class="cart-button">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cartCount" class="cart-count">0</span>
+                </button>
+                
+                <div id="cartPanel" class="cart-panel">
+                    <div class="cart-header">
+                        <h2>Shopping Cart</h2>
+                        <button id="closeCart" class="close-button">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div id="cartItems" class="cart-items">
+                        <!-- Cart items will be added here dynamically -->
+                    </div>
+                    <div class="cart-footer">
+                        <div class="cart-total">
+                            <span>Total:</span>
+                            <span id="cartTotal">$0.00</span>
+                        </div>
+                        <button id="checkoutButton" class="checkout-button">Proceed to Checkout</button>
+                    </div>
+                </div>
+            </div>
             
         </main>
-        <!-- Add more stickers as needed -->
+        <script>
+            let cart = [];
+            let total = 0;
+            
+            // DOM Elements
+            const cartButton = document.getElementById('cartButton');
+            const cartPanel = document.getElementById('cartPanel');
+            const closeCart = document.getElementById('closeCart');
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+            const cartCount = document.getElementById('cartCount');
+            const checkoutButton = document.getElementById('checkoutButton');
+            
+            // Event Listeners
+            cartButton.addEventListener('click', toggleCart);
+            closeCart.addEventListener('click', toggleCart);
+            checkoutButton.addEventListener('click', proceedToCheckout);
+            
+            function toggleCart() {
+                cartPanel.classList.toggle('active');
+                document.body.classList.toggle('cart-open');
+            }
+            
+            function addToCart(item, price) {
+                const existingItem = cart.find(cartItem => cartItem.item === item);
+                
+                if (existingItem) {
+                    existingItem.quantity++;
+                    existingItem.totalPrice = existingItem.quantity * existingItem.price;
+                } else {
+                    cart.push({
+                        item: item,
+                        price: price,
+                        quantity: 1,
+                        totalPrice: price
+                    });
+                }
+                
+                total += price;
+                updateCartDisplay();
+                toggleCart(); // Show cart when item is added
+            }
+            
+            function removeFromCart(item) {
+                const itemIndex = cart.findIndex(cartItem => cartItem.item === item);
+                if (itemIndex > -1) {
+                    const cartItem = cart[itemIndex];
+                    total -= cartItem.price;
+                    
+                    if (cartItem.quantity > 1) {
+                        cartItem.quantity--;
+                        cartItem.totalPrice = cartItem.quantity * cartItem.price;
+                    } else {
+                        cart.splice(itemIndex, 1);
+                    }
+                    
+                    updateCartDisplay();
+                }
+            }
+            
+            function updateCartDisplay() {
+                cartItems.innerHTML = '';
+                let itemCount = 0;
+                
+                cart.forEach(item => {
+                    itemCount += item.quantity;
+                    const itemElement = document.createElement('div');
+                    itemElement.className = 'cart-item';
+                    itemElement.innerHTML = `
+                        <div class="item-details">
+                            <div class="item-title">${item.item}</div>
+                            <div class="item-price">$${item.totalPrice.toFixed(2)}</div>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="quantity-button" onclick="removeFromCart('${item.item}')">-</button>
+                            <span>${item.quantity}</span>
+                            <button class="quantity-button" onclick="addToCart('${item.item}', ${item.price})">+</button>
+                        </div>
+                    `;
+                    cartItems.appendChild(itemElement);
+                });
+                
+                cartTotal.textContent = `$${total.toFixed(2)}`;
+                cartCount.textContent = itemCount;
+                
+                // Save cart to localStorage
+                localStorage.setItem('cartItems', JSON.stringify(cart));
+                localStorage.setItem('cartTotal', total);
+            }
+            
+            function proceedToCheckout() {
+                if (cart.length > 0) {
+                    window.location.href = 'checkout.html';
+                }
+            }
+            
+            // Load cart from localStorage on page load
+            window.addEventListener('load', () => {
+                const savedCart = localStorage.getItem('cartItems');
+                const savedTotal = localStorage.getItem('cartTotal');
+                
+                if (savedCart && savedTotal) {
+                    cart = JSON.parse(savedCart);
+                    total = parseFloat(savedTotal);
+                    updateCartDisplay();
+                }
+            });
+                        
+            
+        </script>
     </div>
     <footer>
         <div class="footer background">
             <div class="footer-col">
-                <img src="assets/logo/icon.png" alt="">
+                <img src="assets/logo/icon.png" id="ironlogo" alt="">
                 <p class="footer-p">
     
                     Iron Man is a fictional superhero in the Marvel Comics universe, created by writer Stan Lee. His real name is Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech suit of powered armor to fight crime after a life-threatening injury.
@@ -300,153 +495,49 @@
     
         </div>
        </footer>
-       <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top" style="bottom: 25px;">
-        <div class="scroll-top-icon">
-            <i class="fa-solid fa-arrow-up"></i>
+       <button id="BacktoTop">
+        <div class="circle1">
+          <svg
+            id="back-to-top"
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            class="bi bi-arrow-up-circle-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"
+            ></path>
+          </svg>
         </div>
-        <svg class="progress-ring" width="60" height="60">
-            <circle class="progress-ring__circle" stroke="#ffffff" stroke-width="4" fill="transparent" r="28" cx="30"
-                cy="30"></circle>
-        </svg>
-    </button>
-    <style>
-        .scroll-top {
-            position: fixed;
-            right: 1.6%;
-            background: linear-gradient(100deg, #b33535, #ff903c, #ff6905);
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
-            overflow: visible;
-            z-index: 10;
-            /* Ensure button is on top */
+      </button>
+  
+      <script>
+        /* Back to Top Button */
+        const scrollToTopBtn = document.getElementById("BacktoTop");
+        window.onscroll = function () {
+          scrollFunction();
+        };
+  
+        function scrollFunction() {
+          if (
+            document.body.scrollTop > 50 ||
+            document.documentElement.scrollTop > 50
+          ) {
+            scrollToTopBtn.style.visibility = "visible";
+            scrollToTopBtn.style.opacity = "1";
+          } else {
+            scrollToTopBtn.style.visibility = "hidden";
+            scrollToTopBtn.style.opacity = "0";
+          }
         }
-    
-        .scroll-top.show {
-            opacity: 1;
-            visibility: visible;
-        }
-    
-        .scroll-top:hover {
-            transform: scale(1.1);
-            /* Subtle scaling instead of expanding */
-            box-shadow: 0 8px 20px rgba(255, 69, 159, 0.6);
-            /* Slightly larger shadow */
-        }
-    
-        .scroll-top:active {
-            transform: scale(1.05);
-            /* Minor scale reduction on click */
-        }
-    
-        .scroll-top-icon {
-            position: relative;
-            z-index: 2;
-            transition: transform 0.3s ease;
-        }
-    
-        .scroll-top:hover .scroll-top-icon {
-            transform: translateY(-3px);
-        }
-    
-        /* Progress Ring Styling */
-        .progress-ring {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transform: rotate(-90deg);
-            /* To start from the top */
-        }
-    
-        .progress-ring__circle {
-            transition: stroke-dashoffset 0.35s;
-            transform-origin: 50% 50%;
-        }
-    
-        /* Pulse Animation */
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
-            }
-    
-            50% {
-                box-shadow: 0 5px 15px rgba(255, 69, 159, 0.7);
-            }
-    
-            100% {
-                box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
-            }
-        }
-    
-        .scroll-top:hover {
-            animation: pulse 1.5s infinite;
-        }
-    
-        .scroll-top.show {
-            animation: none;
-            /* No animation when showing the button */
-        }
-    
-        .scroll-top.show:hover {
-            animation: pulse 1.5s infinite;
-            /* Pulse on hover */
-        }
-    </style>
-    <script>
-        // Get the button
-        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-        const progressCircle = document.querySelector(".progress-ring__circle");
-        const radius = progressCircle.r.baseVal.value;
-        const circumference = 2 * Math.PI * radius;
-    
-        // Set the circle progress properties
-        progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
-        progressCircle.style.strokeDashoffset = circumference;
-    
-        // Function to show or hide the button based on scroll position
-        function toggleScrollButton() {
-            if (window.scrollY > 100) {
-                scrollToTopBtn.classList.add("show");
-            } else {
-                scrollToTopBtn.classList.remove("show");
-            }
-        }
-    
-        // Function to set the scroll progress on the button ring
-        function setProgress(percent) {
-            const offset = circumference - (percent / 100) * circumference;
-            progressCircle.style.strokeDashoffset = offset;
-        }
-    
-        // Listen for scroll events to update button visibility and progress
-        window.addEventListener("scroll", () => {
-            toggleScrollButton();
-            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            setProgress(scrollPercent);
+  
+        scrollToTopBtn.addEventListener("click", function () {
+          // Smooth scroll back to top
+          window.scrollTo({ top: 0, behavior: "smooth" });
         });
-    
-        // Smooth scroll to top when the button is clicked
-        scrollToTopBtn.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    
-    </script>
+      </script>
     
         <script>
                 window.addEventListener('scroll', function() {

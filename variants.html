@@ -144,9 +144,21 @@
             </ul>
         </div>
     </nav>
-    <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top" style="bottom: 25px;">
-        <div class="scroll-top-icon">
-            <i class="fa-solid fa-arrow-up"></i>
+    <button id="BacktoTop">
+        <div class="circle1">
+          <svg
+            id="back-to-top"
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            class="bi bi-arrow-up-circle-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"
+            ></path>
+          </svg>
         </div>
         <svg class="progress-ring" width="60" height="60">
             <circle class="progress-ring__circle" stroke="#ffffff" stroke-width="4" fill="transparent" r="28" cx="30"
@@ -276,23 +288,12 @@
             const offset = circumference - (percent / 100) * circumference;
             progressCircle.style.strokeDashoffset = offset;
         }
-    
-        // Listen for scroll events to update button visibility and progress
-        window.addEventListener("scroll", () => {
-            toggleScrollButton();
-            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            setProgress(scrollPercent);
+  
+        scrollToTopBtn.addEventListener("click", function () {
+          // Smooth scroll back to top
+          window.scrollTo({ top: 0, behavior: "smooth" });
         });
-    
-        // Smooth scroll to top when the button is clicked
-        scrollToTopBtn.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    
-    </script>
+      </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <script>
