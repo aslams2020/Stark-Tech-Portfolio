@@ -91,7 +91,8 @@
         <h2 class="movie-title">IRON MAN VS F-22 EPIC DOGFIGHT SCENE</h2>
         
         <!-- Embedded YouTube Video -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/lpEYXaNNysM?si=G-g3imfWt08tgcW6" 
+         
+        <iframe class="video" src="https://www.youtube.com/embed/lpEYXaNNysM?si=G-g3imfWt08tgcW6" 
             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
@@ -101,7 +102,7 @@
         <h2 class="movie-title">IRON MAN STARK EXPO SCENE</h2>
         
         <!-- Embedded YouTube Video -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/yocBQlw_mCA?si=Cbq9dpQY2VJY4g-O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="video" src="https://www.youtube.com/embed/yocBQlw_mCA?si=Cbq9dpQY2VJY4g-O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 
     <!-- Card 3 -->
@@ -109,14 +110,14 @@
         <h2 class="movie-title">IRON MAN FINAL MARK 33 SUIT UP</h2>
         
         <!-- Embedded YouTube Video -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/cseyd_CRKF0?si=vToUKzkjq2Q1VS8E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
+        <iframe class="video" src="https://www.youtube.com/embed/cseyd_CRKF0?si=vToUKzkjq2Q1VS8E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
     </div>
     <!-- Card 4 -->
     <div class="movie-card">
         <h2 class="movie-title">IRON MAN VS THANOS INFINITY WAR</h2>
             
         <!-- Embedded YouTube Video -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/10zjuGJEG_w?si=1Bs7gHRhVB_jnCVA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="video" src="https://www.youtube.com/embed/10zjuGJEG_w?si=1Bs7gHRhVB_jnCVA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 
     <!--Card 5-->
@@ -124,7 +125,7 @@
         <h2 class="movie-title">I AM IRON MAN SCENE ICONIC</h2>
             
         <!-- Embedded YouTube Video -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/_anDMGmck-k?si=H7wN3AGcaMUHd8HZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="video" src="https://www.youtube.com/embed/_anDMGmck-k?si=H7wN3AGcaMUHd8HZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </div>
 
@@ -146,10 +147,29 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-align: center;
     }
-
+    .video {
+        width: 560px;
+        height: 315px;
+    }
     .movie-title {
         font-size: 22px;
         margin-bottom: 10px;
+    }
+    @media(max-width:480px)
+    {   
+        .video{
+        width: 300px;
+        height: 190px; 
+        } 
+        .movie-card {
+        width: 90%;
+        margin: 10px;
+        padding: 5px;
+    }
+    .movie-title {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
     }
 </style>
 
@@ -205,7 +225,7 @@
     </div>
     <div class="footer-bar background"> 
         <p>
-            &copy; Copyright 2024- All Rights Reserved -Made With ❤️ by <a class="mygithub" href="https://github.com/aslams2020"><span>Aslam</span> Sayyad</a>
+            &copy; Copyright 2024- All Rights Reserved -Made With ❤ by <a class="mygithub" href="https://github.com/aslams2020"><span>Aslam</span> Sayyad</a>
         </p>
 
     </div>
