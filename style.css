@@ -1049,170 +1049,6 @@ input[type="number"]::-webkit-outer-spin-button {
   text-decoration: underline;
 }
 
-@media (max-width: 600px) {
-  .txt-big {
-    font-size: 35px;
-    margin-left: 1rem;
-  }
-
-  .txt-small {
-    margin-left: 1rem;
-  }
-
-  .secondHalf {
-    padding-left: 0;
-  }
-
-  .buttons {
-    margin-top: 20px;
-    margin-bottom: 40px;
-  }
-
-  .buttons .btn {
-    margin: 0 !important;
-    padding: 10px 15px;
-  }
-
-  .firstHalf {
-    display: flex;
-    justify-content: center;
-  }
-
-  .ironman-illustration {
-    width: 80%;
-  }
-
-  .movie-cards-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    flex-wrap: wrap;
-    margin: 0 auto;
-  }
-
-  /* Styling for each movie card */
-  .movie-card {
-    width: 100%;
-    height: auto;
-  }
-
-  .movie-image {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-
-  .movie-title {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #ffffff;
-    margin-top: 10px;
-  }
-
-  .visitor-counter {
-    margin-left: 170px;
-    top: 30px;
-  }
-
-  .footer {
-    grid-template-columns: 1fr;
-    padding: 1.5rem;
-    text-align: center;
-  }
-
-  .footer-col,
-  .footer-col-main {
-    margin: 0 auto;
-  }
-
-  .footer-img {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-  }
-
-  #ironlogo {
-    margin-left: 0;
-  }
-
-  .footer-p {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .footer-social {
-    justify-content: center;
-    gap: 0.5rem;
-    margin-left: 0;
-    margin-top: 1rem;
-  }
-
-  .footer-social i {
-    font-size: 1rem;
-    padding: 0.4rem;
-  }
-
-  .h46 {
-    margin-left: 0;
-    margin-bottom: 0.5rem;
-  }
-
-  .footer-col-main a {
-    margin-left: 0;
-    margin-bottom: 0.25rem;
-  }
-
-  .footer-bar p {
-    font-size: 0.8rem;
-    top: 0;
-    padding: 1rem 3rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .buttons {
-    margin-bottom: 25px;
-  }
-
-  .ironman-illustration {
-    width: 90%;
-  }
-
-  .footer {
-    grid-template-columns: 1fr 1fr;
-    padding: 2rem;
-  }
-
-  .footer-col-main {
-    margin-top: 1rem;
-  }
-
-  .footer-img {
-    margin-left: -30px;
-    margin-right: 200px;
-  }
-
-  .footer-p {
-    margin-left: 50px;
-  }
-
-  .footer-social {
-    justify-content: center;
-    margin-left: 20px;
-  }
-
-  .footer-col img {
-    width: 3.5rem;
-    height: 3.5rem;
-  }
-
-  .footer-bar p {
-    font-size: 0.8rem;
-    top: 0;
-    padding: 1rem 3rem;
-  }
-}
-
 /* Responsiveness ^_^ */
 @media only screen and (max-width: 1020px) {
   .logo img {
@@ -1351,5 +1187,170 @@ input[type="number"]::-webkit-outer-spin-button {
   .logo a {
     display: flex;
     justify-content: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .buttons {
+    margin-bottom: 25px;
+  }
+
+  .ironman-illustration {
+    width: 90%;
+  }
+
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+  }
+
+  .footer-col-main {
+    margin-top: 1rem;
+  }
+
+  .footer-img {
+    margin-left: -30px;
+    margin-right: 200px;
+  }
+
+  .footer-p {
+    margin-left: 50px;
+  }
+
+  .footer-social {
+    justify-content: center;
+    margin-left: 20px;
+  }
+
+  .footer-col img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .footer-bar p {
+    font-size: 0.8rem;
+    top: 0;
+    padding: 1rem 3rem;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .txt-big {
+    font-size: 35px;
+    margin-left: 1rem;
+  }
+
+  .txt-small {
+    margin-left: 1rem;
+  }
+
+  .secondHalf {
+    padding-left: 0;
+  }
+
+  .buttons {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .buttons .btn {
+    margin: 0 !important;
+    padding: 10px 15px;
+  }
+
+  .firstHalf {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ironman-illustration {
+    width: 80%;
+  }
+
+  .movie-cards-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  /* Styling for each movie card */
+  .movie-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .movie-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .movie-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 10px;
+  }
+
+  .visitor-counter {
+    margin-left: 170px;
+    top: 30px;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-col,
+  .footer-col-main {
+    margin: 0 auto;
+  }
+
+  .footer-img {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  #ironlogo {
+    margin-left: 0;
+  }
+
+  .footer-p {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .footer-social {
+    justify-content: center;
+    gap: 0.5rem;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .footer-social i {
+    font-size: 1rem;
+    padding: 0.4rem;
+  }
+
+  .h46 {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-col-main a {
+    margin-left: 0;
+    margin-bottom: 0.25rem;
+  }
+
+  .footer-bar p {
+    font-size: 0.8rem;
+    top: 0;
+    padding: 1rem 3rem;
   }
 }
