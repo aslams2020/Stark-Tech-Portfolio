@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Stark Tech Defense - Iron Man FAQ</title>
+    <link rel="icon" href="ironman-icon.png" type="image/x-icon">
+    
+    <style>
+        /* CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: #1A1A1D;
+            color: #FFD700;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #C8102E;
+            margin: 30px 0;
+        }
+
+        .faq-section {
+            width: 90%;
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 15px;
+            background: #2D2D30;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
+            transition: background 0.3s ease;
+        }
+        
+        .faq-section:hover {
+            background: #3A3A3D;
+        }
+
+        .faq-section h2 {
+            font-size: 1.3rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #FFD700;
+            margin: 0;
+        }
+
+        .arrow {
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-section p {
+            display: none;
+            font-size: 1rem;
+            color: #E5E5E5;
+            margin-top: 10px;
+        }
+
+        .ironman-img {
+            width: 100px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            animation: float 3s ease-in-out infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9rem;
+            background: #111;
+            color: #bbb;
+            margin-top: 30px;
+        }
+
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        footer ul li {
+            display: inline;
+            margin: 0 12px;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #C8102E;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Stark Tech Portfolio - FAQ</h1>
+    </header>
+
+    <main>
+        <!-- FAQ Section 1 -->
+        <section class="faq-section">
+            <h2 onclick="toggleAnswer(this)">
+                1. What is the latest Iron Man armor model?
+                <span class="arrow">▼</span>
+            </h2>
+            <p>Tony Stark has developed multiple models of the Iron Man armor, with the most recent being the Model Prime. This suit adapts to various environments and can transform for different types of combat scenarios.</p>
+        </section>
+
+        <!-- FAQ Section 2 -->
+        <section class="faq-section">
+            <h2 onclick="toggleAnswer(this)">
+                2. How does Iron Man’s arc reactor work?
+                <span class="arrow">▼</span>
+            </h2>
+            <p>The arc reactor is a clean energy source that powers Tony Stark's suits and was initially built to prevent shrapnel from reaching his heart. It uses palladium, vibranium, or other energy sources in different suit versions.</p>
+        </section>
+
+        <!-- FAQ Section 3 -->
+        <section class="faq-section">
+            <h2 onclick="toggleAnswer(this)">
+                3. What are Iron Man’s most advanced weapons?
+                <span class="arrow">▼</span>
+            </h2>
+            <p>The Iron Man suit features numerous advanced weapons, including repulsor blasts, the Unibeam, smart missiles, and nanotech-based weapons. These allow for versatile and powerful combat responses.</p>
+        </section>
+
+        <!-- FAQ Section 4 -->
+        <section class="faq-section">
+            <h2 onclick="toggleAnswer(this)">
+                4. Which suit is the best for space missions?
+                <span class="arrow">▼</span>
+            </h2>
+            <p>The Space Armor suits are specifically designed for space exploration. They include enhanced life support, radiation shielding, and propulsion for maneuverability in zero-gravity environments.</p>
+        </section>
+
+        <!-- FAQ Section 5 -->
+        <section class="faq-section">
+            <h2 onclick="toggleAnswer(this)">
+                5. How many suits has Tony Stark created?
+                <span class="arrow">▼</span>
+            </h2>
+            <p>Throughout his career, Tony Stark has created over 50 unique Iron Man suits, each with specialized capabilities for different environments, combat scenarios, and missions.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Stark Industries. All Rights Reserved.</p>
+        <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="https://www.facebook.com/StarkTech" target="_blank">Facebook</a></li>
+            <li><a href="https://twitter.com/StarkTech" target="_blank">Twitter</a></li>
+            <li><a href="https://www.instagram.com/StarkTech" target="_blank">Instagram</a></li>
+        </ul>
+    </footer>
+
+    <img src="https://camo.githubusercontent.com/09371c8a0b17bc61adb79966def9a7df86ee583dd28444cf5cf563bbf82c6936/68747470733a2f2f692e70696e696d672e636f6d2f6f726967696e616c732f61382f64352f62612f61386435626165623036666331326337376363656664303132313031306432302e676966" class="ironman-img" alt="Iron Man">
+
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            element.querySelector('.arrow').style.transform = answer.style.display === 'block' ? 'rotate(180deg)' : 'rotate(0)';
+        }
+    </script>
+</body>
+</html>
