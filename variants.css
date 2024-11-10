@@ -108,7 +108,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1;
 }
@@ -234,7 +234,7 @@ body {
 }
 
 #heading {
-  margin-top: 30px;
+  margin-top: 115px;
   font-size: 90px;
   text-align: center;
   font-weight: 500;

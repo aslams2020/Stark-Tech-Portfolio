@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <title>Tony Stark's Remarkable Achievements</title>
     <link rel="website icon" href="/assets/logo/icon.png">
     <style>
@@ -17,14 +22,15 @@
 
         body {
             background-image: url(assets/bg3.jpg);
-            color: #333;
-            padding: 20px;
+            color: white;
+            padding: 0px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        h1 {
+        h2{
+          padding-top: 20px;
             text-align: center;
             margin-bottom: 20px;
             color: #f5f5f5;
@@ -37,7 +43,7 @@
             background-color: #09081fc5;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 20px 0;
+            margin: 40px 0;
             padding: 20px;
             width: 100%;
             max-width: 1400px;
@@ -52,14 +58,15 @@
         }
 
         /* Alternating Layout */
-        .card:nth-child(odd) {
-            flex-direction: row;
-        }
-
         .card:nth-child(even) {
-            flex-direction: row-reverse;
+            flex-direction: row; /* Image on left */
+            text-align: left;
         }
 
+        .card:nth-child(odd) {
+            flex-direction: row-reverse; /* Image on right */
+            text-align: right;
+        }
         .card img {
             width: 150px;
             height: 150px;
@@ -73,12 +80,14 @@
         }
 
         .card-content {
+          padding: 20px;
             flex: 1;
         }
 
         .card h2 {
             color: #007bff;
             margin-bottom: 10px;
+            text-align: start;
         }
 
         .card p {
@@ -165,6 +174,11 @@
             box-shadow: 0 0 0 2px #fff, 0 0 0 3px #262626, 0 0 6px 2px rgba(255, 255, 255, 0.2), 0 0 10px 8px #7b0a0a;
         }
         }
+        footer{
+          margin: 0;
+          padding: 0;
+          width: 100%;
+        }
     </style>
     <script>
         /* Back to Top Button */
@@ -192,8 +206,33 @@
         });
       </script>
     
-    <h1>Tony Stark's Remarkable Achievements</h1>
+    <h2>Tony Stark's Remarkable Achievements</h2>
 
+    <nav class="navbar h-nav background">
+      <ul class="nav-list visibility">
+          <div class="logo" id="ironmask"><a href="/index.html"><img src="assets\logo\icon.png" alt="logo" srcset=""></a></div>
+          <li> <a href="index.html">Home</a></li>
+          <li> <a href="index.html#about" onclick="scrollToSection(event, 'home')">About</a></li>
+          <li> <a href="Appearances.html#Appearance">Appearances</a></li>
+          <li> <a href="index.html#Comics">Comics</a></li>
+          <li> <a href="index.html#contact">Contact</a></li>
+          <li> <a href="/blog.html">Blogs</a></li>
+      </ul>
+  
+      <div class="rightNav visibility">
+          <form class="search-bar">
+          <input type="text" name="search"  placeholder="Search the website">
+          <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+      </div>
+      <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+      </div>
+  </nav>
+  <div class = "main-content">
+    <h1>Tony Stark's Remarkable Achievements</h1>
     <div class="card">
         <img src="assets/arc-reactor.jpg" alt="Arc Reactor">
         <div class="card-content">
@@ -233,6 +272,58 @@
             <p>Tony Stark played a vital role in forming the Avengers, a team of Earth’s mightiest heroes. This initiative was a response to the growing threats beyond human control. His leadership and resources enabled the team to face formidable foes like Loki and Ultron. The Avengers Initiative is a testament to Stark’s belief in protecting humanity.</p>
         </div>
     </div>
+  </div>
+    <footer>
+      <div class="footer background">
+          <div class="footer-col">
+              <img src="/assets/logo/icon.png" id="ironlogo"    alt="">
+              <p class="footer-p">
+  
+                  <!-- Iron Man is a fictional superhero in the Marvel Comics universe, created by writer Stan Lee. His real name is Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech suit of powered armor to fight crime after a life-threatening injury. -->
+                  <!-- Iron Man, or Tony Stark, is a billionaire genius who becomes a superhero with his advanced armored suit. -->
+                  <!-- Iron Man, Tony Stark, is a tech genius who fights for justice in a powerful, high-tech suit of armor he created. -->
+                  Iron Man, aka Tony Stark, is a tech genius and billionaire who uses his advanced armored suit to fight for justice.
+  
+              </p>
+              
+              <div class="footer-social">
+                  <a href="#"><i class="fa-brands fa-github"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              </div> 
+          </div>
+          <div class="footer-col-main">
+              <h4 class="h46">Overview</h4>
+              <a href="index.html">Who is Iron Man?</a>
+              <a href="#">Franchise</a>
+              <a href="#">Community</a>
+              <!-- Added Villain page redirect -->
+              <a href="villain.html">Marvel Villains</a>
+          </div>
+          <div class="footer-col-main">
+              <h4 class="h46">About Us</h4>
+              <a href="blog.html">Blogs</a>
+              <a href="/contributor.html">Contributors</a>
+              <a href="#">Careers</a>
+          </div>
+          <div class="footer-col-main">
+              <h4 class="h46">Contact Us</h4>
+              <a href="FAQs.html">Help/Faq's</a>
+              <a href="index.html#contact">Contact</a>
+              <a href="PrivacyPolicy.html">Privacy Policy</a>
+              <a href="Terms&Conditions.html">Terms & Conditions</a>
+              <a href="#">Advertising</a>
+          </div>
+      </div>
+      <div class="footer-bar background"> 
+          <p>
+              &copy; Copyright 2024- All Rights Reserved -Made With ❤️ by <a class="mygithub" href="https://github.com/aslams2020"><span>Aslam</span> Sayyad</a>
+          </p>
+  
+      </div>
+     </footer>
 
     <script>
         // Scroll Animation JavaScript
