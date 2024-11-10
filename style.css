@@ -53,12 +53,10 @@ body {
 #progress-bar {
   height: 53%;
   width: 0;
-  background: linear-gradient(
-    90deg,
-    rgb(255, 0, 0) 0%,
-    rgb(255, 153, 153) 50%,
-    rgb(250, 0, 0) 100%
-  );
+  background: linear-gradient(90deg,
+      rgb(255, 0, 0) 0%,
+      rgb(255, 153, 153) 50%,
+      rgb(250, 0, 0) 100%);
   box-shadow: 0 0 4px rgba(255, 0, 0, 0.7), 0 0 10px rgba(192, 100, 2, 0.7);
   transition: width 0.09s ease-in-out;
   border-radius: 10px;
@@ -94,6 +92,7 @@ body {
 #ironmask {
   cursor: pointer;
 }
+
 #ironlogo {
   margin-left: 80px;
 
@@ -120,6 +119,7 @@ body {
     box-shadow: 0 0 10px 8px #7b0a0a;
   }
 }
+
 /* Main Nav */
 .navbar {
   height: 85px;
@@ -170,6 +170,7 @@ body {
   transition-duration: 0.5s;
   /* transition: color 0.3s ease, text-shadow 0.4s ease-in-out; */
 }
+
 .nav-list li a:hover {
   padding-right: 5px;
   padding-left: 10px;
@@ -219,14 +220,11 @@ body {
   color: rgb(238, 10, 10);
   margin-top: 3px;
 }
+
 ::placeholder,
 .email-input {
   color: rgb(249, 246, 246);
 }
-
-/* ::placeholder {
-  color: rgb(238, 10, 10);
-} */
 
 .search-bar button {
   border: 0;
@@ -253,6 +251,7 @@ body {
   margin: auto;
   height: 80%;
 }
+
 a:link,
 a:visited {
   color: rgb(226, 96, 10);
@@ -269,7 +268,6 @@ a:visited {
     url("assets/bg3.jpg");
   background-size: cover;
   padding-left: 50px;
-  /* Space between left edge and content */
 }
 
 .box-main {
@@ -283,7 +281,6 @@ a:visited {
 /* Image Styling */
 .firstHalf {
   flex: 0.7;
-  /* Adjust image width */
 }
 
 .ironman-illustration {
@@ -298,7 +295,6 @@ a:visited {
   flex: 1;
   color: #fff;
   padding-left: 30px;
-  /* Space between image and text */
   animation: float 1.5s ease-in-out infinite alternate;
 }
 
@@ -307,20 +303,15 @@ a:visited {
   font-weight: bold;
   margin-bottom: 15px;
   text-align: left;
-  /* Align text to the left */
   text-shadow: rgba(255, 77, 0, 0.849) 1px 0 10px !important;
 }
 
 .txt-small {
   font-size: 18px;
-  /* Increased font size for better readability */
   line-height: 1.8;
-  /* Better line spacing */
   text-align: left;
-  /* Align text to the left */
   padding-right: 100px;
   margin-bottom: 30px;
-  /* Space between text and buttons */
   text-shadow: rgba(255, 0, 195, 0.849) 1px 0 10px !important;
 }
 
@@ -333,7 +324,6 @@ a:visited {
 
 .btn {
   padding: 12px 28px;
-  /* Larger padding for a prominent look */
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s ease;
@@ -392,7 +382,6 @@ a:visited {
 
   100% {
     transform: translateY(-10px);
-    /* Adjust this value for the float height */
   }
 }
 
@@ -410,51 +399,6 @@ a:visited {
   text-shadow: rgba(255, 0, 195, 0.849) 1px 0 10px !important;
 }
 
-@media (max-width: 600px) {
-  .txt-big {
-    font-size: 35px;
-    margin-left: 1rem;
-  }
-
-  .txt-small {
-    margin-left: 1rem;
-  }
-
-  .secondHalf {
-    padding-left: 0;
-    /* margin-left: 1rem; */
-  }
-
-  .buttons {
-    margin-top: 20px;
-    margin-bottom: 40px;
-  }
-
-  .buttons .btn {
-    margin: 0 !important;
-    padding: 10px 15px;
-  }
-
-  .firstHalf {
-    display: flex;
-    justify-content: center;
-  }
-
-  .ironman-illustration {
-    width: 80%;
-  }
-}
-
-@media (max-width: 900px) {
-  .buttons {
-    margin-bottom: 25px;
-  }
-
-  .ironman-illustration {
-    width: 90%;
-  }
-}
-
 .section {
   height: 500px;
   display: flex;
@@ -468,9 +412,7 @@ a:visited {
 }
 
 .sec {
-  /* background-color: rgba(111, 7, 0, 0.819); */
   background-image: url("assets/bg3.jpg");
-  /* background-color: rgba(0, 0, 0, 0.61); */
   background-repeat: none;
   color: white;
   background-size: auto;
@@ -494,7 +436,6 @@ a:visited {
 .imgFluid:hover {
   transform: scale(1.03) translateY(-2px);
   cursor: pointer;
-  /* box-shadow: 10px 5px 5px rgba(255, 0, 0, 0.486); */
   z-index: -1;
   box-shadow: 10px 5px 125px rgba(255, 0, 0, 0.6);
 }
@@ -621,11 +562,9 @@ a:visited {
   padding: 12px 25px;
   color: #fff;
   font-weight: bold;
-  background: linear-gradient(
-    135deg,
-    rgba(237, 20, 4, 0.8),
-    rgba(200, 0, 0, 0.6)
-  );
+  background: linear-gradient(135deg,
+      rgba(237, 20, 4, 0.8),
+      rgba(200, 0, 0, 0.6));
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -636,15 +575,12 @@ a:visited {
 .submit-btn:hover {
   transform: scale(1.05);
   box-shadow: 0 3px 15px rgba(244, 2, 2, 0.9), 0 0 30px rgba(237, 20, 4, 0.95);
-  background: linear-gradient(
-    135deg,
-    rgba(255, 0, 0, 0.9),
-    rgba(237, 20, 4, 0.8)
-  );
+  background: linear-gradient(135deg,
+      rgba(255, 0, 0, 0.9),
+      rgba(237, 20, 4, 0.8));
 }
 
 /* Footer */
-
 .footer {
   padding: 5rem 1rem;
   position: relative;
@@ -653,12 +589,12 @@ a:visited {
   gap: 2rem;
   text-align: left;
 }
+
 .footer-col {
-  /* background-color: yellow; */
-  /* width: 300px; */
   margin-left: 0px;
   text-align: left;
 }
+
 .footer-col img {
   width: 5rem;
   height: 5rem;
@@ -678,20 +614,13 @@ a:visited {
 /* Styling for each movie card */
 .movie-card {
   background-color: rgba(255, 255, 255, 0.1);
-  /* Transparent card background */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 30%;
   margin: 20px 0;
   padding: 10px;
-  /* transition: transform 0.2s; */
   text-align: center;
 }
-
-/* .movie-card:hover {
-  /* transform: scale(1.05);  */
-/* Slight zoom effect on hover */
-/* } */
 
 /* Movie image inside card */
 .movie-image {
@@ -719,7 +648,7 @@ a:visited {
   align-items: center;
   font-family: Arial, sans-serif;
   margin-left: 190px;
-  z-index: 10; /* Ensure it stays on top of the border */
+  z-index: 10;
 }
 
 .visitor-counter .icon {
@@ -728,8 +657,6 @@ a:visited {
 
 .footer-p {
   opacity: 0.7;
-  /* background-color: #c6e130; */
-  /* padding-top: 5px; */
   margin-bottom: 1.3rem;
   height: fit-content;
   width: 66%;
@@ -774,7 +701,6 @@ a:visited {
 }
 
 .h46:hover {
-  /* text-decoration: underline; */
   font-size: 21px;
   color: #ee1919;
 }
@@ -794,26 +720,28 @@ a:visited {
 .footer-col-main a:hover {
   color: #e61d1d;
 }
+
 ironlogo .footer-col-main {
   background-color: #1da1f2;
   text-align: left;
 }
+
 .footer background {
   background-color: #1da1f2;
 }
 
 .footer-bar {
-  /* background-color: #0d0101; */
   text-align: center;
   margin: auto;
-  /* padding: 1rem; */
   font-size: 1rem;
+
   .mygithub {
     color: white;
     text-decoration: none;
     text-shadow: rgba(255, 0, 144, 0.629) 1px 0 6px;
   }
 }
+
 .footer-bar p span {
   color: #d12323;
 }
@@ -822,48 +750,6 @@ ironlogo .footer-col-main {
   position: relative;
   top: -60px;
 }
-
-/* .footer-bar {
-  background-color: #040101;
-} */
-
-@media (max-width: 900px) {
-  .footer {
-    grid-template-columns: 1fr 1fr;
-    padding: 2rem;
-  }
-
-  .footer-col-main {
-    margin-top: 1rem;
-  }
-
-  .footer-img {
-    margin-left: -30px;
-    margin-right: 200px;
-  }
-
-  .footer-p {
-    margin-left: 50px;
-  }
-
-  .footer-social {
-    justify-content: center;
-    margin-left: 20px;
-  }
-
-  .footer-col img {
-    width: 3.5rem;
-    height: 3.5rem;
-  }
-
-  .footer-bar p {
-    font-size: 0.8rem;
-    top: 0;
-    padding: 1rem 3rem;
-  }
-}
-
-/* Small screens (mobile) */
 
 /* Hamburger Menu */
 .burger {
@@ -881,170 +767,6 @@ ironlogo .footer-col-main {
   margin: 5px 3px;
 }
 
-/* Responsiveness ^_^ */
-@media only screen and (max-width: 1020px) {
-  .logo img {
-    max-width: 100px;
-    border: 3px solid white;
-    border-radius: 50%;
-    padding: 5px;
-    margin: 20px 0px;
-    animation: glow 5s infinite alternate;
-  }
-
-  @keyframes glow {
-    from {
-      box-shadow: 0 0 5px -8px #6a0a0a;
-    }
-
-    to {
-      box-shadow: 0 0 10px 8px #7b0a0a;
-    }
-  }
-
-  .nav-list {
-    flex-direction: column;
-    align-items: center;
-    /* Added for central alignment */
-    margin-right: 0px;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    /* Ensure content is centrally aligned */
-    transition: all 0.7s ease-out;
-    height: 480px;
-  }
-
-  .rightNav {
-    text-align: center;
-    width: 100%;
-    /* Added to adjust width */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Center-align the elements */
-  }
-
-  #search {
-    width: 300px;
-    /* Adjust this value to set the desired width */
-    padding: 8px;
-    margin-bottom: 10px;
-    text-align: center;
-    /* Center the placeholder text */
-  }
-
-  .btn {
-    width: 100px;
-  }
-
-  .secondHalf img {
-    width: 100%;
-    margin: 15px 0;
-    /* Adjust the top and bottom margin for spacing */
-  }
-
-  .burger {
-    display: block;
-  }
-
-  .h-nav {
-    height: 85px;
-  }
-
-  .visibility {
-    visibility: hidden;
-  }
-
-  .box-main {
-    max-width: 100%;
-    flex-direction: column-reverse;
-    align-items: center;
-    /* Ensure central alignment */
-  }
-
-  .section {
-    flex-direction: column-reverse;
-    align-items: center;
-    /* Added for alignment */
-  }
-
-  .text-small,
-  .text-big,
-  .btn {
-    text-align: center;
-    margin: 0 auto;
-    /* Added to center buttons */
-  }
-
-  .paras {
-    padding: 0px;
-    text-align: center;
-    margin: 0 auto;
-    /* Center the paragraphs */
-  }
-
-  .buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    /* Added for spacing above buttons */
-  }
-
-  .firstHalf {
-    margin-bottom: 20px;
-    /* Increase this value for more space below the heading and content */
-  }
-
-  .text-big {
-    margin-bottom: 15px;
-    /* Add margin below the heading */
-  }
-
-  .text-small {
-    margin-bottom: 0px;
-    /* Add margin below the content */
-  }
-
-  .buttons .btn {
-    margin: 0 15px;
-    /* Adjust this value to reduce space between buttons */
-    padding: 10px 15px;
-    /* Adjust padding for better button size */
-  }
-
-  .thumbnail {
-    text-align: center;
-    /* Center the thumbnail */
-    margin: 20px 0;
-    /* Space around the thumbnail */
-  }
-
-  .thumbnail img,
-  .firstHalf img {
-    border: 5px solid white;
-    /* Add a white border */
-    box-sizing: border-box;
-    max-width: 100%;
-    /* Prevent overflow */
-    display: inline-block;
-    /* Make images inline-block for centering */
-    margin: 0 auto;
-    /* Center the image */
-  }
-
-  .search-bar {
-    margin-left: 0px;
-  }
-
-  .logo a {
-    display: flex;
-    justify-content: center;
-  }
-}
-
 /* Footer */
 .mygithub {
   color: white;
@@ -1057,7 +779,6 @@ ironlogo .footer-col-main {
 }
 
 /*Added SOCIAL- Media icons */
-
 .footer-list {
   display: flex;
   justify-content: end;
@@ -1125,13 +846,11 @@ ironlogo .footer-col-main {
   left: 0;
   width: 100%;
   z-index: 1000;
-  /* Make sure the navbar stays on top */
 }
 
 /* Add margin-top to push the section down below the navbar */
 #home {
   margin-top: 80px;
-  /* Adjust based on your navbar's height */
   text-align: center;
 }
 
@@ -1147,7 +866,6 @@ ironlogo .footer-col-main {
 
 .ironman-image {
   width: 160px;
-  /* Adjust the image size */
   height: auto;
   vertical-align: middle;
   margin: 0 30px;
@@ -1156,7 +874,6 @@ ironlogo .footer-col-main {
 .movies-heading img {
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-  /* Add shadow for the image */
 }
 
 /* General body and background */
@@ -1185,15 +902,10 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 30%;
-  margin: 20px 0; /* Maintains spacing around cards */
+  margin: 20px 0;
   padding: 10px;
   text-align: center;
 }
-
-/* .movie-card:hover {
-  /* transform: scale(1.05);  */
-/* Slight zoom effect on hover */
-/* } */
 
 /* Movie image inside card */
 .movie-image {
@@ -1214,26 +926,21 @@ h1,
 h2 {
   text-align: center;
   color: #ffffff;
-  /* Ensure text is visible on a dark background */
   margin-top: 20px;
-  /* Optional: Adjust margin for spacing */
 }
 
 .imdb-rating {
   margin-left: 20px;
-  /* Add space between title and IMDb rating */
 }
 
 .imdd-rating {
   font-size: 15px;
   margin-left: 20px;
-  /* Add space between title and IMDb rating */
 }
 
 /* Back to Top button style */
 #BacktoTop {
   display: block;
-  /* Ensure the button is part of the layout */
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -1252,7 +959,6 @@ h2 {
   transition: opacity 1.5s, visibility 1.5s, box-shadow 0.3s ease;
   box-shadow: 0 0 0 2px #fff, 0 0 0 3px #262626,
     0 0 6px 2px rgba(255, 255, 255, 0.2);
-  /* Adjusted outer rings */
   overflow: hidden;
 }
 
@@ -1264,9 +970,7 @@ h2 {
 
 #BacktoTop:hover {
   background-color: rgb(106, 12, 11);
-  /* Darker shade on hover */
   transform: scale(1.1);
-  /* Slight zoom effect on hover */
 }
 
 #BacktoTop svg {
@@ -1277,13 +981,16 @@ h2 {
 #BacktoTop:hover svg {
   fill: #ffd700;
 }
-#BacktoTop{
+
+#BacktoTop {
   animation: glow 5s infinite alternate;
 }
+
 @keyframes glow {
   from {
     box-shadow: 0 0 0 2px #fff, 0 0 0 3px #262626, 0 0 6px 2px rgba(255, 255, 255, 0.2), 0 0 5px -8px #6a0a0a;
   }
+
   to {
     box-shadow: 0 0 0 2px #fff, 0 0 0 3px #262626, 0 0 6px 2px rgba(255, 255, 255, 0.2), 0 0 10px 8px #7b0a0a;
   }
@@ -1294,6 +1001,7 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 #fun-fact-overlay {
   position: fixed;
   top: 0;
@@ -1335,11 +1043,231 @@ input[type="number"]::-webkit-outer-spin-button {
 #fun-fact-ok-button:hover {
   background-color: #ff5555;
 }
+
 .nav-list li .active-header {
   color: rgb(238, 10, 10);
   text-decoration: underline;
 }
+
+/* Responsiveness ^_^ */
+@media only screen and (max-width: 1020px) {
+  .logo img {
+    max-width: 100px;
+    border: 3px solid white;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 20px 0px;
+    animation: glow 5s infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 5px -8px #6a0a0a;
+    }
+
+    to {
+      box-shadow: 0 0 10px 8px #7b0a0a;
+    }
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.7s ease-out;
+    height: 480px;
+  }
+
+  .rightNav {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #search {
+    width: 300px;
+    padding: 8px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .btn {
+    width: 100px;
+  }
+
+  .secondHalf img {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .h-nav {
+    height: 85px;
+  }
+
+  .visibility {
+    visibility: hidden;
+  }
+
+  .box-main {
+    max-width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .section {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .text-small,
+  .text-big,
+  .btn {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .paras {
+    padding: 0px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .firstHalf {
+    margin-bottom: 20px;
+  }
+
+  .text-big {
+    margin-bottom: 15px;
+  }
+
+  .text-small {
+    margin-bottom: 0px;
+  }
+
+  .buttons .btn {
+    margin: 0 15px;
+    padding: 10px 15px;
+  }
+
+  .thumbnail {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .thumbnail img,
+  .firstHalf img {
+    border: 5px solid white;
+    box-sizing: border-box;
+    max-width: 100%;
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  .search-bar {
+    margin-left: 0px;
+  }
+
+  .logo a {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .buttons {
+    margin-bottom: 25px;
+  }
+
+  .ironman-illustration {
+    width: 90%;
+  }
+
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+  }
+
+  .footer-col-main {
+    margin-top: 1rem;
+  }
+
+  .footer-img {
+    margin-left: -30px;
+    margin-right: 200px;
+  }
+
+  .footer-p {
+    margin-left: 50px;
+  }
+
+  .footer-social {
+    justify-content: center;
+    margin-left: 20px;
+  }
+
+  .footer-col img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .footer-bar p {
+    font-size: 0.8rem;
+    top: 0;
+    padding: 1rem 3rem;
+  }
+}
+
+
 @media (max-width: 600px) {
+  .txt-big {
+    font-size: 35px;
+    margin-left: 1rem;
+  }
+
+  .txt-small {
+    margin-left: 1rem;
+  }
+
+  .secondHalf {
+    padding-left: 0;
+  }
+
+  .buttons {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .buttons .btn {
+    margin: 0 !important;
+    padding: 10px 15px;
+  }
+
+  .firstHalf {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ironman-illustration {
+    width: 80%;
+  }
+
   .movie-cards-container {
     display: flex;
     flex-direction: column;
@@ -1359,6 +1287,7 @@ input[type="number"]::-webkit-outer-spin-button {
     height: auto;
     border-radius: 5px;
   }
+
   .movie-title {
     font-size: 1.1rem;
     font-weight: bold;
