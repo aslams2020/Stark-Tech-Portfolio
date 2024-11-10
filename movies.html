@@ -39,6 +39,61 @@
      background-image: linear-gradient(to right,red,orange);
      z-index: 100;
 }
+.poll-overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(24, 24, 24, 0.9); 
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.poll-content {
+    background: #2f2f2f; 
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #ffcc00; 
+    max-width: 400px;
+    width: 80%;
+    text-align: center;
+    color: #ffcc00;
+}
+
+.poll-content h2 {
+    margin-top: 0;
+    color: #ff4b2b; 
+}
+
+.poll-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.poll-content ul li {
+    margin: 10px 0;
+    color: #e1e1e1; 
+    font-size: 20px;
+}
+
+.poll-content button {
+    margin: 10px;
+    padding: 8px 16px;
+    background-color: #ff4b2b; 
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.poll-content button:hover {
+    background-color: #ffcc00;
+}
+
     </style>
 </head>
 <body>
@@ -236,6 +291,31 @@
         </p>
         
     </div>
+    <!-- Popup Poll -->
+<div id="pollPopup" class="poll-overlay">
+    <div class="poll-content">
+        <h2>Vote for Your Favorite Movie</h2>
+        <ul>
+            <li><label><input type="radio" name="movie" value="Iron Man"> Iron Man (2008)</label></li>
+            <li><label><input type="radio" name="movie" value="Iron Man 2"> Iron Man 2 (2010)</label></li>
+            <li><label><input type="radio" name="movie" value="The Avengers"> The Avengers (2012)</label></li>
+            <li><label><input type="radio" name="movie" value="Iron Man 3"> Iron Man 3 (2013)</label></li>
+            <li><label><input type="radio" name="movie" value="Avengers: Age of Ultron"> Avengers: Age of Ultron (2015)</label></li>
+            <li><label><input type="radio" name="movie" value="Captain America: Civil War">Captain America: Civil War (2016)</label></li>
+            <li><label><input type="radio" name="movie" value="Spider-Man: Homecoming">Spider-Man: Homecoming(2017)</label></li>
+            <li><label><input type="radio" name="movie" value="Avengers: Infinity War"> Avengers: Infinity War (2018)</label></li>
+            <li><label><input type="radio" name="movie" value="Avengers: Endgame"> Avengers: Endgame (2019)</label></li>
+            <li><label><input type="radio" name="movie" value="Spider-Man: Far from Home "> Spider-Man: Far from Home (2019)</label></li>
+        </ul>
+        <button onclick="submitVote()">Submit Vote</button>
+        <button onclick="closePoll()">Close</button>
+        <!-- Top Voted Movie Display -->
+<div id="topVotedMovie">No votes yet. Be the first to vote!</div>
+    </div>
+</div>
+
+
+
 </footer>
 </div>
 <button id="BacktoTop">
@@ -355,5 +435,60 @@ requestAnimationFrame(update);
 update();
 </script>
 
+<script>
+window.onload = function() {
+    // Check if the user has voted before
+    if (!localStorage.getItem("hasVoted")) {
+        document.getElementById("pollPopup").style.display = "flex";
+    }
+    displayTopVotedMovie();
+};
+
+function closePoll() {
+    document.getElementById("pollPopup").style.display = "none";
+}
+
+function submitVote() {
+    const selectedMovie = document.querySelector('input[name="movie"]:checked');
+    if (selectedMovie) {
+        let votes = JSON.parse(localStorage.getItem("movieVotes")) || {};
+        votes[selectedMovie.value] = (votes[selectedMovie.value] || 0) + 1;
+        localStorage.setItem("movieVotes", JSON.stringify(votes));
+
+        // Mark that the user has voted, so the poll won't appear again
+        localStorage.setItem("hasVoted", "true");
+
+        alert("Thank you for voting for: " + selectedMovie.value);
+        closePoll();
+        displayTopVotedMovie();
+    } else {
+        alert("Please select a movie to vote.");
+    }
+}
+
+// Function to display the top-voted movie
+function displayTopVotedMovie() {
+    const votes = JSON.parse(localStorage.getItem("movieVotes")) || {};
+    let topMovie = null;
+    let maxVotes = 0;
+
+    for (const movie in votes) {
+        if (votes[movie] > maxVotes) {
+            maxVotes = votes[movie];
+            topMovie = movie;
+        }
+    }
+
+    const topVotedDisplay = document.getElementById("topVotedMovie");
+    if (topVotedDisplay && topMovie) {
+        topVotedDisplay.textContent = `Top Voted Movie: ${topMovie} with ${maxVotes} vote(s)`;
+    } else if (topVotedDisplay) {
+        topVotedDisplay.textContent = "No votes yet. Be the first to vote!";
+    }
+}
+
+
+
+</script>
 </body>
 </html>
