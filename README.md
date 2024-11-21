@@ -4,7 +4,7 @@
             <td><b>🌟 Stars</b></td>
             <td><b>🍴 Forks</b></td>
             <td><b>🐛 Issues</b></td>
-            <td><b>🔔 Open PRs</b></td>
+            <td><b>🔔 Open PRs</b></td> 
             <td><b>🔕 Closed PRs</b></td>
         </tr>
      </thead>
